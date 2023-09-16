@@ -1,3 +1,54 @@
-.global {
-    color: green;
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 16px;
+
+	@media screen and (min-width: $tablet) {
+		padding: 0 40px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: 0 75px;
+	}
+}
+
+.button {
+	width: 100%;
+	padding: 14px 0;
+	color: $white;
+	background-color: $main-blue;
+	cursor: pointer;
+	border: 1px solid transparent;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: auto;
+	border-radius: 8px;
+	transition: color $transition-function, background-color $transition-function,
+		box-shadow $transition-function;
+
+	@media screen and (min-width: $mobile) {
+		width: 311px;
+	}
+
+	&:hover,
+	&:focus {
+		color: $main-blue;
+		background-color: $white;
+		border: 1px solid $main-blue;
+		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+			0px 2px 2px rgba(0, 0, 0, 0.12);
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	margin: -1px;
 }

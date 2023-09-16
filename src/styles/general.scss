@@ -58,6 +58,8 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
+	text-decoration: none;
+	color: currentColor;
 	background-color: transparent;
 }
 
@@ -335,7 +337,8 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+		"Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -416,21 +419,9 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 dt {
@@ -636,7 +627,6 @@ textarea {
 }
 
 @media screen and (min-width: 37.5em) {
-
 	.menu-toggle {
 		display: none;
 	}
@@ -647,10 +637,8 @@ textarea {
 }
 
 .site-main .comment-navigation,
-.site-main
-.posts-navigation,
-.site-main
-.post-navigation {
+.site-main .posts-navigation,
+.site-main .post-navigation {
 	margin: 0 0 1.5em;
 }
 
@@ -873,7 +861,6 @@ textarea {
 /* Alignments
 --------------------------------------------- */
 .alignleft {
-
 	/*rtl:ignore*/
 	float: left;
 
@@ -883,7 +870,6 @@ textarea {
 }
 
 .alignright {
-
 	/*rtl:ignore*/
 	float: right;
 

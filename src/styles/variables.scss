@@ -1,6 +1,14 @@
+$black: #222222;
+$white: #ffffff;
+$main-blue: #1c74bc;
+$yellow: #fdd929;
+$grey: #898989;
+$bg-footer: #eff5fa;
 
-$green: #0fda20;
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1440px;
 
-.variables{
-    color: $green;
-}
+$btn-border-radius: 8px;
+
+$transition-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
