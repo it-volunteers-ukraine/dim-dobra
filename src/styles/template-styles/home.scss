@@ -1,5 +1,25 @@
 @import "../variables.scss";
 
-.home {
-	color: $grey;
+.house {
+	padding: 174px 16px;
+	margin-left: -16px;
+	margin-right: -16px;
+	text-align: center;
+	background-color: #c4c4c4;
+	background-size: cover;
+	background-position: center;
+
+	background-image: url(../../images/main-bg-image.jpg);
+
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		background-image: url(../../images/main-bg-image-2X.jpg);
+	}
+}
+
+.house__title {
+	margin: 0;
+	margin-bottom: 32px;
+	color: $white;
+	font-weight: 600;
+	line-height: 1.3;
 }
