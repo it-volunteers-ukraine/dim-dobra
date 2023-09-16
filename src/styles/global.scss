@@ -13,7 +13,7 @@
 }
 
 .button {
-	width: 311px;
+	width: 100%;
 	padding: 14px 0;
 	color: $white;
 	background-color: $main-blue;
@@ -25,6 +25,10 @@
 	border-radius: 8px;
 	transition: color $transition-function, background-color $transition-function,
 		box-shadow $transition-function;
+
+	@media screen and (min-width: $mobile) {
+		width: 311px;
+	}
 
 	&:hover,
 	&:focus {
