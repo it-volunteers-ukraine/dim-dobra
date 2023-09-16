@@ -1,3 +1,26 @@
-.global {
-    color: green;
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 16px;
+
+	@media screen and (min-width: $tablet) {
+		padding: 0 40px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: 0 75px;
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	margin: -1px;
 }
