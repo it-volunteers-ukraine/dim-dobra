@@ -114,10 +114,64 @@ get_header();
     </section>
 
     <section class="bank-details">
-      <h3 class="bank-details__title">Наші реквізити</h3> 
-      <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
-      aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+      <h3 class="bank-details__title">Наші реквізити</h3>
+      
+      <div class="tabs">
+        <ul>
+          <li>UAH</li>
+          <li>USD</li>
+          <li>EUR</li>
+        </ul>
+        <div>
+          <div class="tabs__wraper"> 
+            <p class="bank-details__text-first" style="margin-top: -20px">Отримувач:</p>     
+            <p class="bank-details__text-second">ЗУБЕНКО ОЛЕНА ВОЛОДИМИРІВНА</p>     
+            <p class="bank-details__text-first">ЄДРПОУ:</p>     
+            <p class="bank-details__text-second">3192013863</p>     
+            <p class="bank-details__text-first">Банк:</p>     
+            <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>     
+            <p class="bank-details__text-first">IBAN:</p>     
+            <p class="bank-details__text-second">UA683052990000026207742096747</p>   
+              <div class="tabs__wraper-img"> 
+                <img src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
+              </div> 
+            <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
+            aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+          </div>
+          <div class="tabs__wraper">
+            <p class="bank-details__text-first" style="margin-top: -20px">Отримувач:</p>     
+            <p class="bank-details__text-second">ZUBENKO OLENA VOLODYMYRIVNA</p>     
+            <p class="bank-details__text-first">ЄДРПОУ:</p>     
+            <p class="bank-details__text-second">3192013863</p>     
+            <p class="bank-details__text-first">Банк:</p>     
+            <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>     
+            <p class="bank-details__text-first">IBAN:</p>     
+            <p class="bank-details__text-second">UA683052990000026207742096747</p>  
+              <div class="tabs__wraper-img"> 
+                <img src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
+              </div>          
+            <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
+            aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+          </div>
+          <div class="tabs__wraper"> 
+            <p class="bank-details__text-first" style="margin-top: -20px">Отримувач:</p>     
+            <p class="bank-details__text-second">ZUBENKO ELENA WOLODYMYRIWNA</p>     
+            <p class="bank-details__text-first">ЄДРПОУ:</p>     
+            <p class="bank-details__text-second">3192013863</p>     
+            <p class="bank-details__text-first">Банк:</p>     
+            <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>     
+            <p class="bank-details__text-first">IBAN:</p>     
+            <p class="bank-details__text-second">UA683052990000026207742096747</p>   
+              <div class="tabs__wraper-img"> 
+                <img src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
+              </div>        
+            <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
+            aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+          </div>
+        </div>            
+      </div>
     </section>
+
   </div>
 
 <?php get_footer(); ?>

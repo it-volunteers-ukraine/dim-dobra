@@ -151,3 +151,79 @@
 	font-weight: 500;
 	line-height: auto;
 }
+
+.tabs {
+	width: 100%;
+	display: inline-block;
+}
+.tabs div {
+	padding-top: 51px;
+}
+.tabs ul {
+	margin: 0px;
+	padding: 0px;
+}
+.tabs ul li {
+	width: 33.333%;
+	margin: 0px;
+	padding: 0px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	padding: 10px 15px;
+	color: $black;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: auto;
+	text-align: center;
+	border-bottom: 1px solid $main-blue;
+}
+.tabs ul li.active,
+.tabs ul li.active:hover {
+	border: 1px solid $main-blue;
+	border-bottom: none;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+.tabs ul li:hover {
+	background: #fbfbfc;
+}
+.tabs__wraper {
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-bottom: 40px;
+	border-left: 1px solid $main-blue;
+	border-right: 1px solid $main-blue;
+	border-bottom: 1px solid $main-blue;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.tabs__wraper-img {
+	display: flex;
+	justify-content: center;
+	margin-top: -51px;
+	margin-bottom: 40px;
+}
+
+.bank-details__text-first {
+	margin: 0;
+	margin-bottom: 14px;
+	color: $black;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: auto;
+}
+
+.bank-details__text-second {
+	margin: 0;
+	margin-bottom: 24px;
+	color: $black;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: auto;
+
+	@media screen and (max-width: $mobile) {
+		font-size: 17px;
+		letter-spacing: -0.05em;
+	}
+}
