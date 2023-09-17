@@ -8,8 +8,8 @@ get_header();
   <div class="container ">
     <section class="house">
       <h1 class="house__title">Дім Добра: рука допомоги для тих, хто потребує - від людей до тварин</h1> 
-      <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
-      aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+      <button class="button" type="button" aria-label="support"   aria-expanded="false"
+      aria-controls="modal-window">ПІДТРИМАТИ</button>
     </section>
 
     <section class="support">
@@ -49,7 +49,7 @@ get_header();
   
       <div class="swiper-container">
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" style="margin-bottom: 32px">
             <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/01-2-1024x790.jpg' alt=''/></div>
             <div class="swiper-slide">  <img src='http://dim-dobra/wp-content/uploads/2023/09/02-2-1024x790.jpg' alt=''/></div>
             <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/03-2-1024x790.jpg' alt=''/></div>
@@ -57,12 +57,66 @@ get_header();
             <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/05-2-1024x790.jpg' alt=''/></div>
             <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/06-2-1024x790.jpg' alt=''/></div>
           </div>
-        </div>
-        <div class="swiper-pagination" style="position: inherit"></div>
+            <div class="swiper-pagination" style="position: inherit"></div>
+        </div>       
       </div>
 
         <p class="about__text">Двічі на місяць ми виїжджаємо до Херсонської області та годуємо людей гарячими обідами, роздаємо хліб, продуктові набори, допомогаємо по побуту літнім людям. Крім того, ми не залишаємо без уваги тварин - евакуюємо собак з зони бойових дій та шукаємо для них нові домівки. <br> <br> Наш фонд щиро вірить у потужну силу добра та прагне змінювати життя до кращого для тих, хто опинився у складних життєвих обставинах.
         </p>    
+    </section>
+
+    <section class="news">
+      <h3 class="news__title">Новини та події</h3> 
+  
+      <div class="swiper-container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-1-1024x1015.jpg' alt=''/>
+            <div class="news__wraper">
+              <p class="news__text">м. Херсон</p>
+              <p class="news__text">23.07.2023</p>
+            </div>
+              <h4 class="news__subTitle">Допомога Херсонцям. Видача гуманітарної допомоги</h4>
+          </div>
+            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-2-1024x1015.jpg' alt=''/>
+            <div class="news__wraper">
+              <p class="news__text">Гарячі напрямки</p>
+              <p class="news__text">20.07.2023</p>
+            </div>
+              <h4 class="news__subTitle">Допомога ЗСУ. Закупівля продуктів для ії потреб</h4>
+          </div>
+            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-3-1024x1015.jpg' alt=''/>
+            <div class="news__wraper">
+              <p class="news__text">м. Кривий Ріг</p>
+              <p class="news__text">15.07.2023</p>
+            </div>
+              <h4 class="news__subTitle">Зібрали гуманітарну допомогу для пунктів незламності</h4>
+          </div>
+            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-4-1024x1015.jpg' alt=''/>
+            <div class="news__wraper">
+              <p class="news__text">м. Кривий Ріг</p>
+              <p class="news__text">21.07.2023</p>
+            </div>
+              <h4 class="news__subTitle">Врятований лабрадор. Лікування у клініці.</h4>
+          </div>
+            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-5-1024x1015.jpg' alt=''/>
+            <div class="news__wraper">
+              <p class="news__text">В дорозі</p>
+              <p class="news__text">05.07.2023</p>
+            </div>
+              <h4 class="news__subTitle">Екскурсія для дітей</h4>
+          </div>         
+          
+          </div>
+            <div class="swiper-pagination" style="position: inherit"></div>
+        </div>       
+      </div>
+    </section>
+
+    <section class="bank-details">
+      <h3 class="bank-details__title">Наші реквізити</h3> 
+      <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
+      aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
     </section>
   </div>
 
