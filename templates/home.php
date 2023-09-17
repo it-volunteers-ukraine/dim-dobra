@@ -42,13 +42,25 @@ get_header();
       </ul>
     </section>
 
-     <section class="about">
+    <section class="about">
         <h3 class="about__title">Про “Дім Добра”</h3> 
         <p class="about__text">З початку повномаштабного вторгнення наша організація систематично допомогає та забезпечує усім необхідним людей та тварин, що постраждали під час війни, тимчасово або назавжди залишились без домівки. <br> <br> Наші волонтери регулярно безкоштовно годують переселенців в Кривому Розі, видають продукти харчування, хімію, гігієну, одяг, надають житло та прихисток.
         </p>  
-      <div class="about__img-wrap">
-        <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/slider-home/01.jpg" alt="">  
+  
+      <div class="swiper-container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/01-2-1024x790.jpg' alt=''/></div>
+            <div class="swiper-slide">  <img src='http://dim-dobra/wp-content/uploads/2023/09/02-2-1024x790.jpg' alt=''/></div>
+            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/03-2-1024x790.jpg' alt=''/></div>
+            <div class="swiper-slide">  <img src='http://dim-dobra/wp-content/uploads/2023/09/04-1-1024x790.jpg' alt=''/></div>
+            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/05-2-1024x790.jpg' alt=''/></div>
+            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/06-2-1024x790.jpg' alt=''/></div>
+          </div>
+        </div>
+        <div class="swiper-pagination" style="position: inherit"></div>
       </div>
+
         <p class="about__text">Двічі на місяць ми виїжджаємо до Херсонської області та годуємо людей гарячими обідами, роздаємо хліб, продуктові набори, допомогаємо по побуту літнім людям. Крім того, ми не залишаємо без уваги тварин - евакуюємо собак з зони бойових дій та шукаємо для них нові домівки. <br> <br> Наш фонд щиро вірить у потужну силу добра та прагне змінювати життя до кращого для тих, хто опинився у складних життєвих обставинах.
         </p>    
     </section>

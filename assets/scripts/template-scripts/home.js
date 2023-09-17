@@ -1,1 +1,1 @@
-console.log("home page");
+const swiper=new Swiper(".mySwiper",{slidesPerView:1,spaceBetween:20,loop:!0,keyboard:{enabled:!0},pagination:{el:".swiper-pagination",clickable:!0}});
