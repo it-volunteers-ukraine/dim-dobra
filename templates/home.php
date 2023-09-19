@@ -173,6 +173,9 @@ get_header();
         </div>            
       </div>
     </section>
+
+    <?php get_template_part( 'template-parts/need-help'); ?>
+
   </div>
 
 <?php get_footer(); ?>
