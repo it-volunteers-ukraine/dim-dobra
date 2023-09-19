@@ -65,6 +65,8 @@ get_header();
         </p>    
     </section>
 
+    <?php get_template_part( 'template-parts/founding-documents'); ?>
+
     <section class="news">
       <h3 class="news__title">Новини та події</h3> 
   
@@ -171,7 +173,6 @@ get_header();
         </div>            
       </div>
     </section>
-
   </div>
 
 <?php get_footer(); ?>

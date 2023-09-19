@@ -1,0 +1,49 @@
+@import "../variables.scss";
+
+.documents {
+	margin-left: -16px;
+	margin-right: -16px;
+	padding: 32px 16px 40px 16px;
+	background-color: $main-blue;
+}
+
+.documents__title {
+	margin: 0;
+	margin-bottom: 48px;
+	color: $white;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: auto;
+}
+
+.documents__wraper {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	margin-bottom: 32px;
+	transition: color $transition-function;
+
+	&:hover,
+	&:focus {
+		.documents__subtitle {
+			color: $yellow;
+		}
+	}
+}
+
+.documents__subtitle {
+	margin: 0;
+	color: $white;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.documents__text {
+	margin: 0;
+	margin-top: 8px;
+	color: $white;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.4;
+}

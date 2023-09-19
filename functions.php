@@ -38,7 +38,10 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_script( 'about-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/about.js', array(), false, true );
   }
 
- 
+  if (is_singular() && locate_template('template-parts/founding-documents.php')) {
+    wp_enqueue_style( 'documents-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/founding-documents.css', array('main') );
+    }
+
 }
 /** add fonts */
 function add_google_fonts() {
