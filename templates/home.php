@@ -7,38 +7,41 @@ get_header();
 
   <div class="container ">
     <section class="house">
-      <h1 class="house__title">Дім Добра: рука допомоги для тих, хто потребує - від людей до тварин</h1> 
-      <button class="button" type="button" aria-label="support"   aria-expanded="false"
-      aria-controls="modal-window">ПІДТРИМАТИ</button>
+      <div class="house__title-wraper">
+        <h1 class="house__title">Дім Добра: рука допомоги для тих, хто потребує - від людей до тварин</h1>
+      </div> 
+      <button class="button house__button" type="button" aria-label="support"   aria-expanded="false"
+      aria-controls="modal-window">ПІДТРИМАТИ<span class="house__span">ФОНД</span> </button>
     </section>
 
     <section class="support">
       <h2 class="support__title">Кожен місяць завдяки нашій організації:</h2>    
       <ul class="support__list">
-        <li>
+        <li class="support__item">
           <p class="support__count">50</p>
-          <p class="support__text">сімей отримують разову допомогу</p>
+          <p class="support__t  ext">сімей отримують разову допомогу</p>
         </li>
-        <li>
+        <li class="support__item">
           <p class="support__count">3000</p>
           <p class="support__text">людей отримують різного роду допомогу: харчі, одяг, гігієна, тощо.</p>
         </li>
-        <li>
+        <li class="support__item">
           <p class="support__count">100</p>
           <p class="support__text">котиків ЗСУ на різних напрямках отримують бокси з гігієною, їжею, солодощами, медициною, тощо.</p>
         </li>
-        <li>
-          <p class="support__count">50</p>
-          <p class="support__text">тварин проживають у нашому притулку і постійно працюють з зоо-психологами та кінологами</p>
-        </li>
-        <li>
-          <p class="support__count">200</p>
-          <p class="support__text">тварин отримують корма від нашого фонду</p>
-        </li>
-        <li>
+        <li class="support__item">
           <p class="support__count">100</p>
           <p class="support__text">врятованих тварин знаходять новий дім</p>
         </li>
+        <li class="support__item">
+          <p class="support__count">50</p>
+          <p class="support__text">тварин проживають у нашому притулку і постійно працюють з зоо-психологами та кінологами</p>
+        </li>
+        <li class="support__item">
+          <p class="support__count">200</p>
+          <p class="support__text">тварин отримують корма від нашого фонду</p>
+        </li>
+
       </ul>
     </section>
 
@@ -113,6 +116,43 @@ get_header();
             <div class="swiper-pagination" style="position: inherit"></div>
         </div>       
       </div>
+
+      <div class="news__gallery">
+        <div class="news__flexWraper" >
+          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-1-1024x1015.jpg' alt=''/>
+            <div class="news__wraper">
+              <p class="news__text">м. Херсон</p>
+              <p class="news__text">23.07.2023</p>
+            </div>
+              <h4 class="news__subTitle">Допомога Херсонцям. Видача гуманітарної допомоги</h4>
+          </div>
+          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-2-1024x1015.jpg' alt=''/>
+            <div class="news__wraper">
+              <p class="news__text">Гарячі напрямки</p>
+              <p class="news__text">20.07.2023</p>
+            </div>
+              <h4 class="news__subTitle">Допомога ЗСУ. Закупівля продуктів для ії потреб</h4>
+          </div>
+          </div>
+
+          <div class="news__flexWraper">
+          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-3-1024x1015.jpg' alt=''/>
+            <div class="news__wraper">
+              <p class="news__text">м. Кривий Ріг</p>
+              <p class="news__text">15.07.2023</p>
+            </div>
+              <h4 class="news__subTitle">Зібрали гуманітарну допомогу для пунктів незламності</h4>
+          </div>
+          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-3-1024x1015.jpg' alt=''/>
+            <div class="news__wraper">
+              <p class="news__text">м. Кривий Ріг</p>
+              <p class="news__text">21.07.2023</p>
+            </div>
+              <h4 class="news__subTitle">Врятований лабрадор. Лікування у клініці.</h4>
+          </div>
+    </div>
+
+      </div>
     </section>
 
     <section class="bank-details">
@@ -125,7 +165,7 @@ get_header();
           <li>EUR</li>
         </ul>
         <div>
-          <div class="tabs__wraper"> 
+         <div class="tabs__wraper">
             <p class="bank-details__text-first" style="margin-top: -20px">Отримувач:</p>     
             <p class="bank-details__text-second">ЗУБЕНКО ОЛЕНА ВОЛОДИМИРІВНА</p>     
             <p class="bank-details__text-first">ЄДРПОУ:</p>     
@@ -133,10 +173,10 @@ get_header();
             <p class="bank-details__text-first">Банк:</p>     
             <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>     
             <p class="bank-details__text-first">IBAN:</p>     
-            <p class="bank-details__text-second">UA683052990000026207742096747</p>   
+            <p class="bank-details__text-second">UA683052990000026207742096747</p>  
               <div class="tabs__wraper-img"> 
                 <img src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
-              </div> 
+              </div>          
             <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
             aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
           </div>
