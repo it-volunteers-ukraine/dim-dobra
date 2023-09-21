@@ -165,21 +165,36 @@ get_header();
           <li>EUR</li>
         </ul>
         <div>
-         <div class="tabs__wraper">
-            <p class="bank-details__text-first" style="margin-top: -20px">Отримувач:</p>     
-            <p class="bank-details__text-second">ЗУБЕНКО ОЛЕНА ВОЛОДИМИРІВНА</p>     
-            <p class="bank-details__text-first">ЄДРПОУ:</p>     
-            <p class="bank-details__text-second">3192013863</p>     
-            <p class="bank-details__text-first">Банк:</p>     
-            <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>     
-            <p class="bank-details__text-first">IBAN:</p>     
-            <p class="bank-details__text-second">UA683052990000026207742096747</p>  
+          <div class="tabs__wraper">
+            <div class="tabs__flexWraper">
+              <div style="padding-top: 0">
+                <div class="tabs__textWraper" style="padding-top: 0">
+                  <p class="bank-details__text-first">Отримувач:</p>     
+                  <p class="bank-details__text-second">ЗУБЕНКО ОЛЕНА ВОЛОДИМИРІВНА</p>     
+                </div>
+                <div class="tabs__textWraper" style="padding-top: 0">
+                  <p class="bank-details__text-first">ЄДРПОУ:</p>     
+                  <p class="bank-details__text-second">3192013863</p> 
+                </div>
+                <div class="tabs__textWraper" style="padding-top: 0">    
+                  <p class="bank-details__text-first">Банк:</p>     
+                  <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>
+                </div>
+                <div class="tabs__textWraper" style="padding-top: 0">      
+                  <p class="bank-details__text-first">IBAN:</p>     
+                  <p class="bank-details__text-second">UA683052990000026207742096747</p>
+                </div>   
+              </div>
               <div class="tabs__wraper-img"> 
-                <img src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
-              </div>          
-            <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
-            aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
-          </div>
+                <img class="tabs-img" src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
+              </div>  
+            </div>        
+            <div style="	display: flex; justify-content: center; padding-top: 0">
+              <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
+              aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+            </div>
+        </div>
+
           <div class="tabs__wraper">
             <p class="bank-details__text-first" style="margin-top: -20px">Отримувач:</p>     
             <p class="bank-details__text-second">ZUBENKO OLENA VOLODYMYRIVNA</p>     
@@ -210,7 +225,8 @@ get_header();
             <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
             aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
           </div>
-        </div>            
+        </div>    
+                
       </div>
     </section>
 
