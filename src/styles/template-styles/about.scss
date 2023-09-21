@@ -22,7 +22,7 @@ p {
 }
 
 
- a.return__text{
+ a.return__text__mob{
   text-decoration: none;
   font-size: 16px;
   color: $grey;
@@ -36,11 +36,11 @@ p {
 
 .about{
   
-  @media screen  and (min-width: $tablet) {
+  @media (min-width: $tablet) {
      
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto;
+     
       gap: 0px 24px;
       grid-auto-flow: row;
       grid-template-areas:
@@ -68,17 +68,58 @@ p {
     
     .description__animals { grid-area: description__animals; } 
 
-    
-}
+  @media (min-width: $desktop) {
 
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: .45fr .6fr .7fr 1fr 0.1fr 0.1fr 0.01fr 0.1fr;;
+            gap: 0px 35px;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "about__title about__title"
+              "description__main command__img"
+              "description__command command__img"
+              "about__contact command__img"
+              "work__img description__other"
+              "work__img description__animals"
+              "work__img description__morehelp"
+              "work__img support__btn";
+          }
+          
+          .about__title { grid-area: about__title; }
+          
+          .description__main { grid-area: description__main; }
+          
+          .description__command { grid-area: description__command; }
+          
+          .about__contact { grid-area: about__contact; }
+          
+          .command__img { grid-area: command__img; }
+          
+          .work__img { grid-area: work__img; }
+          
+          .description__other { grid-area: description__other; }
+          
+          .description__animals { grid-area: description__animals; }
+          
+          .description__morehelp { grid-area: description__morehelp; }
+          
+        }
+    
 .about__title{
   font-size: 28px;
   min-width: 220px;
   margin: 14px 0px 24px 0px;
   font-weight: 600;
 
-  @media screen  and (min-width: $tablet) {
+  @media (min-width: $tablet) {
     margin: 32px 0px 16px 0px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 32px;
+    margin: 4px 0px 11px 0px;
+  
   }
 }
 
@@ -88,13 +129,16 @@ p {
   line-height: 1.366;
   font-weight: 500;
 
-  @media screen  and (min-width: $tablet) {
+  @media  (min-width: $tablet) {
     font-size: 16px;
     line-height: 1.366;
     font-weight: 500;
     margin-top: 3px;
     margin-bottom: 17px;
+  }
 
+  @media (min-width: $desktop){
+    font-size: 18px;
   }
 }
 
@@ -106,13 +150,23 @@ p {
 	background-position: center;
 	background-image: url(../../images/command-mobile.jpg);
 
-  @media screen and (min-width: $tablet) {
+  @media (min-width: $tablet) {
     background-image: url(../../images/command-tablet.jpg);
     height: 534px;
     margin-top: 32px;
     margin-bottom: 24px;
     background-size: cover;
     background-position: center;
+  }
+
+  @media  (min-width: $desktop) {
+    background-image: url(../../images/command-desktop.jpg);
+    height: 490px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+    background-size: cover;
+    background-position: center;
+
   }
 
 }
@@ -125,7 +179,7 @@ p {
 	
 	background-image: url(../../images/work-mobile.jpg);
 
-  @media screen  and (min-width: $tablet) {
+  @media  (min-width: $tablet) {
     height: 370px;
     background-image: url(../../images/work-tablet.jpg);
     margin-bottom: -30px;
@@ -133,13 +187,27 @@ p {
     background-position: center;
   }
 
+  @media  (min-width: $desktop) {
+    background-image: url(../../images/work-desktop.jpg);
+    height: 459px;
+    width: 520px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    background-size: cover;
+    background-position: center;
+
+  }
+
 }
 
 .about__contact{
   margin-top: 32px;
 
-  @media screen  and (min-width: $tablet){
+  @media  (min-width: $tablet){
     margin-top: 4px;
+  }
+  @media  (min-width: $desktop) {
+    margin-top: 13px;
   }
  
 }
@@ -157,15 +225,18 @@ p {
   font-size: 18px;
   margin-top: 16px;
 
-  @media screen  and (min-width: $tablet){
+  @media  (min-width: $tablet){
     margin-top: 21px;
+  }
+  @media  (min-width: $desktop) {
+    margin-top: 31px;
   }
 }
 
 .email__img{
   margin-right: 12px;
 
-  @media screen  and (min-width: $tablet){
+  @media  (min-width: $tablet){
     width: 32px;
   }
 }
@@ -173,7 +244,7 @@ p {
 .phone__img{
   margin-right: 12px;
 
-  @media screen  and (min-width: $tablet){
+  @media  (min-width: $tablet){
     width: 32px;
   }
 
@@ -185,45 +256,76 @@ p {
  margin-top: 28px;
  margin-left: 16px;
 
-   @media screen  and (min-width: $tablet){
-     visibility: hidden;
+   @media  (min-width: $tablet){
+     display: none;
 }
+
+  @media  (min-width: $desktop){
+     display: block;
+     font-size: 24px;
+     height: fit-content;
+     width: 297px;
+     margin-top: 26px;
+     margin-left: 0px;
+  
+  }
 }
 
 .description__main {
   
-  @media screen  and (min-width: $tablet){ 
+  @media  (min-width: $tablet){ 
     margin: 0px;
   }
+
+  @media  (min-width: $desktop){
+    padding-right: 106px;
+    }
 }
 
 .description__command {
   
-  @media screen  and (min-width: $tablet){
+  @media  (min-width: $tablet){
     margin-bottom: 0px;
    }
+
+  @media  (min-width: $desktop){
+    padding-right: 98px;
+  }
   }
 
 .description__other {
   
-  @media screen  and (min-width: $tablet){
+  @media  (min-width: $tablet){
     padding-top: 37px;
     margin-top: 3px ;
+    }
+    @media  (min-width: $desktop){
+      padding-top: 30px;
+      margin-top: 3px ;
     }
   }
     
 .description__animals {
   
-  @media screen  and (min-width: $tablet){
+  @media  (min-width: $tablet){
     margin-top: 20px;
+  }
+  @media  (min-width: $desktop){
+  margin-top: 0px;
+  padding-right: 11px;
   }
 }
 
 .description__morehelp{
-    visibility: visible;
+  display: block;
 
-  @media screen  and (min-width: $tablet){
-    visibility: hidden;
-  }
+  @media  (min-width: $tablet){
+    display: none;
+
+  @media  (min-width: $desktop){
+    display: block;
+    margin-top: -32px;
+   }
+ }
 }
 
