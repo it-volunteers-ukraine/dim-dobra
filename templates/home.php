@@ -44,11 +44,16 @@ get_header();
 
       </ul>
     </section>
-
+   
     <section class="about">
         <h3 class="about__title">Про “Дім Добра”</h3> 
-        <p class="about__text">З початку повномаштабного вторгнення наша організація систематично допомогає та забезпечує усім необхідним людей та тварин, що постраждали під час війни, тимчасово або назавжди залишились без домівки. <br> <br> Наші волонтери регулярно безкоштовно годують переселенців в Кривому Розі, видають продукти харчування, хімію, гігієну, одяг, надають житло та прихисток.
-        </p>  
+
+        <div class="about__wraper">
+          <p class="about__text">З початку повномаштабного вторгнення наша організація систематично допомогає та забезпечує усім необхідним людей та тварин, що постраждали під час війни, тимчасово або назавжди залишились без домівки. <br> <br> Наші волонтери регулярно безкоштовно годують переселенців в Кривому Розі, видають продукти харчування, хімію, гігієну, одяг, надають житло та прихисток.
+          </p>  
+
+          <p class="about__text-tablet">З початку повномаштабного вторгнення наша організація систематично допомогає та забезпечує усім необхідним людей та тварин, що постраждали під час війни, тимчасово або назавжди залишились без домівки. Наші волонтери регулярно безкоштовно годують переселенців в Кривому Розі, видають продукти харчування, хімію, гігієну, одяг, надають житло та прихисток.<br><br> 
+          Двічі на місяць ми виїжджаємо до Херсонської області та годуємо людей гарячими обідами, роздаємо хліб, продуктові набори, допомогаємо по побуту літнім людям. Крім того, ми не залишаємо без уваги тварин - евакуюємо собак з зони бойових дій та шукаємо для них нові домівки. Наш фонд щиро вірить у потужну силу добра та прагне змінювати життя до кращого для тих, хто опинився у складних життєвих обставинах.</p>
   
       <div class="swiper-container">
         <div class="swiper mySwiper">
@@ -64,6 +69,8 @@ get_header();
         </div>       
       </div>
 
+      </div>
+
         <p class="about__text">Двічі на місяць ми виїжджаємо до Херсонської області та годуємо людей гарячими обідами, роздаємо хліб, продуктові набори, допомогаємо по побуту літнім людям. Крім того, ми не залишаємо без уваги тварин - евакуюємо собак з зони бойових дій та шукаємо для них нові домівки. <br> <br> Наш фонд щиро вірить у потужну силу добра та прагне змінювати життя до кращого для тих, хто опинився у складних життєвих обставинах.
         </p>    
     </section>
@@ -73,7 +80,7 @@ get_header();
     <section class="news">
       <h3 class="news__title">Новини та події</h3> 
   
-      <div class="swiper-container">
+      <div class="swiper-container news__hide">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-1-1024x1015.jpg' alt=''/>
@@ -160,11 +167,21 @@ get_header();
       
       <div class="tabs">
         <ul>
-          <li>UAH</li>
-          <li>USD</li>
-          <li>EUR</li>
+          <li> 
+            <span class="tabs-span1">Для переказу у гривнях</span> 
+            <span class="tabs-span2">UAH</span> 
+          </li>
+          <li>          
+            <span class="tabs-span1">Для переказу у доларах</span> 
+            <span class="tabs-span2">USD</span> 
+          </li>
+          <li>          
+            <span class="tabs-span1">Для переказу у євро</span> 
+            <span class="tabs-span2">EUR</span> 
+          </li>      
         </ul>
         <div>
+
           <div class="tabs__wraper">
             <div class="tabs__flexWraper">
               <div style="padding-top: 0">
@@ -193,39 +210,67 @@ get_header();
               <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
               aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
             </div>
-        </div>
+          </div>
 
           <div class="tabs__wraper">
-            <p class="bank-details__text-first" style="margin-top: -20px">Отримувач:</p>     
-            <p class="bank-details__text-second">ZUBENKO OLENA VOLODYMYRIVNA</p>     
-            <p class="bank-details__text-first">ЄДРПОУ:</p>     
-            <p class="bank-details__text-second">3192013863</p>     
-            <p class="bank-details__text-first">Банк:</p>     
-            <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>     
-            <p class="bank-details__text-first">IBAN:</p>     
-            <p class="bank-details__text-second">UA683052990000026207742096747</p>  
+            <div class="tabs__flexWraper">
+              <div style="padding-top: 0">
+                <div class="tabs__textWraper" style="padding-top: 0">
+                  <p class="bank-details__text-first">Отримувач:</p>     
+                  <p class="bank-details__text-second">ZUBENKO OLENA VOLODYMYRIVNA</p>     
+                </div>
+                <div class="tabs__textWraper" style="padding-top: 0">
+                  <p class="bank-details__text-first">ЄДРПОУ:</p>     
+                  <p class="bank-details__text-second">3192013863</p> 
+                </div>
+                <div class="tabs__textWraper" style="padding-top: 0">    
+                  <p class="bank-details__text-first">Банк:</p>     
+                  <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>
+                </div>
+                <div class="tabs__textWraper" style="padding-top: 0">      
+                  <p class="bank-details__text-first">IBAN:</p>     
+                  <p class="bank-details__text-second">UA683052990000026207742096747</p>
+                </div>   
+              </div>
               <div class="tabs__wraper-img"> 
-                <img src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
-              </div>          
-            <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
-            aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+                <img class="tabs-img" src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
+              </div>  
+            </div>        
+            <div style="	display: flex; justify-content: center; padding-top: 0">
+              <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
+              aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+            </div>
           </div>
-          <div class="tabs__wraper"> 
-            <p class="bank-details__text-first" style="margin-top: -20px">Отримувач:</p>     
-            <p class="bank-details__text-second">ZUBENKO ELENA WOLODYMYRIWNA</p>     
-            <p class="bank-details__text-first">ЄДРПОУ:</p>     
-            <p class="bank-details__text-second">3192013863</p>     
-            <p class="bank-details__text-first">Банк:</p>     
-            <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>     
-            <p class="bank-details__text-first">IBAN:</p>     
-            <p class="bank-details__text-second">UA683052990000026207742096747</p>   
+
+          <div class="tabs__wraper">
+            <div class="tabs__flexWraper">
+              <div style="padding-top: 0">
+                <div class="tabs__textWraper" style="padding-top: 0">
+                  <p class="bank-details__text-first">Отримувач:</p>     
+                  <p class="bank-details__text-second">ZUBENKO ELENA WOLODYMYRIWNA</p>     
+                </div>
+                <div class="tabs__textWraper" style="padding-top: 0">
+                  <p class="bank-details__text-first">ЄДРПОУ:</p>     
+                  <p class="bank-details__text-second">3192013863</p> 
+                </div>
+                <div class="tabs__textWraper" style="padding-top: 0">    
+                  <p class="bank-details__text-first">Банк:</p>     
+                  <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>
+                </div>
+                <div class="tabs__textWraper" style="padding-top: 0">      
+                  <p class="bank-details__text-first">IBAN:</p>     
+                  <p class="bank-details__text-second">UA683052990000026207742096747</p>
+                </div>   
+              </div>
               <div class="tabs__wraper-img"> 
-                <img src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
-              </div>        
-            <button class="button" type="button" aria-label="support the fund"   aria-expanded="false"
-            aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+                <img class="tabs-img" src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
+              </div>  
+            </div>        
+            <div style="	display: flex; justify-content: center; padding-top: 0">
+              <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
+              aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+            </div>
           </div>
-        </div>    
                 
       </div>
     </section>

@@ -194,6 +194,14 @@
 
 .about {
 	margin-bottom: 64px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 80px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 117px;
+	}
 }
 
 .about__title {
@@ -203,6 +211,24 @@
 	font-size: 28px;
 	font-weight: 500;
 	line-height: auto;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 24px;
+		font-size: 32px;
+		line-height: 1;
+	}
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 56px;
+		font-size: 40px;
+		line-height: auto;
+	}
+}
+
+.about__wraper {
+	@media screen and (min-width: $desktop) {
+		display: flex;
+		gap: 140px;
+	}
 }
 
 .about__text {
@@ -212,6 +238,28 @@
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.4;
+
+	@media screen and (min-width: $tablet) {
+		display: none;
+	}
+}
+
+.about__text-tablet {
+	display: none;
+
+	@media screen and (min-width: $tablet) {
+		display: block;
+		margin: 0;
+		margin-bottom: 40px;
+		color: $black;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.35;
+	}
+	@media screen and (min-width: $desktop) {
+		font-size: 18px;
+		margin-bottom: 0;
+	}
 }
 
 .about__img-wrap {
@@ -227,7 +275,13 @@
 	margin-bottom: 30px;
 
 	@media screen and (min-width: $tablet) {
-		display: none;
+		margin-right: -40px;
+	}
+}
+
+@media screen and (min-width: $tablet) {
+	.swiper-slide {
+		width: 80%;
 	}
 }
 
@@ -243,6 +297,12 @@
 	@media screen and (min-width: $desktop) {
 		margin-top: 117px;
 		margin-bottom: 117px;
+	}
+}
+
+.news__hide {
+	@media screen and (min-width: $tablet) {
+		display: none;
 	}
 }
 
@@ -329,6 +389,10 @@
 	@media screen and (min-width: $tablet) {
 		margin-bottom: 80px;
 	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 117px;
+	}
 }
 
 .bank-details__title {
@@ -343,6 +407,12 @@
 		margin-bottom: 24px;
 		font-size: 32px;
 		line-height: 1;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 56px;
+		font-size: 40px;
+		line-height: auto;
 	}
 }
 
@@ -371,7 +441,32 @@
 	line-height: auto;
 	text-align: center;
 	border-bottom: 1px solid $main-blue;
+
+	@media screen and (min-width: $tablet) {
+		margin-top: 14px;
+		font-size: 16px;
+		line-height: 1;
+	}
+	@media screen and (min-width: $desktop) {
+		margin-top: 10px;
+		font-size: 20px;
+		line-height: auto;
+	}
 }
+.tabs-span1 {
+	display: none;
+
+	@media screen and (min-width: $tablet) {
+		display: block;
+	}
+}
+
+.tabs-span2 {
+	@media screen and (min-width: $tablet) {
+		display: none;
+	}
+}
+
 .tabs ul li.active,
 .tabs ul li.active:hover {
 	border: 1px solid $main-blue;
@@ -396,6 +491,10 @@
 		padding-left: 24px;
 		padding-right: 24px;
 	}
+	@media screen and (min-width: $desktop) {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
 }
 .tabs__flexWraper {
 	margin-top: -51px;
@@ -404,6 +503,9 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 128px;
+	}
+	@media screen and (min-width: $desktop) {
+		margin-right: 35px;
 	}
 }
 .tabs__textWraper {
@@ -433,6 +535,12 @@
 	@media screen and (min-width: $tablet) {
 		width: 332px;
 	}
+
+	@media screen and (min-width: $desktop) {
+		width: 297px;
+		margin-top: -25px;
+		font-size: 24px;
+	}
 }
 
 .bank-details__text-first {
@@ -450,6 +558,10 @@
 	@media screen and (min-width: $tablet) {
 		font-size: 16px;
 		line-height: 1;
+	}
+	@media screen and (min-width: $desktop) {
+		font-size: 18px;
+		line-height: auto;
 	}
 }
 
@@ -469,5 +581,9 @@
 	@media screen and (min-width: $tablet) {
 		font-size: 16px;
 		line-height: 1;
+	}
+	@media screen and (min-width: $desktop) {
+		font-size: 18px;
+		line-height: auto;
 	}
 }

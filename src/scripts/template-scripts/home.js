@@ -1,5 +1,6 @@
 const swiper = new Swiper(".mySwiper", {
 	slidesPerView: 1,
+	slidesPerView: "auto",
 	spaceBetween: 20,
 	loop: true,
 	keyboard: {
