@@ -8,8 +8,8 @@
     <title>Dim Dobra</title>
 </head>
 <body>  
-    <div class="container">
-        <header class="header">
+    <header class="header">
+        <div class="container">
             <div class="header__content _container">
                  <div class="menu__nav">  
                         <?php 
@@ -69,5 +69,5 @@
                         </div> 
                 </div>  
             </div>                    
-        </header>
-    </div>
+        </div>
+    </header>
