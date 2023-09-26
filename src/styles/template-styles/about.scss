@@ -1,3 +1,446 @@
-.about {
-    color: red
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+@import "../variables.scss";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.return{
+  text-decoration: none;
+  font-size: 16px;
+  color: $grey;
+  margin-top: -35px;
+
+   @media screen and (min-width: $desktop) {
+    margin-bottom: 17px;
+   }
+   @media screen and(min-width: 1920px) {
+    margin-top: 92px;
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+}
+ 
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about{
+  width: 100%;
+  
+  @media screen and (min-width: $tablet) {
+     
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+     
+      gap: 0px 24px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "about__title about__title"
+        "description__main description__main"
+        "command__img command__img"
+        "description__command about__contact"
+        "work__img description__other"
+        "work__img description__animals"
+        "work__img support__btn";
+  }
+    
+    .about__title { grid-area: about__title; height: fit-content; }
+    
+    .description__main { grid-area: description__main;}
+    
+    .command__img { grid-area: command__img; }
+    
+    .description__command { grid-area: description__command; }
+    
+    .about__contact { grid-area: about__contact;  }
+    
+    .work__img { grid-area: work__img }
+    
+    .description__other { grid-area: description__other; }
+    
+    .description__animals { grid-area: description__animals; } 
+
+    .support__btn { grid-area: support__btn ;}
+
+      @media screen and (min-width: $desktop) {
+            margin-top: 12px;
+            margin-bottom: 57px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: .45fr .6fr .7fr 1fr 0.1fr 0.1fr 0.01fr 0.1fr;
+            gap: 0px 35px;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "about__title about__title"
+              "description__main command__img"
+              "description__command command__img"
+              "about__contact command__img"
+              "work__img description__other"
+              "work__img description__animals"
+              "work__img description__morehelp"
+              "work__img support__btn";
+          }
+
+                   
+          .about__title { grid-area: about__title; }
+          
+          .description__main { grid-area: description__main; }
+          
+          .description__command { grid-area: description__command; }
+          
+          .about__contact { grid-area: about__contact; }
+          
+          .command__img { grid-area: command__img; }
+          
+          .work__img { grid-area: work__img; }
+          
+          .description__other { grid-area: description__other; }
+          
+          .description__animals { grid-area: description__animals; }
+          
+          .description__morehelp { grid-area: description__morehelp; }
+
+          @media screen and (min-width: 1920px) {
+            grid-template-rows: auto;
+            margin-top: -2px;
+            gap: 0px 24px;
+            margin-bottom: 76px;
+            
+          }
+          
+        }
+    
+.about__title{
+  font-size: 28px;
+  min-width: 220px;
+  margin: 21px 0px 28px 0px;
+  font-weight: 600;
+
+  @media screen and (min-width: $tablet) {
+    margin: 32px 0px 16px 0px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+    margin: 4px 0px 11px 0px;
+  
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 48px;
+    margin: 27px 0px 11px 0px;
+  
+  }
+}
+
+.about__description{
+  margin: 16px 0px 0px 0px;
+  font-size: 18px;
+  line-height: 1.366;
+  font-weight: 500;
+
+  @media  screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1.377;
+    font-weight: 500;
+    margin-top: 3px;
+    margin-bottom: 17px;
+  }
+
+  @media screen and (min-width: $desktop){
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1920px){
+    font-size: 26px;
+    font-weight: 400;
+  }
+}
+
+.command__img{
+  height: 267px;
+  margin-top: 40px;
+  margin-bottom: 42px;
+  background-size: cover;
+	background-position: center;
+	background-image: url(../../images/command-mobile.jpg);
+
+
+  @media screen and (min-width: $tablet) {
+    background-image: url(../../images/command-tablet.jpg);
+    height: 534px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url(../../images/command-desktop.jpg);
+    height: 490px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+    background-size: cover;
+    background-position: center;
+
+  }
+
+  @media screen and (min-width: 1920px) {
+    background-image: url(../../images/command-HD.jpg);
+    margin-top: -130px;
+    height: 716px;
+
+ }
+}
+.work__img{
+  height: 267px;
+  margin-top: 40px;
+  margin-bottom: 38px;
+  background-size: cover;
+	
+	background-image: url(../../images/work-mobile.jpg);
+
+  @media screen and (min-width: $tablet) {
+    height: 370px;
+    background-image: url(../../images/work-tablet.jpg);
+    margin-bottom: 19px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url(../../images/work-desktop.jpg);
+    height: 459px;
+    width: 520px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    background-size: cover;
+    background-position: center;
+
+  }
+
+  @media screen and (min-width: 1920px) {
+    background-image: url(../../images/work-HD.jpg);
+    width: 722px;
+    height: 618px;
+    margin-top: 77px;
+   }
+
+}
+
+.about__contact{
+  margin-top: 32px;
+
+  @media screen and (min-width: $tablet){
+    margin-top: 4px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 13px;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-top: 6px;
+  }
+ 
+}
+
+.email{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+
+  @media screen and (min-width: 1920px) {
+    font-size: 24px;
+  }
+
+}
+
+.phone{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  margin-top: 16px;
+
+  @media screen and (min-width: $tablet){
+    margin-top: 21px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 31px;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-top: 9px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 24px;
+  }
+}
+
+.email__img{
+  margin-right: 12px;
+
+  @media screen and (min-width: $tablet){
+    width: 32px;
+  }
+
+  @media screen and (min-width: 1920px){
+    width: 46px;
+   }
+}
+
+.phone__img{
+  margin-right: 12px;
+
+  @media screen and (min-width: $tablet){
+    width: 32px;
+  }
+
+  @media screen and (min-width: 1920px){
+   width: 46px;
+  }
+
+}
+
+.support__btn{
+ font-size: 20px;
+ cursor: pointer;
+ margin-top: 30px;
+ margin-bottom: 64px;
+ margin-left: 16px;
+
+   &:hover,
+   &:focus {
+   color: $yellow;
+   background-color: $main-blue;
+ }
+
+
+   @media screen and (min-width: $tablet){
+      font-size: 20px;
+      margin-top: 2px;
+      margin-bottom: 13px;
+      margin-left: 2px;
+  }
+
+  @media screen and (min-width: $desktop){
+     display: block;
+     font-size: 24px;
+     height: fit-content;
+     width: 297px;
+     margin-top: 26px;
+     margin-left: 0px;
+  
+  }
+  @media screen and (min-width: 1920px) {
+    display: block;
+    font-size: 23px;
+    height: auto;
+    width: 335px;
+    margin-top: 17px;
+    margin-left: 0px;
+    padding: 26px 26px;
+    margin-bottom: 22px;
+  }
+}
+.description__main {
+  
+  @media screen and (min-width: $tablet){ 
+    margin: 0px;
+  }
+
+  @media screen and (min-width: $desktop){
+    padding-right: 106px;
+    }
+
+  @media screen and (min-width: 1920px) {
+    padding-right: 128px;
+    margin-top: 49px;
+    margin-bottom: 0px;
+  } 
+}
+
+.description__command {
+  
+  @media  screen and (min-width: $tablet){
+    margin-bottom: 0px;
+   }
+
+  @media screen and (min-width: $desktop){
+    padding-right: 98px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding-right: 130px;
+    margin-bottom: 37px;
+   }
+}
+
+.description__other {
+  
+    @media screen and (min-width: $tablet){
+    padding-top: 37px;
+    margin-top: 3px ;
+    }
+    @media screen and (min-width: $desktop){
+      padding-top: 26px;
+      margin-top: 3px ;
+    }
+    @media screen and (min-width: 1920px) {
+      padding-right: 25px;
+      margin-bottom: 7px;
+      padding-top: 74px;
+      
+     }
+  }
+    
+.description__animals {
+  
+  @media screen and  (min-width: $tablet){
+    margin-top: 5px;
+  }
+  @media screen and (min-width: $desktop){
+    margin-top: -5px;
+    padding-right: 11px;
+  }
+  @media screen and (min-width: 1920px) {
+    padding-right: 11px;
+    margin-top: 7px;
+    
+   }
+}
+
+.description__morehelp{
+  display: block;
+  margin-top: 10px;
+
+  @media screen and (min-width: $tablet){
+    display: none;
+   }
+  @media screen and (min-width: $desktop){
+    display: block;
+    margin-top: -32px;
+   }
+  @media screen and (min-width: 1920px) {
+    padding-right: 11px;
+    margin-top: 0px;
+  }
+}
+
+

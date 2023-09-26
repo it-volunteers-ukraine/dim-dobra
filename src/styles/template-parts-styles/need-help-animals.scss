@@ -1,0 +1,89 @@
+@import "../variables.scss";
+
+.help-animals {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	margin-left: -16px;
+	margin-right: -16px;
+	padding: 192px 16px;
+	background-size: cover;
+	background-position: center;
+    margin-top: 62px;
+
+	background-image: url(../../images/need-help-image.jpg);
+
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		background-image: url(../../images/need-help-mobile.jpg);
+	}
+
+	@media screen and (min-width: $tablet) {
+		margin: 0;
+		padding: 120px 16px;
+        margin-top: 80px;
+		background-image: url(../../images/need-help-tablet.jpg);
+
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: url(../../images/need-help-tablet.jpg);
+		}
+	}
+
+	@media screen and (min-width: $desktop) {
+        background-image: url(../../images/need-help-desktop.jpg);
+		padding: 267px 16px;
+        margin-top: 132px;
+        gap: 45px;
+
+	}
+
+    @media screen and (min-width: 1920px) {
+    background-image: url(../../images/need-help-hd.png);
+    margin-top: 63px;
+  }
+}
+
+.help-animals__title {
+	margin: 0;
+	color: $white;
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1;
+
+	@media screen and (max-width: $mobile) {
+		font-size: 29px;
+	}
+
+	@media screen and (min-width: $tablet) {
+		font-size: 40px;
+		line-height: 1.4;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 48px;
+	}
+}
+
+.help-animals__button {
+	color: $main-blue;
+	background-color: $yellow;
+
+	@media screen and (min-width: $mobile) {
+		width: 311px;
+	}
+
+	@media screen and (min-width: $tablet) {
+		width: 332px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 296px;
+	}
+
+	&:hover,
+	&:focus {
+		color: $yellow;
+		background-color: $main-blue;
+	}
+}

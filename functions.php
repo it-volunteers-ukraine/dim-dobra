@@ -46,6 +46,11 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_style( 'need-help-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/need-help.css', array('main') );
     }
 
+  if (is_singular() && locate_template('template-parts/need-help-animals.php')) {
+      wp_enqueue_style( 'need-help-animals', get_template_directory_uri() . '/assets/styles/template-parts-styles/need-help-animals.css', array('main') );
+      }
+  
+
 }
 /** add fonts */
 function add_google_fonts() {
