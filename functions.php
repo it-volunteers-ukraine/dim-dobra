@@ -47,6 +47,10 @@ function wp_it_volunteers_scripts() {
     }
 
 }
+
+/*register img for posts*/
+add_theme_support( 'post-thumbnails' );
+
 /** add fonts */
 function add_google_fonts() {
   wp_enqueue_style( 'google_web_fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto' );

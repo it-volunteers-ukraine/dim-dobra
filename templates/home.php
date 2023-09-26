@@ -79,51 +79,40 @@ get_header();
 
     <section class="news">
       <h3 class="news__title">Новини та події</h3> 
-  
+
       <div class="swiper-container news__hide">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-1-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Херсон</p>
-              <p class="news__text">23.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Допомога Херсонцям. Видача гуманітарної допомоги</h4>
-          </div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-2-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">Гарячі напрямки</p>
-              <p class="news__text">20.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Допомога ЗСУ. Закупівля продуктів для ії потреб</h4>
-          </div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-3-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Кривий Ріг</p>
-              <p class="news__text">15.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Зібрали гуманітарну допомогу для пунктів незламності</h4>
-          </div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-4-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Кривий Ріг</p>
-              <p class="news__text">21.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Врятований лабрадор. Лікування у клініці.</h4>
-          </div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-5-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">В дорозі</p>
-              <p class="news__text">05.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Екскурсія для дітей</h4>
-          </div>         
-          
-          </div>
-            <div class="swiper-pagination" style="position: inherit"></div>
-        </div>       
-      </div>
 
+<?php
+global $post;
+
+$myposts = get_posts([ 
+	'numberposts' => -1,
+]);
+
+if( $myposts ){
+	foreach( $myposts as $post ){
+		setup_postdata( $post );
+		?>
+    <div class="swiper-slide"> 
+      <?php the_post_thumbnail(); ?>
+      <!-- <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-1-1024x1015.jpg' alt=''/> -->
+      <div class="news__wraper">
+        <p class="news__text"><?php the_content(); ?></p>
+        <!-- <p class="news__text"><?php the_content(); ?></p> -->
+      </div>
+      <h4 class="news__subTitle"><?php the_title(); ?></h4>
+    </div>     
+  <?php 
+	}
+} 
+wp_reset_postdata(); ?>
+        </div>
+      <div class="swiper-pagination" style="position: inherit"></div>
+    </div>  
+  </div>
+  
       <div class="news__gallery">
         <div class="news__flexWraper" >
           <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-1-1024x1015.jpg' alt=''/>
@@ -159,7 +148,7 @@ get_header();
           </div>
     </div>
 
-      </div>
+    </div>
     </section>
 
     <section class="bank-details">
