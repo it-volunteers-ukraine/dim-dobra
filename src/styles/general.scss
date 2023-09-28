@@ -11,6 +11,7 @@ html {
  */
 body {
 	margin: 0;
+	scroll-behavior: smooth;
 }
 
 /**
@@ -26,7 +27,6 @@ main {
  */
 h1 {
 	font-size: 2em;
-	margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -61,6 +61,9 @@ a {
 	text-decoration: none;
 	color: currentColor;
 	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
 }
 
 /**
@@ -349,12 +352,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-	clear: both;
-}
-
+h6,
 p {
-	margin-bottom: 1.5em;
+	clear: both;
+	margin: 0;
+	padding: 0;
 }
 
 dfn,
@@ -443,6 +445,8 @@ object {
 img {
 	height: auto;
 	max-width: 100%;
+	display: block;
+	margin: 0;
 }
 
 figure {
@@ -453,31 +457,6 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
-
-/* Links
---------------------------------------------- */
-// a {
-// 	color: #4169e1;
-// }
-
-// a:visited {
-// 	color: #800080;
-// }
-
-// a:hover,
-// a:focus,
-// a:active {
-// 	color: #191970;
-// }
-
-// a:focus {
-// 	outline: thin dotted;
-// }
-
-// a:hover,
-// a:active {
-// 	outline: 0;
-// }
 
 /* Forms
 --------------------------------------------- */

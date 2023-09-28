@@ -48,7 +48,7 @@ function wp_it_volunteers_scripts() {
 
 }
 
-/*register img for posts*/
+/*register img for posts */
 add_theme_support( 'post-thumbnails' );
 
 /** add fonts */
