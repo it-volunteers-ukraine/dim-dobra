@@ -8,10 +8,10 @@ get_header();
   <div class="container ">
     <section class="house">
       <div class="house__title-wraper">
-        <h1 class="house__title">Дім Добра: рука допомоги для тих, хто потребує - від людей до тварин</h1>
+        <h1 class="house__title"><?php the_field('hero_title'); ?></h1>
       </div> 
       <button class="button house__button" type="button" aria-label="support"   aria-expanded="false"
-      aria-controls="modal-window">ПІДТРИМАТИ<span class="house__span">ФОНД</span> </button>
+      aria-controls="modal-window"><?php the_field('hero_btn_text'); ?></button>
     </section>
 
     <section class="support">
