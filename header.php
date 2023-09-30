@@ -64,7 +64,7 @@
                                             </svg></a></li>
                                     </ul>
                                 </div>
-                                <a class="menu__btn" href="<?php echo get_permalink('#'); ?>">ПОТРІБНА ДОПОМОГА</a>
+                                <a class="menu__btn" href="<?php echo get_permalink('22'); ?>">ПОТРІБНА ДОПОМОГА</a>
                             </div>
                         </div> 
                 </div>  

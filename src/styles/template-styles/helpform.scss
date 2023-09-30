@@ -1,0 +1,29 @@
+@import "../variables.scss";
+
+.external__wrap {
+  background-color: $bg-footer;
+  @media screen and (min-width: $tablet) {
+    background-color: $white;
+  }
+}
+
+.internal__wrap {
+  @media screen and (min-width: $tablet) {
+    background-color: $bg-footer;
+    border-radius: 16px;
+  }
+  @media screen and (min-width: $desktop) {
+    border-radius: 0;
+  }
+}
+
+.helpform__title {
+  font-size: 28px;
+  font-weight: 600;
+  @media screen and (min-width: $tablet) {
+    line-height: 1;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+  }
+}

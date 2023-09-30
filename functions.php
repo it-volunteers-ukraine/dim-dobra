@@ -38,6 +38,11 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_script( 'about-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/about.js', array(), false, true );
   }
 
+  if ( is_page_template('templates/helpform.php') ) {
+    wp_enqueue_style( 'helpform-style', get_template_directory_uri() . '/assets/styles/template-styles/helpform.css', array('main') );
+    wp_enqueue_script( 'helpform-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/helpform.js', array(), false, true );
+  }  
+
   if (is_singular() && locate_template('template-parts/founding-documents.php')) {
     wp_enqueue_style( 'documents-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/founding-documents.css', array('main') );
     }
