@@ -15,36 +15,27 @@ get_header();
     </section>
 
     <section class="support">
-      <h2 class="support__title">Кожен місяць завдяки нашій організації:</h2>    
+      <h2 class="support__title"><?php the_field('support__title'); ?></h2>    
       <ul class="support__list">
-        <li class="support__item">
-          <p class="support__count">50</p>
-          <p class="support__t  ext">сімей отримують разову допомогу</p>
-        </li>
-        <li class="support__item">
-          <p class="support__count">3000</p>
-          <p class="support__text">людей отримують різного роду допомогу: харчі, одяг, гігієна, тощо.</p>
-        </li>
-        <li class="support__item">
-          <p class="support__count">100</p>
-          <p class="support__text">котиків ЗСУ на різних напрямках отримують бокси з гігієною, їжею, солодощами, медициною, тощо.</p>
-        </li>
-        <li class="support__item">
-          <p class="support__count">100</p>
-          <p class="support__text">врятованих тварин знаходять новий дім</p>
-        </li>
-        <li class="support__item">
-          <p class="support__count">50</p>
-          <p class="support__text">тварин проживають у нашому притулку і постійно працюють з зоо-психологами та кінологами</p>
-        </li>
-        <li class="support__item">
-          <p class="support__count">200</p>
-          <p class="support__text">тварин отримують корма від нашого фонду</p>
-        </li>
+
+      <?php
+      $support__list = get_field("support__list");
+
+      if($support__list) : ?>
+        <?php foreach($support__list as $support) : 
+          $count = $support['support__count'];
+          $text = $support['support__text'];
+        ?>
+          <li class="support__item">
+            <p class="support__count"><?php echo $count; ?></p>
+            <p class="support__text"><?php echo $text; ?></p>       
+          </li>
+        <?php endforeach; ?>
+      <?php endif; ?>
 
       </ul>
     </section>
-   
+
     <section class="about">
         <h3 class="about__title">Про “Дім Добра”</h3> 
 

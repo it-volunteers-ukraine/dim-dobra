@@ -77,15 +77,6 @@
 	}
 }
 
-.house__span {
-	display: none;
-
-	@media screen and (min-width: $tablet) {
-		display: block;
-		margin-left: 6px;
-	}
-}
-
 .support {
 	margin-bottom: 64px;
 
