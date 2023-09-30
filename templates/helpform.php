@@ -12,6 +12,9 @@ get_header();
         <div class="container">
             <div class="internal__wrap">
                 <h1 class="helpform__title">Форма подачі заявки на допомогу</h1>
+                <?php 
+                $formShortCode = get_field('')
+                ?>
                 <div class="helpform">
                     <?php echo do_shortcode('[contact-form-7 id="71b2894" title="help-form"]')?>
                 </div>

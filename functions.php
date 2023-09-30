@@ -40,7 +40,6 @@ function wp_it_volunteers_scripts() {
 
   if ( is_page_template('templates/helpform.php') ) {
     wp_enqueue_style( 'helpform-style', get_template_directory_uri() . '/assets/styles/template-styles/helpform.css', array('main') );
-    wp_enqueue_script( 'helpform-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/helpform.js', array(), false, true );
   }  
 
   if (is_singular() && locate_template('template-parts/founding-documents.php')) {
@@ -75,3 +74,26 @@ function wp_it_volunteers_menus() {
 }
 
 add_action( 'init', 'wp_it_volunteers_menus');
+
+if( function_exists('acf_add_options_page') ) {
+
+  acf_add_options_page(array(
+      'page_title'    => 'Theme General Settings',
+      'menu_title'    => 'Theme Settings',
+      'menu_slug'     => 'theme-general-settings',
+      'capability'    => 'edit_posts',
+      'redirect'      => false
+  ));
+
+  acf_add_options_sub_page(array(
+      'page_title'    => 'Theme Header Settings',
+      'menu_title'    => 'Header',
+      'parent_slug'   => 'theme-general-settings',
+  ));
+
+  acf_add_options_sub_page(array(
+      'page_title'    => 'Theme Footer Settings',
+      'menu_title'    => 'Footer',
+      'parent_slug'   => 'theme-general-settings',
+  ));
+}
