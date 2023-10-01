@@ -37,109 +37,122 @@ get_header();
     </section>
 
     <section class="about">
-        <h3 class="about__title">Про “Дім Добра”</h3> 
+        <h3 class="about__title"><?php the_field('about__title'); ?></h3> 
 
         <div class="about__wraper">
-          <p class="about__text">З початку повномаштабного вторгнення наша організація систематично допомогає та забезпечує усім необхідним людей та тварин, що постраждали під час війни, тимчасово або назавжди залишились без домівки. <br> <br> Наші волонтери регулярно безкоштовно годують переселенців в Кривому Розі, видають продукти харчування, хімію, гігієну, одяг, надають житло та прихисток.
+          <p class="about__text">
+            <?php the_field('about_text_first'); ?>
+          <br> <br> 
+            <?php the_field('about_text_second'); ?>
           </p>  
 
-          <p class="about__text-tablet">З початку повномаштабного вторгнення наша організація систематично допомогає та забезпечує усім необхідним людей та тварин, що постраждали під час війни, тимчасово або назавжди залишились без домівки. Наші волонтери регулярно безкоштовно годують переселенців в Кривому Розі, видають продукти харчування, хімію, гігієну, одяг, надають житло та прихисток.<br><br> 
-          Двічі на місяць ми виїжджаємо до Херсонської області та годуємо людей гарячими обідами, роздаємо хліб, продуктові набори, допомогаємо по побуту літнім людям. Крім того, ми не залишаємо без уваги тварин - евакуюємо собак з зони бойових дій та шукаємо для них нові домівки. Наш фонд щиро вірить у потужну силу добра та прагне змінювати життя до кращого для тих, хто опинився у складних життєвих обставинах.</p>
+          <p class="about__text-tablet">
+            <?php the_field('about_text_first'); ?> 
+            <?php the_field('about_text_second'); ?>
+          <br><br> 
+            <?php the_field('about_text_thirdth'); ?> 
+            <?php the_field('about_text_fourth'); ?>
+          </p>
   
-      <div class="swiper-container">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper" style="margin-bottom: 32px">
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/01-2-1024x790.jpg' alt=''/></div>
-            <div class="swiper-slide">  <img src='http://dim-dobra/wp-content/uploads/2023/09/02-2-1024x790.jpg' alt=''/></div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/03-2-1024x790.jpg' alt=''/></div>
-            <div class="swiper-slide">  <img src='http://dim-dobra/wp-content/uploads/2023/09/04-1-1024x790.jpg' alt=''/></div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/05-2-1024x790.jpg' alt=''/></div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/06-2-1024x790.jpg' alt=''/></div>
+        <?php if (have_rows('about_slider')) : ?>
+          <div class="swiper-container">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper" style="margin-bottom: 32px">      
+
+            <?php while(have_rows('about_slider')) : the_row(); 
+            $img = get_sub_field('about_slider_img'); ?>
+              <div class="swiper-slide"> 
+                <img src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
+              </div>
+            <?php endwhile; ?>      
+
+              </div>
+                <div class="swiper-pagination" style="position: inherit"></div>
+            </div>       
           </div>
-            <div class="swiper-pagination" style="position: inherit"></div>
-        </div>       
-      </div>
+        <?php endif; ?>
 
       </div>
 
-        <p class="about__text">Двічі на місяць ми виїжджаємо до Херсонської області та годуємо людей гарячими обідами, роздаємо хліб, продуктові набори, допомогаємо по побуту літнім людям. Крім того, ми не залишаємо без уваги тварин - евакуюємо собак з зони бойових дій та шукаємо для них нові домівки. <br> <br> Наш фонд щиро вірить у потужну силу добра та прагне змінювати життя до кращого для тих, хто опинився у складних життєвих обставинах.
+        <p class="about__text">
+            <?php the_field('about_text_thirdth'); ?> 
+          <br> <br> 
+            <?php the_field('about_text_fourth'); ?>
         </p>    
     </section>
 
     <?php get_template_part( 'template-parts/founding-documents'); ?>
 
     <section class="news">
-      <h3 class="news__title">Новини та події</h3> 
+      <h3 class="news__title"><?php the_field('news__title'); ?></h3> 
+
 
       <div class="swiper-container news__hide">
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper">  
 
-<?php
-global $post;
+          <?php if(have_rows('news_slider')) : ?>
 
-$myposts = get_posts([ 
-	'numberposts' => -1,
-]);
+          <?php while(have_rows('news_slider')) : the_row();          
+          $img = get_sub_field('news_img'); ?>
 
-if( $myposts ){
-	foreach( $myposts as $post ){
-		setup_postdata( $post );
-		?>
-    <div class="swiper-slide"> 
-      <?php the_post_thumbnail(); ?>
-      <!-- <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-1-1024x1015.jpg' alt=''/> -->
-      <div class="news__wraper">
-        <p class="news__text"><?php the_content(); ?></p>
-        <!-- <p class="news__text"><?php the_content(); ?></p> -->
+            <div class="swiper-slide"> 
+              <img src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
+              <div class="news__wraper">
+                <p class="news__text"><?php the_sub_field('news_text_left') ?></p>
+                <p class="news__text"><?php the_sub_field('news_text_right') ?></p>
+              </div>
+              <h4 class="news__subTitle"><?php the_sub_field('news_slider_subtitle') ?></h4>
+            </div>  
+
+          <?php endwhile; ?> 
+          <?php endif; ?>
+
+          </div>
+            <div class="swiper-pagination" style="position: inherit"></div>
+        </div>  
       </div>
-      <h4 class="news__subTitle"><?php the_title(); ?></h4>
-    </div>     
-  <?php 
-	}
-} 
-wp_reset_postdata(); ?>
-        </div>
-      <div class="swiper-pagination" style="position: inherit"></div>
-    </div>  
-  </div>
-  
+
+      
       <div class="news__gallery">
         <div class="news__flexWraper" >
-          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-1-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Херсон</p>
-              <p class="news__text">23.07.2023</p>
+
+        <?php
+        global $post;
+
+        $myposts = get_posts([ 
+	      'numberposts' => -1,
+        ]);
+
+        if( $myposts ){
+	        foreach( $myposts as $post ){
+		      setup_postdata( $post );
+
+          $title = get_the_title();
+          $content = get_the_content();
+		    ?>
+
+          <div class="news__wraper"> 
+           <?php the_post_thumbnail(); ?>
+        
+          <?php 
+            if ($content) : ?>
+            <div class="news__text">
+              <?php echo $content; ?>
             </div>
-              <h4 class="news__subTitle">Допомога Херсонцям. Видача гуманітарної допомоги</h4>
-          </div>
-          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-2-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">Гарячі напрямки</p>
-              <p class="news__text">20.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Допомога ЗСУ. Закупівля продуктів для ії потреб</h4>
-          </div>
+
+          <?php endif; ?>         
+         
+            <h4 class="news__subTitle"><?php echo $title; ?></h4>
           </div>
 
-          <div class="news__flexWraper">
-          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-3-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Кривий Ріг</p>
-              <p class="news__text">15.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Зібрали гуманітарну допомогу для пунктів незламності</h4>
-          </div>
-          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-3-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Кривий Ріг</p>
-              <p class="news__text">21.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Врятований лабрадор. Лікування у клініці.</h4>
-          </div>
-    </div>
+          <?php 
+	    }
+    } 
+    wp_reset_postdata(); ?>
 
-    </div>
+        </div>
+      </div>
     </section>
 
     <section class="bank-details">

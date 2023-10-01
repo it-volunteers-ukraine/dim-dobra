@@ -16,6 +16,7 @@ function images() {
 function stylesTemplates() {
 	return src("src/styles/template-styles/*.scss")
 		.pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
+		.pipe(scss().on("error", scss.logError))
 		.pipe(scss({ outputStyle: "compressed" }))
 		.pipe(dest("assets/styles/template-styles"));
 }
@@ -25,6 +26,7 @@ function stylesTemplatesParts() {
 		src("src/styles/template-parts-styles/*.scss")
 			// .pipe(plumber())
 			.pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
+			.pipe(scss().on("error", scss.logError))
 			.pipe(scss({ outputStyle: "compressed" }))
 			.pipe(dest("assets/styles/template-parts-styles"))
 	);
@@ -33,6 +35,7 @@ function stylesTemplatesParts() {
 function styles() {
 	return src("src/styles/main.scss")
 		.pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
+		.pipe(scss().on("error", scss.logError))
 		.pipe(scss({ outputStyle: "compressed" }))
 		.pipe(dest("assets/styles"));
 }
