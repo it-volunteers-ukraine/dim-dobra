@@ -30,7 +30,7 @@ p {
    @media screen and (min-width: $desktop) {
     margin-bottom: 17px;
    }
-   @media screen and(min-width: 1920px) {
+   @media screen and(min-width: $full) {
     margin-top: 92px;
     font-size: 24px;
     margin-bottom: 0px;
@@ -118,7 +118,7 @@ p {
           
           .description__morehelp { grid-area: description__morehelp; }
 
-          @media screen and (min-width: 1920px) {
+          @media screen and (min-width: $full) {
             grid-template-rows: auto;
             margin-top: -2px;
             gap: 0px 24px;
@@ -144,7 +144,7 @@ p {
   
   }
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     font-size: 48px;
     margin: 27px 0px 11px 0px;
   
@@ -169,7 +169,7 @@ p {
     font-size: 18px;
   }
 
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: $full){
     font-size: 26px;
     font-weight: 400;
   }
@@ -203,7 +203,7 @@ p {
 
   }
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     background-image: url(../../images/command-HD.jpg);
     margin-top: -130px;
     height: 716px;
@@ -237,7 +237,7 @@ p {
 
   }
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     background-image: url(../../images/work-HD.jpg);
     width: 722px;
     height: 618px;
@@ -255,7 +255,7 @@ p {
   @media screen and (min-width: $desktop) {
     margin-top: 13px;
   }
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     margin-top: 6px;
   }
  
@@ -266,7 +266,7 @@ p {
   justify-content: flex-start;
   font-size: 18px;
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     font-size: 24px;
   }
 
@@ -284,11 +284,11 @@ p {
   @media screen and (min-width: $desktop) {
     margin-top: 31px;
   }
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     margin-top: 9px;
   }
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     font-size: 24px;
   }
 }
@@ -300,7 +300,7 @@ p {
     width: 32px;
   }
 
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: $full){
     width: 46px;
    }
 }
@@ -312,7 +312,7 @@ p {
     width: 32px;
   }
 
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: $full){
    width: 46px;
   }
 
@@ -348,7 +348,7 @@ p {
      margin-left: 0px;
   
   }
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     display: block;
     font-size: 23px;
     height: auto;
@@ -369,7 +369,7 @@ p {
     padding-right: 106px;
     }
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     padding-right: 128px;
     margin-top: 49px;
     margin-bottom: 0px;
@@ -386,7 +386,7 @@ p {
     padding-right: 98px;
   }
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     padding-right: 130px;
     margin-bottom: 37px;
    }
@@ -402,7 +402,7 @@ p {
       padding-top: 26px;
       margin-top: 3px ;
     }
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $full) {
       padding-right: 25px;
       margin-bottom: 7px;
       padding-top: 74px;
@@ -419,7 +419,7 @@ p {
     margin-top: -5px;
     padding-right: 11px;
   }
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     padding-right: 11px;
     margin-top: 7px;
     
@@ -437,7 +437,7 @@ p {
     display: block;
     margin-top: -32px;
    }
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $full) {
     padding-right: 11px;
     margin-top: 0px;
   }
