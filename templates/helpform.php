@@ -5,8 +5,13 @@ Template Name: helpform
 get_header();
 ?>
 <main>
-    <div class="container back-page__wrap">
-        <p class="back-page__btn">Повернутись назад</p>
+    <div class="container">
+        <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+            <?php if(function_exists('bcn_display'))
+	        {
+		        bcn_display();
+	        }?>
+</div>
     </div>
     <div class="external__wrap">
         <div class="container">

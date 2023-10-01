@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 //back to page button
-.back-page__wrap {
+.breadcrumbs {
   padding-top: 16px;
   padding-bottom: 23px;
   @media screen and (min-width: $tablet) {
@@ -13,7 +13,7 @@
   }
 }
 
-.back-page__btn {
+.breadcrumbs span {
   color: $grey;
   line-height: 1;
   @media screen and (min-width: $tablet) {
@@ -27,6 +27,7 @@
   padding: 24px 16px 16px;
   margin-bottom: 64px;
   @media screen and (min-width: $tablet) {
+    padding: 0;
     background-color: $white;
     margin-bottom: 0;
   }
