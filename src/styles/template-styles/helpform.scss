@@ -1,28 +1,7 @@
 @import "../variables.scss";
 
-//back to page button
-.breadcrumbs {
-  padding-top: 16px;
-  padding-bottom: 23px;
-  @media screen and (min-width: $tablet) {
-    padding-bottom: 24px;
-  }
-  @media screen and (min-width: $desktop) {
-    padding-top: 25px;
-    padding-bottom: 32px;
-  }
-}
-
-.breadcrumbs span {
-  color: $grey;
-  line-height: 1;
-  @media screen and (min-width: $tablet) {
-    font-size: 14px;
-  }
-}
-
 //containers
-.external__wrap {
+.helpform__section {
   background-color: $bg-footer;
   padding: 24px 16px 16px;
   margin-bottom: 64px;

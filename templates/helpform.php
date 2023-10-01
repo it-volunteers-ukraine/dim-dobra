@@ -5,15 +5,8 @@ Template Name: helpform
 get_header();
 ?>
 <main>
-    <div class="container">
-        <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-            <?php if(function_exists('bcn_display'))
-	        {
-		        bcn_display();
-	        }?>
-</div>
-    </div>
-    <div class="external__wrap">
+    <?php get_template_part( 'template-parts/breadcrumbs'); ?>
+    <section class="helpform__section">
         <div class="container">
             <div class="internal__wrap">
                 <h1 class="helpform__title"><?php the_field('form_title'); ?></h1>
@@ -26,7 +19,7 @@ get_header();
                 <?php endif; ?>
             </div>
         </div>
-    </div> 
+    </section> 
 </main>
 
 <?php get_footer(); ?>

@@ -42,6 +42,10 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_style( 'helpform-style', get_template_directory_uri() . '/assets/styles/template-styles/helpform.css', array('main') );
   }  
 
+  if ( is_page_template('templates/help_people.php') ) {
+    wp_enqueue_style( 'help_people-style', get_template_directory_uri() . '/assets/styles/template-styles/help_people.css', array('main') );
+  } 
+
   if (is_singular() && locate_template('template-parts/founding-documents.php')) {
     wp_enqueue_style( 'documents-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/founding-documents.css', array('main') );
     }
@@ -53,8 +57,11 @@ function wp_it_volunteers_scripts() {
   if (is_singular() && locate_template('template-parts/need-help-animals.php')) {
       wp_enqueue_style( 'need-help-animals', get_template_directory_uri() . '/assets/styles/template-parts-styles/need-help-animals.css', array('main') );
       }
-  
 
+  if (is_singular() && locate_template('template-parts/breadcrumbs.php')) {
+      wp_enqueue_style( 'breadcrumbs', get_template_directory_uri() . '/assets/styles/template-parts-styles/breadcrumbs.css', array('main') );
+      }
+  
 }
 /** add fonts */
 function add_google_fonts() {
@@ -75,6 +82,7 @@ function wp_it_volunteers_menus() {
 
 add_action( 'init', 'wp_it_volunteers_menus');
 
+/** Display a representative image for Posts, Pages or Custom Post Types*/
 add_theme_support( 'post-thumbnails' );
 
 /** ACF add options page */
