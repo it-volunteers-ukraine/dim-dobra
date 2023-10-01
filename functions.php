@@ -75,6 +75,9 @@ function wp_it_volunteers_menus() {
 
 add_action( 'init', 'wp_it_volunteers_menus');
 
+add_theme_support( 'post-thumbnails' );
+
+/** ACF add options page */
 if( function_exists('acf_add_options_page') ) {
 
   acf_add_options_page(array(
