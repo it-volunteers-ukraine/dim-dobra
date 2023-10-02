@@ -41,6 +41,7 @@
     @media screen and (min-width: $full) {
     background-image: url(../../images/need-help-hd.png);
     margin-top: 63px;
+	height: 900px;
   }
 }
 
@@ -63,6 +64,12 @@
 	@media screen and (min-width: $desktop) {
 		font-size: 48px;
 	}
+
+	@media screen and (min-width: $full) {
+		font-size: 72px;
+		margin-top: -6px;
+		margin-bottom: 8px;
+	}
 }
 
 .help-animals__button {
@@ -79,6 +86,12 @@
 
 	@media screen and (min-width: $desktop) {
 		width: 296px;
+	}
+
+	@media screen and (min-width: $full) {
+		width: 358px;
+		font-size: 28px;
+		height: 70px;
 	}
 
 	&:hover,
