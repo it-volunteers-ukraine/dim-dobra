@@ -1,5 +1,15 @@
 @import "../variables.scss";
 
+.help-people__section {
+  margin-bottom: 64px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 80px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 126px;
+  }
+}
+
 .help-people__title {
   margin: 0;
   font-size: 28px;
@@ -13,12 +23,12 @@
 .posts-list {
   display: flex;
   flex-direction: column;
-  margin: 24px 0 64px;
+  margin-top: 24px;
   @media screen and (min-width: $tablet) {
-    margin: 32px 0 80px;
+    margin-top: 32px;
   }
   @media screen and (min-width: $desktop) {
-    margin: 40px 0 130px;
+    margin-top: 40px;
   }
 }
 
