@@ -42,8 +42,8 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_style( 'helpform-style', get_template_directory_uri() . '/assets/styles/template-styles/helpform.css', array('main') );
   }  
 
-  if ( is_page_template('templates/help_people.php') ) {
-    wp_enqueue_style( 'help_people-style', get_template_directory_uri() . '/assets/styles/template-styles/help_people.css', array('main') );
+  if ( is_page_template('templates/blog-template.php') ) {
+    wp_enqueue_style( 'blog-style', get_template_directory_uri() . '/assets/styles/template-styles/blog-template.css', array('main') );
   } 
 
   if (is_singular() && locate_template('template-parts/founding-documents.php')) {
