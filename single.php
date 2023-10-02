@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
  * The template for displaying all single posts
  *
@@ -37,4 +37,4 @@ get_header();
 
 <?php
 get_sidebar();
-get_footer();
+get_footer(); -->
