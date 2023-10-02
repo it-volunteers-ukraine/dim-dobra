@@ -133,7 +133,7 @@ get_header();
 		    ?>
 
           <div class="news__wraper"> 
-           <?php the_post_thumbnail(); ?>
+          <?php the_post_thumbnail(); ?>
         
           <?php 
             if ($content) : ?>
