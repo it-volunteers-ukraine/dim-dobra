@@ -30,7 +30,7 @@ p {
    @media screen and (min-width: $desktop) {
     margin-bottom: 17px;
    }
-   @media screen and(min-width: $full) {
+   @media screen and (min-width: $full) {
     margin-top: 92px;
     font-size: 24px;
     margin-bottom: 0px;
@@ -44,7 +44,7 @@ p {
 
 .about{
   width: 100%;
-  
+    
   @media screen and (min-width: $tablet) {
      
       display: grid;
@@ -131,7 +131,7 @@ p {
 .about__title{
   font-size: 28px;
   min-width: 220px;
-  margin: 21px 0px 28px 0px;
+  margin: 53px 0px 28px 0px;
   font-weight: 600;
 
   @media screen and (min-width: $tablet) {
@@ -175,70 +175,48 @@ p {
   }
 }
 
-.command__img{
+.about__img{
   height: 267px;
+  min-width: 343px;;
   margin-top: 40px;
   margin-bottom: 42px;
-  background-size: cover;
-	background-position: center;
-	background-image: url(../../images/command-mobile.jpg);
-
+  display: flex;
+  justify-content: center;
 
   @media screen and (min-width: $tablet) {
-    background-image: url(../../images/command-tablet.jpg);
-    height: 534px;
     margin-top: 32px;
     margin-bottom: 24px;
-    background-size: cover;
-    background-position: center;
   }
 
   @media screen and (min-width: $desktop) {
-    background-image: url(../../images/command-desktop.jpg);
-    height: 490px;
     margin-top: 0px;
     margin-bottom: 24px;
-    background-size: cover;
-    background-position: center;
-
   }
 
   @media screen and (min-width: $full) {
-    background-image: url(../../images/command-HD.jpg);
     margin-top: -130px;
     height: 716px;
-
- }
+  }
 }
 .work__img{
-  height: 267px;
   margin-top: 40px;
   margin-bottom: 38px;
-  background-size: cover;
-	
-	background-image: url(../../images/work-mobile.jpg);
-
+  
   @media screen and (min-width: $tablet) {
     height: 370px;
-    background-image: url(../../images/work-tablet.jpg);
     margin-bottom: 19px;
-    background-size: cover;
-    background-position: center;
-  }
+    }
 
   @media screen and (min-width: $desktop) {
-    background-image: url(../../images/work-desktop.jpg);
-    height: 459px;
-    width: 520px;
     margin-top: 32px;
     margin-bottom: 24px;
-    background-size: cover;
-    background-position: center;
+  }
 
+  .img {
+    width: 100%;
   }
 
   @media screen and (min-width: $full) {
-    background-image: url(../../images/work-HD.jpg);
     width: 722px;
     height: 618px;
     margin-top: 77px;

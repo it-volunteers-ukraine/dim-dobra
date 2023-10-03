@@ -6,15 +6,13 @@ get_header();
 ?>
 
 <div class="container">
-    <div class="return">
-        <a href=" http://wp.vp/home" class="return__text">< повернутись назад</a>
-    </div>
-
     <section class="about">
         <h1 class="about__title"><?php the_field('about-title'); ?></h1>
         <p class="about__description description__main"><?php the_field('description-main'); ?></p>
-        <div class="command__img"></div>
-        <!-- <img class="about__img" src="<?php echo get_template_directory_uri();?> ../src/images/about_mobile.png" alt="about"> -->
+        <div class="about__img">
+            <img class="img" src="<?php echo get_template_directory_uri();?> ../assets/images/command.jpg" alt="about">
+        </div>
+           
         <p class="about__description description__command"><?php the_field('description-command'); ?></p>
         <p class="about__description description__other"><?php the_field('description-other'); ?></p>
         <div class="about__contact">
@@ -27,7 +25,9 @@ get_header();
                 <a class="phone__link__first" href="tel:+<?php the_field('first-phone'); ?>"><?php the_field('first-phone'); ?> </a>&nbsp|&nbsp <a class="phone__link" href="tel:<?php the_field('second-phone'); ?>"> <?php the_field('second-phone'); ?></a> 
             </div>
         </div>
-        <div class="work__img"></div>
+        <div class="work__img">
+            <img class="img" src="<?php echo get_template_directory_uri();?> ../assets/images/work.jpg" alt="work">
+        </div>
         <p class="about__description description__animals"><?php the_field('animals'); ?></p>
         <p class="about__description description__morehelp"><?php the_field('morehelp'); ?></p>
         <button class="support__btn button">ПІДТРИМАТИ ФОНД</button>
