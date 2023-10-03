@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.help-people__section {
+.help__section {
   margin-bottom: 64px;
   @media screen and (min-width: $tablet) {
     margin-bottom: 80px;
@@ -10,7 +10,7 @@
   }
 }
 
-.help-people__title {
+.help__title {
   margin: 0;
   font-size: 28px;
   font-weight: 600;
@@ -29,101 +29,5 @@
   }
   @media screen and (min-width: $desktop) {
     margin-top: 40px;
-  }
-}
-
-.post-box {
-  padding: 24px 16px;
-  box-shadow: 0px 4px 11px 0px rgba(137, 137, 137, 0.25);
-  display: flex;
-  flex-direction: column;
-  @media screen and (min-width: $tablet) {
-    flex-direction: row;
-    padding: 0;
-    max-width: 688px;
-  }
-  @media screen and (min-width: $desktop) {
-    max-width: 960px;
-  }
-}
-
-.post-box:not(:last-child) {
-  margin-bottom: 32px;
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 50px;
-  }
-}
-
-.feature-image {
-  margin-bottom: 24px;
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 0;
-    max-width: 332px;
-    max-height: 343px;
-  }
-  @media screen and (min-width: $tablet) {
-    max-width: 342px;
-    max-height: 342px;
-  }
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  @media screen and (min-width: $tablet) {
-    padding: 20px 20px 50px 24px;
-  }
-  @media screen and (min-width: $desktop) {
-    padding: 24px 64px 55px;
-  }
-}
-
-.entry-date {
-  color: $grey;
-  text-align: center;
-  margin-bottom: 16px;
-  @media screen and (min-width: $tablet) {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 16px;
-  }
-}
-
-.post-title {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 16px;
-  @media screen and (min-width: $desktop) {
-    font-size: 22px;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 24px;
-  }
-}
-
-.details-btn {
-  display: flex;
-  width: 100%;
-  padding: 14px 32px;
-  justify-content: center;
-  align-items: center;
-  border-radius: $btn-border-radius;
-  border: 1px solid $main-blue;
-  background-color: $white;
-  color: $main-blue;
-  margin-top: 32px;
-  @media screen and (min-width: $tablet) {
-    width: fit-content;
-    margin-top: 24px;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-top: 32px;
   }
 }
