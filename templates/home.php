@@ -156,8 +156,9 @@ get_header();
     </section>
 
     <section class="bank-details">
-      <h3 class="bank-details__title">Наші реквізити</h3>
+      <h3 class="bank-details__title"><?php the_field('bank_details_title'); ?></h3>
       
+      <?php if (have_rows('bank_details_tabs')) : ?>
       <div class="tabs">
         <ul>
           <li> 
@@ -173,99 +174,46 @@ get_header();
             <span class="tabs-span2">EUR</span> 
           </li>      
         </ul>
+
         <div>
+          <?php while(have_rows('bank_details_tabs')) : the_row(); 
+          $img = get_sub_field('qr-code'); ?>
 
           <div class="tabs__wraper">
             <div class="tabs__flexWraper">
               <div style="padding-top: 0">
                 <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">Отримувач:</p>     
-                  <p class="bank-details__text-second">ЗУБЕНКО ОЛЕНА ВОЛОДИМИРІВНА</p>     
+                  <p class="bank-details__text-first"><?php the_sub_field('recipient_first') ?></p>     
+                  <p class="bank-details__text-second"><?php the_sub_field('recipient_second') ?></p>     
                 </div>
                 <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">ЄДРПОУ:</p>     
-                  <p class="bank-details__text-second">3192013863</p> 
+                  <p class="bank-details__text-first"><?php the_sub_field('edrpou_first') ?></p>     
+                  <p class="bank-details__text-second"><?php the_sub_field('edrpou_second') ?></p> 
                 </div>
                 <div class="tabs__textWraper" style="padding-top: 0">    
-                  <p class="bank-details__text-first">Банк:</p>     
-                  <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>
+                  <p class="bank-details__text-first"><?php the_sub_field('bank_first') ?></p>     
+                  <p class="bank-details__text-second"><?php the_sub_field('bank_second') ?></p>
                 </div>
                 <div class="tabs__textWraper" style="padding-top: 0">      
-                  <p class="bank-details__text-first">IBAN:</p>     
-                  <p class="bank-details__text-second">UA683052990000026207742096747</p>
+                  <p class="bank-details__text-first"><?php the_sub_field('iban_first') ?></p>     
+                  <p class="bank-details__text-second"><?php the_sub_field('iban_second') ?></p>
                 </div>   
               </div>
               <div class="tabs__wraper-img"> 
-                <img class="tabs-img" src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
+                <img class="tabs-img" src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
               </div>  
             </div>        
             <div style="	display: flex; justify-content: center; padding-top: 0">
               <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
-              aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+              aria-controls="modal-window"><?php the_sub_field('tabs_button') ?></button>
             </div>
           </div>
 
-          <div class="tabs__wraper">
-            <div class="tabs__flexWraper">
-              <div style="padding-top: 0">
-                <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">Отримувач:</p>     
-                  <p class="bank-details__text-second">ZUBENKO OLENA VOLODYMYRIVNA</p>     
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">ЄДРПОУ:</p>     
-                  <p class="bank-details__text-second">3192013863</p> 
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">    
-                  <p class="bank-details__text-first">Банк:</p>     
-                  <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">      
-                  <p class="bank-details__text-first">IBAN:</p>     
-                  <p class="bank-details__text-second">UA683052990000026207742096747</p>
-                </div>   
-              </div>
-              <div class="tabs__wraper-img"> 
-                <img class="tabs-img" src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
-              </div>  
-            </div>        
-            <div style="	display: flex; justify-content: center; padding-top: 0">
-              <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
-              aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
-            </div>
-          </div>
-
-          <div class="tabs__wraper">
-            <div class="tabs__flexWraper">
-              <div style="padding-top: 0">
-                <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">Отримувач:</p>     
-                  <p class="bank-details__text-second">ZUBENKO ELENA WOLODYMYRIWNA</p>     
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">ЄДРПОУ:</p>     
-                  <p class="bank-details__text-second">3192013863</p> 
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">    
-                  <p class="bank-details__text-first">Банк:</p>     
-                  <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">      
-                  <p class="bank-details__text-first">IBAN:</p>     
-                  <p class="bank-details__text-second">UA683052990000026207742096747</p>
-                </div>   
-              </div>
-              <div class="tabs__wraper-img"> 
-                <img class="tabs-img" src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
-              </div>  
-            </div>        
-            <div style="	display: flex; justify-content: center; padding-top: 0">
-              <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
-              aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
-            </div>
-          </div>
-                
+          <?php endwhile; ?>
+        </div>                
       </div>
+
+      <?php endif; ?>
     </section>
 
     <?php get_template_part( 'template-parts/need-help'); ?>
