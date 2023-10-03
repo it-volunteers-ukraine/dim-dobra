@@ -1,0 +1,127 @@
+@import "../variables.scss";
+
+//containers
+.helpform__section {
+  background-color: $bg-footer;
+  padding: 24px 16px 16px;
+  margin-bottom: 64px;
+  @media screen and (min-width: $tablet) {
+    padding: 0;
+    background-color: $white;
+    margin-bottom: 0;
+  }
+}
+
+.internal__wrap {
+  @media screen and (min-width: $tablet) {
+    padding: 40px 116px 36px;
+    background-color: $bg-footer;
+    border-radius: 16px;
+    margin-bottom: 80px;
+  }
+  @media screen and (min-width: $desktop) {
+    border-radius: 0;
+    padding: 56px 220px 48px;
+    margin-bottom: 130px;
+  }
+}
+
+//form title
+.helpform__title {
+  font-size: 28px;
+  font-weight: 600;
+  @media screen and (min-width: $tablet) {
+    line-height: 1;
+    text-align: center;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+    text-align: left;
+  }
+}
+
+//helpform grid
+.helpform form {
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+}
+
+.contact-needs {
+  grid-column-end: span 2;
+}
+
+//form fields
+.input__wrap {
+  margin-bottom: 24px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 28px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.contact__label {
+  display: inline-block;
+  color: $grey;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 12px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 12px;
+  }
+}
+
+input.contact__input,
+textarea.contact__input {
+  padding: 16px 18px;
+  width: 100%;
+  color: $grey;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: $btn-border-radius;
+}
+
+//form button
+.helpform-btn__wrap {
+  margin-top: 32px;
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    grid-column-end: span 2;
+  }
+}
+
+.helpform-btn__wrap p {
+  margin-top: 0;
+}
+
+.helpform-btn__wrap .helpform__button {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  padding: 14px 32px;
+  justify-content: center;
+  align-items: center;
+  border-radius: $btn-border-radius;
+  background: $main-blue;
+  color: $white;
+  font-size: 20px;
+  font-weight: 500;
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+}
+
+.required {
+  color: rgb(207, 72, 72);
+}

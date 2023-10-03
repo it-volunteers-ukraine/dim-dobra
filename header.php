@@ -50,21 +50,21 @@
                                         </li>
                                     </ul>
                                     <ul class="mob-menu__social">
-                                        <li class="social__item"><a class="mob-social__link" href=""><svg class="icon-socials"
+                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('viber', 2) ); ?>"><svg class="icon-socials"
                                             width="40px" height="40px">
                                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#viber"></use>
                                             </svg></a></li>
-                                        <li class="social__item"><a class="mob-social__link" href=""><svg class="icon-socials"
+                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('telegram', 2) ); ?>"><svg class="icon-socials"
                                             width="40px" height="40px">
                                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#telegram"></use>
                                             </svg></a></li>
-                                        <li class="social__item"><a class="mob-social__link" href=""><svg class="icon-socials"
+                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('whatsapp', 2) ); ?>"><svg class="icon-socials"
                                             width="40px" height="40px">
                                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#whatsapp"></use>
                                             </svg></a></li>
                                     </ul>
                                 </div>
-                                <a class="menu__btn" href="<?php echo get_permalink('#'); ?>">ПОТРІБНА ДОПОМОГА</a>
+                                <a class="menu__btn" href="<?php echo get_permalink('12'); ?>"><?php the_field('need-help_button', 2) ?></a>
                             </div>
                         </div> 
                 </div>  
