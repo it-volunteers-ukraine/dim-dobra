@@ -6,13 +6,13 @@ get_header();
 ?>
 
 <div class="container">
+    <?php get_template_part( 'template-parts/breadcrumbs'); ?>
     <section class="about">
         <h1 class="about__title"><?php the_field('about-title'); ?></h1>
         <p class="about__description description__main"><?php the_field('description-main'); ?></p>
         <div class="about__img">
-            <img class="img" src="<?php echo get_template_directory_uri();?> ../assets/images/command.jpg" alt="about">
+            <img class="image" src="<?php the_field('about-img'); ?>" alt="about">
         </div>
-           
         <p class="about__description description__command"><?php the_field('description-command'); ?></p>
         <p class="about__description description__other"><?php the_field('description-other'); ?></p>
         <div class="about__contact">
@@ -26,10 +26,10 @@ get_header();
             </div>
         </div>
         <div class="work__img">
-            <img class="img" src="<?php echo get_template_directory_uri();?> ../assets/images/work.jpg" alt="work">
+            <img class="image" src="<?php the_field('work-img'); ?>" alt="work">
         </div>
         <p class="about__description description__animals"><?php the_field('animals'); ?></p>
-        <p class="about__description description__morehelp"><?php the_field('morehelp'); ?></p>
+        <p class="about__description description__morehelp"><?php the_field('more-help'); ?></p>
         <button class="support__btn button">ПІДТРИМАТИ ФОНД</button>
     </section>
     <!-- documents -->

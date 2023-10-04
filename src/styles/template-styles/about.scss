@@ -21,143 +21,165 @@ p {
   margin: 0;
 }
 
-.return{
-  text-decoration: none;
-  font-size: 16px;
-  color: $grey;
-  margin-top: -35px;
-
-   @media screen and (min-width: $desktop) {
-    margin-bottom: 17px;
-   }
-   @media screen and (min-width: $full) {
-    margin-top: 92px;
-    font-size: 24px;
-    margin-bottom: 0px;
-  }
-}
- 
-.container{
+.container {
   width: 100%;
   margin: 0 auto;
+
+  @media screen and (min-width: $full) {
+   max-width: 1920px;
+    
+  }
 }
 
-.about{
+.about {
   width: 100%;
     
   @media screen and (min-width: $tablet) {
-     
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-     
-      gap: 0px 24px;
-      grid-auto-flow: row;
-      grid-template-areas:
-        "about__title about__title"
-        "description__main description__main"
-        "command__img command__img"
-        "description__command about__contact"
-        "work__img description__other"
-        "work__img description__animals"
-        "work__img support__btn";
+    margin-bottom: -8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "about__title about__title"
+      "description__main description__main"
+      "about__img about__img"
+      "description__command about__contact"
+      "work__img description__other"
+      "work__img description__animals"
+      "support__btn description__animals" ;
   }
-    
-    .about__title { grid-area: about__title; height: fit-content; }
-    
-    .description__main { grid-area: description__main;}
-    
-    .command__img { grid-area: command__img; }
-    
-    .description__command { grid-area: description__command; }
-    
-    .about__contact { grid-area: about__contact;  }
-    
-    .work__img { grid-area: work__img }
-    
-    .description__other { grid-area: description__other; }
-    
-    .description__animals { grid-area: description__animals; } 
 
-    .support__btn { grid-area: support__btn ;}
+  .about__title {
+    grid-area: about__title;
+    height: fit-content;
+  }
 
-      @media screen and (min-width: $desktop) {
-            margin-top: 12px;
-            margin-bottom: 57px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: .45fr .6fr .7fr 1fr 0.1fr 0.1fr 0.01fr 0.1fr;
-            gap: 0px 35px;
-            grid-auto-flow: row;
-            grid-template-areas:
-              "about__title about__title"
-              "description__main command__img"
-              "description__command command__img"
-              "about__contact command__img"
-              "work__img description__other"
-              "work__img description__animals"
-              "work__img description__morehelp"
-              "work__img support__btn";
-          }
+  .description__main {
+    grid-area: description__main;
+  }
 
-                   
-          .about__title { grid-area: about__title; }
-          
-          .description__main { grid-area: description__main; }
-          
-          .description__command { grid-area: description__command; }
-          
-          .about__contact { grid-area: about__contact; }
-          
-          .command__img { grid-area: command__img; }
-          
-          .work__img { grid-area: work__img; }
-          
-          .description__other { grid-area: description__other; }
-          
-          .description__animals { grid-area: description__animals; }
-          
-          .description__morehelp { grid-area: description__morehelp; }
+  .about__img {
+    grid-area: about__img;
+  }
 
-          @media screen and (min-width: $full) {
-            grid-template-rows: auto;
-            margin-top: -2px;
-            gap: 0px 24px;
-            margin-bottom: 76px;
-            
-          }
+  .description__command {
+    grid-area: description__command;
+  }
+
+  .about__contact {
+    grid-area: about__contact;
+  }
+
+  .work__img {
+    grid-area: work__img;
+  }
+
+  .description__other {
+    grid-area: description__other;
+  }
+
+  .description__animals {
+    grid-area: description__animals;
+  }
+
+  .support__btn {
+    grid-area: support__btn;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: -16px;
+    margin-bottom: 57px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.45fr 0.6fr 0.7fr 1fr 0.1fr 0.1fr 0.01fr 0.1fr;
+    gap: 0px 35px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "about__title about__title"
+      "description__main about__img"
+      "description__command about__img"
+      "about__contact command__img"
+      "work__img description__other"
+      "work__img description__animals"
+      "work__img description__morehelp"
+      "work__img support__btn";
+  }
+
+  .about__title {
+    grid-area: about__title;
+  }
+
+  .description__main {
+    grid-area: description__main;
+  }
+
+  .description__command {
+    grid-area: description__command;
+  }
+
+  .about__contact {
+    grid-area: about__contact;
+  }
+
+  .about__img {
+    grid-area: about__img;
+  }
+
+  .work__img {
+    grid-area: work__img;
+  }
+
+  .description__other {
+    grid-area: description__other;
+  }
+
+  .description__animals {
+    grid-area: description__animals;
+  }
+
+  .description__morehelp {
+    grid-area: description__morehelp;
+  }
+
+    @media screen and (min-width: $full) {
+        grid-template-rows: auto;
+        margin-top: -2px;
+        gap: 0px 169px;
+        margin-bottom: 76px;
+      }
           
-        }
+}
     
 .about__title{
   font-size: 28px;
   min-width: 220px;
-  margin: 53px 0px 28px 0px;
+  margin: -7px 0px 28px -3px;
   font-weight: 600;
 
   @media screen and (min-width: $tablet) {
-    margin: 32px 0px 16px 0px;
+    margin: -13px 0px 20px -1px;
   }
 
   @media screen and (min-width: $desktop) {
     font-size: 32px;
     margin: 4px 0px 11px 0px;
-  
   }
 
   @media screen and (min-width: $full) {
     font-size: 48px;
     margin: 27px 0px 11px 0px;
-  
   }
 }
 
-.about__description{
+.about__description {
   margin: 16px 0px 0px 0px;
   font-size: 18px;
   line-height: 1.366;
   font-weight: 500;
 
-  @media  screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     font-size: 16px;
     line-height: 1.377;
     font-weight: 500;
@@ -165,7 +187,7 @@ p {
     margin-bottom: 17px;
   }
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     font-size: 18px;
   }
 
@@ -176,59 +198,88 @@ p {
 }
 
 .about__img{
-  height: 267px;
-  min-width: 343px;;
+  min-width: 343px;
   margin-top: 40px;
   margin-bottom: 42px;
   display: flex;
   justify-content: center;
 
   @media screen and (min-width: $tablet) {
+    min-width: 677px;
     margin-top: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   @media screen and (min-width: $desktop) {
+    min-width: 630px;
     margin-top: 0px;
-    margin-bottom: 24px;
+    margin-bottom: -200px;
   }
 
   @media screen and (min-width: $full) {
-    margin-top: -130px;
+    min-width: 869px;
+    margin-top: -133px;
     height: 716px;
   }
 }
+
 .work__img{
+  min-width: 343px;
   margin-top: 40px;
-  margin-bottom: 38px;
-  
+  margin-bottom: 39px;
+  display: flex;
+  justify-content: center;
+  min-height: 267px;
+
   @media screen and (min-width: $tablet) {
-    height: 370px;
-    margin-bottom: 19px;
+    margin-top: 45px; 
+    max-width: 455px;
+    margin-bottom: 18px;
+    min-height: 370px;
     }
 
   @media screen and (min-width: $desktop) {
     margin-top: 32px;
     margin-bottom: 24px;
+    width: 520px;
+    height: 459px;
+    max-width: fit-content;
   }
 
-  .img {
-    width: 100%;
-  }
-
-  @media screen and (min-width: $full) {
-    width: 722px;
-    height: 618px;
+   @media screen and (min-width: $full) {
+    min-width: 722px;
+    height: auto;
     margin-top: 77px;
-   }
-
+  }
 }
 
-.about__contact{
-  margin-top: 32px;
+.image {
+  width: 100%;
+}
 
-  @media screen and (min-width: $tablet){
-    margin-top: 4px;
+.work__img.image{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (min-width: $tablet) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    }
+
+  @media screen and (min-width: $full) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+}
+
+.about__contact {
+  margin-top: 30px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 10px;
   }
   @media screen and (min-width: $desktop) {
     margin-top: 13px;
@@ -236,10 +287,9 @@ p {
   @media screen and (min-width: $full) {
     margin-top: 6px;
   }
- 
 }
 
-.email{
+.email {
   display: flex;
   justify-content: flex-start;
   font-size: 18px;
@@ -247,16 +297,15 @@ p {
   @media screen and (min-width: $full) {
     font-size: 24px;
   }
-
 }
 
-.phone{
+.phone {
   display: flex;
   justify-content: flex-start;
   font-size: 18px;
-  margin-top: 16px;
+  margin-top: 19px;
 
-  @media screen and (min-width: $tablet){
+  @media screen and (min-width: $tablet) {
     margin-top: 21px;
   }
   @media screen and (min-width: $desktop) {
@@ -271,60 +320,57 @@ p {
   }
 }
 
-.email__img{
+.email__img {
   margin-right: 12px;
 
-  @media screen and (min-width: $tablet){
+  @media screen and (min-width: $tablet) {
     width: 32px;
   }
 
   @media screen and (min-width: $full){
     width: 46px;
-   }
+  }
 }
 
-.phone__img{
+.phone__img {
   margin-right: 12px;
 
-  @media screen and (min-width: $tablet){
+  @media screen and (min-width: $tablet) {
     width: 32px;
   }
 
   @media screen and (min-width: $full){
    width: 46px;
   }
-
 }
 
-.support__btn{
- font-size: 20px;
- cursor: pointer;
- margin-top: 30px;
- margin-bottom: 64px;
- margin-left: 16px;
+.support__btn {
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 64px;
+  margin-left: 16px;
 
-   &:hover,
-   &:focus {
-   color: $yellow;
-   background-color: $main-blue;
- }
-
-
-   @media screen and (min-width: $tablet){
-      font-size: 20px;
-      margin-top: 2px;
-      margin-bottom: 13px;
-      margin-left: 2px;
+  &:hover,
+  &:focus {
+    color: $yellow;
+    background-color: $main-blue;
   }
 
-  @media screen and (min-width: $desktop){
-     display: block;
-     font-size: 24px;
-     height: fit-content;
-     width: 297px;
-     margin-top: 26px;
-     margin-left: 0px;
-  
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+    margin-top: 2px;
+    margin-bottom: 18px;
+    margin-left: 8px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    font-size: 24px;
+    height: fit-content;
+    width: 297px;
+    margin-top: 26px;
+    margin-left: 0px;
   }
   @media screen and (min-width: $full) {
     display: block;
@@ -338,42 +384,39 @@ p {
   }
 }
 .description__main {
-  
-  @media screen and (min-width: $tablet){ 
+  @media screen and (min-width: $tablet) {
     margin: 0px;
   }
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     padding-right: 106px;
-    }
+  }
 
   @media screen and (min-width: $full) {
-    padding-right: 128px;
+    padding-right: 0px;
     margin-top: 49px;
     margin-bottom: 0px;
-  } 
+  }
 }
 
 .description__command {
-  
-  @media  screen and (min-width: $tablet){
+  @media screen and (min-width: $tablet) {
     margin-bottom: 0px;
-   }
+  }
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     padding-right: 98px;
   }
 
   @media screen and (min-width: $full) {
     padding-right: 130px;
     margin-bottom: 37px;
-   }
+  }
 }
 
 .description__other {
-  
-    @media screen and (min-width: $tablet){
-    padding-top: 37px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 39px;
     margin-top: 3px ;
     }
     @media screen and (min-width: $desktop){
@@ -389,36 +432,34 @@ p {
   }
     
 .description__animals {
-  
-  @media screen and  (min-width: $tablet){
-    margin-top: 5px;
-  }
-  @media screen and (min-width: $desktop){
-    margin-top: -5px;
-    padding-right: 11px;
-  }
-  @media screen and (min-width: $full) {
-    padding-right: 11px;
-    margin-top: 7px;
-    
-   }
+    margin-top: 4px;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: 5px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-top: 1px;
+      padding-right: 11px;
+    }
+    @media screen and (min-width: $full) {
+      padding-right: 11px;
+      margin-top: 7px;
+    }
 }
 
-.description__morehelp{
+.description__morehelp {
   display: block;
   margin-top: 10px;
 
-  @media screen and (min-width: $tablet){
-    display: none;
-   }
-  @media screen and (min-width: $desktop){
-    display: block;
-    margin-top: -32px;
-   }
-  @media screen and (min-width: $full) {
-    padding-right: 11px;
-    margin-top: 0px;
-  }
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+    @media screen and (min-width: $desktop) {
+      display: block;
+      margin-top: -29px;
+    }
+    @media screen and (min-width: $full) {
+      padding-right: 11px;
+      margin-top: 0px;
+    }
 }
-
-
