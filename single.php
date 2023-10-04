@@ -8,7 +8,8 @@
 		print_r($catID);
 
 		    $args = array(
-                'posts_per_page' => get_option('posts_per_page'),
+				'post_type'      => 'post',
+                'posts_per_page' => 1,
                 'tax_query'      => array(
                     array(
                         'taxonomy'=> 'category',

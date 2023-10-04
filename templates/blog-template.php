@@ -16,20 +16,21 @@ get_header();
             <h1 class="help-people__title"><?php the_field('page_title', $postID) ?></h1>
             
             <?php
-            $category = ($postID === 95) ? 3 : 4;
+            $category = ($postID === 95) ? 'help-people' : 'help-animals';
             $args = array(
                 'posts_per_page' => get_option('posts_per_page'),
                 'paged'          => $current_page,
                 'tax_query'      => array(
                     array(
                         'taxonomy'=> 'category',
+                        'field' => 'slug',
                         'terms' => $category
                     )
                 )
             );
             query_posts( $args );
             
-            $wp_query->is_archive = false;
+            $wp_query->is_archive = true;
             $wp_query->is_home = false; ?>
 
             <div class="posts-list">
