@@ -7,59 +7,59 @@ const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 
 function images() {
-  return src("src/images/*.*")
-    .pipe(newer("assets/images"))
-    .pipe(imagemin())
-    .pipe(dest("assets/images"));
+	return src("src/images/*.*")
+		.pipe(newer("assets/images"))
+		.pipe(imagemin())
+		.pipe(dest("assets/images"));
 }
 
 function stylesTemplates() {
-  return src("src/styles/template-styles/*.scss")
-    .pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
-    .pipe(scss().on("error", scss.logError))
-    .pipe(scss({ outputStyle: "compressed" }))
-    .pipe(dest("assets/styles/template-styles"));
+	return src("src/styles/template-styles/*.scss")
+		.pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
+		.pipe(scss().on("error", scss.logError))
+		.pipe(scss({ outputStyle: "compressed" }))
+		.pipe(dest("assets/styles/template-styles"));
 }
 
 function stylesTemplatesParts() {
-  return (
-    src("src/styles/template-parts-styles/*.scss")
-      // .pipe(plumber())
-      .pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
-      .pipe(scss().on("error", scss.logError))
-      .pipe(scss({ outputStyle: "compressed" }))
-      .pipe(dest("assets/styles/template-parts-styles"))
-  );
+	return (
+		src("src/styles/template-parts-styles/*.scss")
+			// .pipe(plumber())
+			.pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
+			.pipe(scss().on("error", scss.logError))
+			.pipe(scss({ outputStyle: "compressed" }))
+			.pipe(dest("assets/styles/template-parts-styles"))
+	);
 }
 
 function styles() {
-  return src("src/styles/main.scss")
-    .pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
-    .pipe(scss().on("error", scss.logError))
-    .pipe(scss({ outputStyle: "compressed" }))
-    .pipe(dest("assets/styles"));
+	return src("src/styles/main.scss")
+		.pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
+		.pipe(scss().on("error", scss.logError))
+		.pipe(scss({ outputStyle: "compressed" }))
+		.pipe(dest("assets/styles"));
 }
 
 function scripts() {
-  return src(["src/scripts/*.js"])
-    .pipe(concat("main.js"))
-    .pipe(uglify())
-    .pipe(dest("assets/scripts"));
+	return src(["src/scripts/*.js"])
+		.pipe(concat("main.js"))
+		.pipe(uglify())
+		.pipe(dest("assets/scripts"));
 }
 
 function scriptsTemplates() {
-  return src(["src/scripts/template-scripts/*.js"])
-    .pipe(uglify())
-    .pipe(dest("assets/scripts/template-scripts"));
+	return src(["src/scripts/template-scripts/*.js"])
+		.pipe(uglify())
+		.pipe(dest("assets/scripts/template-scripts"));
 }
 
 function watching() {
-  watch("src/styles/*scss", styles);
-  watch("src/styles/template-styles/*scss", stylesTemplates);
-  watch("src/styles/template-parts-styles/*scss", stylesTemplatesParts);
-  watch(["src/images"], images);
-  watch("src/scripts/*js", scripts);
-  watch("src/scripts/template-scripts/*js", scriptsTemplates);
+	watch("src/styles/*scss", styles);
+	watch("src/styles/template-styles/*scss", stylesTemplates);
+	watch("src/styles/template-parts-styles/*scss", stylesTemplatesParts);
+	watch(["src/images"], images);
+	watch("src/scripts/*js", scripts);
+	watch("src/scripts/template-scripts/*js", scriptsTemplates);
 }
 
 exports.styles = styles;
@@ -70,11 +70,11 @@ exports.scripts = scripts;
 exports.scriptsTemplates = scriptsTemplates;
 exports.watching = watching;
 exports.default = parallel(
-  styles,
-  stylesTemplates,
-  stylesTemplatesParts,
-  images,
-  scripts,
-  scriptsTemplates,
-  watching
+	styles,
+	stylesTemplates,
+	stylesTemplatesParts,
+	images,
+	scripts,
+	scriptsTemplates,
+	watching,
 );
