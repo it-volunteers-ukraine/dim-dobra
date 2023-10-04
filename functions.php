@@ -65,6 +65,10 @@ function wp_it_volunteers_scripts() {
   if (is_singular() && locate_template('template-parts/post-file.php')) {
       wp_enqueue_style( 'post-file-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/post-file.css', array('main') );
       }
+
+  if (is_singular() && locate_template('template-parts/content.php')) {
+     wp_enqueue_style( 'content-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/content.css', array('main') );
+      }
   
 }
 /** add fonts */

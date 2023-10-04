@@ -8,14 +8,15 @@ get_header();
     <?php get_template_part( 'template-parts/breadcrumbs'); ?>
     <section class="help__section">
         <div class="container">
-
-            <h1 class="help-people__title"><?php echo get_the_title(); ?></h1>
-
+            
             <?php 
-            $postID = $post->ID;
-            $category = ($postID === 95) ? 3 : 4;
-
             $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $postID = $post->ID; ?>
+
+            <h1 class="help-people__title"><?php the_field('page_title', $postID) ?></h1>
+            
+            <?php
+            $category = ($postID === 95) ? 3 : 4;
             $args = array(
                 'posts_per_page' => get_option('posts_per_page'),
                 'paged'          => $current_page,
@@ -28,7 +29,7 @@ get_header();
             );
             query_posts( $args );
             
-            $wp_query->is_archive = true;
+            $wp_query->is_archive = false;
             $wp_query->is_home = false; ?>
 
             <div class="posts-list">
