@@ -33,7 +33,7 @@
 }
 
 .nav-links {
-  color: $grey;
+  color: $black;
   text-align: center;
 }
 
@@ -43,10 +43,10 @@
 
 .page-numbers {
   cursor: pointer;
-  transition: color $transition-function;
+  transition: font-weight $transition-function;
   &:hover,
   &:focus {
-    color: $black;
+    font-weight: 600;
   }
 }
 
