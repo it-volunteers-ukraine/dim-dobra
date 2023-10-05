@@ -65,6 +65,12 @@
   }
 }
 
+.input__wrap p,
+.contact-needs p,
+.helpform-btn__wrap p {
+  margin: 0;
+}
+
 .contact__label {
   display: inline-block;
   color: $grey;
@@ -96,10 +102,6 @@ textarea.contact__input {
     margin-top: 0;
     grid-column-end: span 2;
   }
-}
-
-.helpform-btn__wrap p {
-  margin-top: 0;
 }
 
 .helpform-btn__wrap .helpform__button {
