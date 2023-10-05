@@ -12,7 +12,7 @@
     <li>
     <a href="<?php the_sub_field('documents_link') ?>" target="_blank">
       <div class="documents__wraper">                   
-        <img class="documents__img" src=<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'>
+        <img class="documents__img" src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'>
         <img class="documents__img-desktop" src="<?php the_sub_field('documents_img_desktop') ?>" alt="file-icon">
         <p class="documents__subtitle"><?php the_sub_field('documents_subtitle') ?></p>
       </div>
