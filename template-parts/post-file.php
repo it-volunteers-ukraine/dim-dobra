@@ -12,6 +12,6 @@
         <div class="entry-date"><?php the_time('d.m.Y'); ?></div>
         <h2 class="post-title" ><?php the_title(); ?></h2>
         <div class="post-content" ><?php if($excerpt) : echo $excerpt; endif; ?></div>
-        <a class="details-btn" href="<?php The_permalink(); ?>"><?php the_field('learn-more_button', 'option'); ?></a>
+        <a class="button details-btn" href="<?php The_permalink(); ?>"><?php the_field('learn-more_button', 'option'); ?></a>
     </div>
 </article>

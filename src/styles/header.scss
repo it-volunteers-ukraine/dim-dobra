@@ -215,6 +215,14 @@ ul.mob-menu__social {
 
 .icon-socials {
   fill: $main-blue;
+  transition: $transition-function;
+}
+
+.social__item:hover,
+.social__item:focus {
+  .icon-socials {
+    transform: scale(1.1);
+  }
 }
 
 // Help menu button

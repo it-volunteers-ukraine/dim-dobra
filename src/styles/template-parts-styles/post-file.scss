@@ -90,11 +90,17 @@
   background-color: $white;
   color: $main-blue;
   margin-top: 32px;
+  transition: border $transition-function;
   @media screen and (min-width: $tablet) {
     width: fit-content;
     margin-top: 24px;
   }
   @media screen and (min-width: $desktop) {
     margin-top: 32px;
+  }
+
+  &:hover,
+  &:focus {
+    border-width: 2px;
   }
 }

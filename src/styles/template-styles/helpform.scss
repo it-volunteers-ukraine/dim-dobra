@@ -114,11 +114,17 @@ textarea.contact__input {
   color: $white;
   font-size: 20px;
   font-weight: 500;
+  transition: $transition-function;
   @media screen and (min-width: $tablet) {
     font-size: 16px;
   }
   @media screen and (min-width: $tablet) {
     font-size: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
   }
 }
 

@@ -35,8 +35,12 @@ get_header();
 
             <div class="posts-list">
             <?php while(have_posts()): the_post(); 
+
                 get_template_part( 'template-parts/post-file');
-            endwhile; ?>
+
+            endwhile; 
+            the_posts_pagination();
+            wp_reset_query(); ?>
             </div>
                 
     </section>
