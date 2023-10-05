@@ -90,7 +90,7 @@
   background-color: $white;
   color: $main-blue;
   margin-top: 32px;
-  transition: border $transition-function;
+  transition: $transition-function;
   @media screen and (min-width: $tablet) {
     width: fit-content;
     margin-top: 24px;
@@ -101,6 +101,6 @@
 
   &:hover,
   &:focus {
-    border-width: 2px;
+    transform: scale(1.03);
   }
 }

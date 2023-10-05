@@ -39,6 +39,7 @@ get_header();
                 get_template_part( 'template-parts/post-file');
 
             endwhile; 
+            
             the_posts_pagination();
             wp_reset_query(); ?>
             </div>

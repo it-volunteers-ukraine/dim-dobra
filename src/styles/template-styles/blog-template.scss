@@ -31,3 +31,25 @@
     margin-top: 40px;
   }
 }
+
+.nav-links {
+  color: $grey;
+  text-align: center;
+}
+
+.nav-links .current {
+  font-weight: 600;
+}
+
+.page-numbers {
+  cursor: pointer;
+  transition: color $transition-function;
+  &:hover,
+  &:focus {
+    color: $black;
+  }
+}
+
+.page-numbers:not(:last-child) {
+  margin-right: 15px;
+}
