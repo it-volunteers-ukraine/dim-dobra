@@ -18,14 +18,14 @@
                             }
                         ?>
                         <button class="menu-open__btn" id="js-open-menu" type="button">
-                            <svg class="menu-icon" width="24px" height="24px">
+                            <svg class="menu-icon">
                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#menu"></use>
                             </svg>
                         </button>
                         <div class="menu__container" id="js-menu">
                             <div class="menu__wrapper">
                                 <button class="menu-close__btn" id="js-close-menu" type="button">
-                                    <svg class="menu-icon" width="40px" height="40px">
+                                    <svg class="menu-icon">
                                         <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#close"></use>
                                     </svg>
                                 </button>             
@@ -64,7 +64,7 @@
                                             </svg></a></li>
                                     </ul>
                                 </div>
-                                <a class="button menu__btn" href="<?php echo get_permalink('22'); ?>"><?php the_field('need-help_button', 'option') ?></a>
+                                <a class="button menu__btn" href="<?php echo get_permalink('12'); ?>"><?php the_field('need-help_button', 'option') ?></a>
                             </div>
                         </div> 
                 </div>  

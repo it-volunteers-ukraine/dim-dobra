@@ -43,6 +43,11 @@
 
 .page-numbers {
   cursor: pointer;
+  transition: color $transition-function;
+  &:hover,
+  &:focus {
+    color: $grey;
+  }
 }
 
 .page-numbers:not(:last-child) {

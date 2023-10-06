@@ -40,6 +40,7 @@ function wp_it_volunteers_scripts() {
 
   if ( is_page_template('templates/helpform.php') ) {
     wp_enqueue_style( 'helpform-style', get_template_directory_uri() . '/assets/styles/template-styles/helpform.css', array('main') );
+    wp_enqueue_script( 'helpform-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/help-form.js', array(), false, true );
   }  
 
   if ( is_page_template('templates/blog-template.php') ) {

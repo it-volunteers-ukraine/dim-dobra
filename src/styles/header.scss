@@ -130,7 +130,18 @@ button {
   }
 }
 
-.menu-close__btn {
+.menu-open__btn .menu-icon {
+  width: 24px;
+  height: 24px;
+  @media screen and (min-width: $tablet) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.menu-close__btn .menu-icon {
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 30px;
   right: 16px;
@@ -237,6 +248,7 @@ ul.mob-menu__social {
   padding: 14px 32px;
   margin-bottom: 39px;
   text-align: center;
+  width: fit-content;
   background-color: $yellow;
   border-radius: $btn-border-radius;
 

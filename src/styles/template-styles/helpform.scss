@@ -40,10 +40,6 @@
   }
 }
 
-.helpform p {
-  margin: 0;
-}
-
 //helpform grid
 .helpform form {
   @media screen and (min-width: $desktop) {
@@ -55,7 +51,7 @@
 }
 
 .contact-needs,
-.acceptance__wrap {
+.check__wrap {
   grid-column-end: span 2;
 }
 
@@ -94,7 +90,12 @@ textarea.contact__input {
   border-radius: $btn-border-radius;
 }
 
-.acceptance__wrap {
+textarea.contact__input {
+  resize: none;
+}
+
+// check button
+.check__wrap {
   color: $grey;
   font-size: 12px;
   font-weight: 300;
@@ -107,6 +108,46 @@ textarea.contact__input {
     font-size: 16px;
     margin: 20px 0 40px;
   }
+}
+.check__wrap label {
+  display: flex;
+  align-items: center;
+}
+
+.check__wrap span {
+  margin: 0;
+}
+
+.contactAccept {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c8c7c7;
+  border-radius: 3px;
+  margin-right: 5px;
+  transition: 250ms $transition-function;
+  @media screen and (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+  }
+  &:checked {
+    background-image: url(../../../assets/images/check.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+}
+
+.contactAccept:checked + span {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 //form button
@@ -146,4 +187,108 @@ textarea.contact__input {
 
 .required {
   color: rgb(207, 72, 72);
+}
+
+//notification
+.notification {
+  position: fixed;
+  top: 20px;
+  right: -400px;
+  z-index: 10;
+  padding: 46px 36px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  border: 2px solid $main-blue;
+  background: $white;
+  box-shadow: 0px 12px 12px 0px rgba(82, 113, 255, 0.04);
+  transition: transform 250ms var(--timing-funcion);
+  @media screen and (min-width: $tablet) {
+    padding: 56px 83px;
+    border-radius: 24px;
+    right: -700px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 67px 133px;
+    border-radius: 30px;
+    right: -1000px;
+  }
+}
+
+.notification.active {
+  right: 20px;
+  transform: scale(1);
+}
+
+.notification__image {
+  width: 67px;
+  margin-right: 10px;
+  @media screen and (min-width: $tablet) {
+    width: 89px;
+    margin-right: 18px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 123px;
+    margin-right: 24px;
+  }
+}
+
+.notification__btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  fill: $black;
+  transition: fill $transition-function;
+  top: 12px;
+  right: 12px;
+  @media screen and (min-width: $tablet) {
+    top: 18px;
+    right: 18px;
+  }
+  @media screen and (min-width: $desktop) {
+    top: 22px;
+    right: 22px;
+  }
+  &:hover,
+  &:focus {
+    fill: $main-blue;
+  }
+}
+
+.notification__btn .menu-icon {
+  width: 22px;
+  height: 22px;
+  top: 12px;
+  right: 12px;
+  @media screen and (min-width: $tablet) {
+    width: 24px;
+    height: 24px;
+    top: 18px;
+    right: 18px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 36px;
+    border-radius: 36px;
+    top: 22px;
+    right: 22px;
+  }
+}
+
+.notification__text {
+  font-size: 18px;
+  font-weight: 500;
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+  }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  display: none;
 }
