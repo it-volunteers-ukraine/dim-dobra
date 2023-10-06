@@ -1,84 +1,81 @@
 @import "../variables.scss";
 
 .need-help {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  margin-left: -16px;
-  margin-right: -16px;
-  padding: 192px 16px;
-  background-size: cover;
-  background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	margin-left: -16px;
+	margin-right: -16px;
+	padding: 192px 16px;
+	background-size: cover;
+	background-position: center;
 
-  background-image: url(../../images/need-help-image.jpg);
+	background-image: url(../../images/need-help-image.jpg);
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../../images/need-help-image-2X.jpg);
-  }
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		background-image: url(../../images/need-help-image-2X.jpg);
+	}
 
-  @media screen and (min-width: $tablet) {
-    margin: 0 0 80px;
-    padding: 120px 16px;
+	@media screen and (min-width: $tablet) {
+		margin: 0 0 80px;
+		padding: 120px 16px;
 
-    background-image: url(../../images/need-help-image-LG.jpg);
+		background-image: url(../../images/need-help-image-LG.jpg);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../../images/need-help-image-LG-2X.jpg);
-    }
-  }
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: url(../../images/need-help-image-LG-2X.jpg);
+		}
+	}
 
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 130px;
-    padding: 262px 16px;
-  }
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 130px;
+		padding: 262px 16px;
+	}
 }
 
 .need-help__title {
-  margin: 0;
-  color: $white;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1;
+	margin: 0;
+	color: $white;
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1;
 
-  @media screen and (max-width: $mobile) {
-    font-size: 29px;
-  }
+	@media screen and (max-width: $mobile) {
+		font-size: 29px;
+	}
 
-  @media screen and (min-width: $tablet) {
-    font-size: 40px;
-    line-height: 1.4;
-  }
+	@media screen and (min-width: $tablet) {
+		font-size: 40px;
+		line-height: 1.4;
+	}
 
-  @media screen and (min-width: $desktop) {
-    font-size: 48px;
-  }
+	@media screen and (min-width: $desktop) {
+		font-size: 48px;
+	}
 }
 
 .need-help__button {
-  color: $main-blue;
-  background-color: $yellow;
+	width: 280px;
+	color: $main-blue;
+	background-color: $yellow;
 
-  @media screen and (min-width: $mobile) {
-    width: 311px;
-  }
+	@media screen and (min-width: $mobile) {
+		width: 311px;
+	}
 
-  @media screen and (min-width: $tablet) {
-    width: 332px;
-  }
+	@media screen and (min-width: $tablet) {
+		width: 332px;
+	}
 
-  @media screen and (min-width: $desktop) {
-    width: 296px;
-  }
+	@media screen and (min-width: $desktop) {
+		width: 296px;
+	}
 
-  &:hover,
-  &:focus {
-    color: $yellow;
-    background-color: $main-blue;
-  }
+	&:hover,
+	&:focus {
+		color: $yellow;
+		background-color: $main-blue;
+	}
 }

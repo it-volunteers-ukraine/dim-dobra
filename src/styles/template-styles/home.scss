@@ -77,15 +77,6 @@
 	}
 }
 
-.house__span {
-	display: none;
-
-	@media screen and (min-width: $tablet) {
-		display: block;
-		margin-left: 6px;
-	}
-}
-
 .support {
 	margin-bottom: 64px;
 
@@ -277,6 +268,10 @@
 	@media screen and (min-width: $tablet) {
 		margin-right: -40px;
 	}
+
+	@media screen and (min-width: $desktop) {
+		margin-right: -75px;
+	}
 }
 
 @media screen and (min-width: $tablet) {
@@ -328,8 +323,18 @@
 }
 
 .news__wraper {
-	display: flex;
-	justify-content: space-between;
+	@media screen and (max-width: 767.99px) {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@media screen and (min-width: 1280px) {
+		width: 100%;
+	}
+
+	img {
+		width: 100%;
+	}
 }
 
 .news__gallery {
@@ -346,16 +351,21 @@
 }
 
 .news__flexWraper {
-	display: flex;
-	gap: 24px;
+	@media screen and (max-width: 1279.99px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 24px;
+	}
 
-	@media screen and (min-width: $desktop) {
+	@media screen and (min-width: 1280px) {
+		display: flex;
 		gap: 30px;
 	}
 }
 
 .news__text {
-	margin: 0;
+	display: flex;
+	justify-content: space-between;
 	margin-top: 18px;
 	margin-bottom: 12px;
 	color: $grey;
@@ -421,7 +431,11 @@
 	display: inline-block;
 }
 .tabs div {
-	padding-top: 51px;
+	padding-top: 48px;
+
+	@media screen and (min-width: $tablet) {
+		padding-top: 51px;
+	}
 }
 .tabs ul {
 	margin: 0px;

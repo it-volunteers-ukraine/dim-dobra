@@ -4,11 +4,11 @@
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 h1,
@@ -18,7 +18,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+	margin: 0;
 }
 
 .container {
@@ -51,42 +51,42 @@ p {
       "support__btn description__animals" ;
   }
 
-  .about__title {
-    grid-area: about__title;
-    height: fit-content;
-  }
+	.about__title {
+		grid-area: about__title;
+		height: fit-content;
+	}
 
-  .description__main {
-    grid-area: description__main;
-  }
+	.description__main {
+		grid-area: description__main;
+	}
 
   .about__img {
     grid-area: about__img;
   }
 
-  .description__command {
-    grid-area: description__command;
-  }
+	.description__command {
+		grid-area: description__command;
+	}
 
-  .about__contact {
-    grid-area: about__contact;
-  }
+	.about__contact {
+		grid-area: about__contact;
+	}
 
-  .work__img {
-    grid-area: work__img;
-  }
+	.work__img {
+		grid-area: work__img;
+	}
 
-  .description__other {
-    grid-area: description__other;
-  }
+	.description__other {
+		grid-area: description__other;
+	}
 
-  .description__animals {
-    grid-area: description__animals;
-  }
+	.description__animals {
+		grid-area: description__animals;
+	}
 
-  .support__btn {
-    grid-area: support__btn;
-  }
+	.support__btn {
+		grid-area: support__btn;
+	}
 
   @media screen and (min-width: $desktop) {
     margin-top: -16px;
@@ -107,41 +107,41 @@ p {
       "work__img support__btn";
   }
 
-  .about__title {
-    grid-area: about__title;
-  }
+	.about__title {
+		grid-area: about__title;
+	}
 
-  .description__main {
-    grid-area: description__main;
-  }
+	.description__main {
+		grid-area: description__main;
+	}
 
-  .description__command {
-    grid-area: description__command;
-  }
+	.description__command {
+		grid-area: description__command;
+	}
 
-  .about__contact {
-    grid-area: about__contact;
-  }
+	.about__contact {
+		grid-area: about__contact;
+	}
 
   .about__img {
     grid-area: about__img;
   }
 
-  .work__img {
-    grid-area: work__img;
-  }
+	.work__img {
+		grid-area: work__img;
+	}
 
-  .description__other {
-    grid-area: description__other;
-  }
+	.description__other {
+		grid-area: description__other;
+	}
 
-  .description__animals {
-    grid-area: description__animals;
-  }
+	.description__animals {
+		grid-area: description__animals;
+	}
 
-  .description__morehelp {
-    grid-area: description__morehelp;
-  }
+	.description__morehelp {
+		grid-area: description__morehelp;
+	}
 
     @media screen and (min-width: $full) {
         grid-template-rows: auto;
@@ -162,10 +162,10 @@ p {
     margin: -13px 0px 20px -1px;
   }
 
-  @media screen and (min-width: $desktop) {
-    font-size: 32px;
-    margin: 4px 0px 11px 0px;
-  }
+	@media screen and (min-width: $desktop) {
+		font-size: 32px;
+		margin: 4px 0px 11px 0px;
+	}
 
   @media screen and (min-width: $full) {
     font-size: 48px;
@@ -174,22 +174,22 @@ p {
 }
 
 .about__description {
-  margin: 16px 0px 0px 0px;
-  font-size: 18px;
-  line-height: 1.366;
-  font-weight: 500;
+	margin: 16px 0px 0px 0px;
+	font-size: 18px;
+	line-height: 1.366;
+	font-weight: 500;
 
-  @media screen and (min-width: $tablet) {
-    font-size: 16px;
-    line-height: 1.377;
-    font-weight: 500;
-    margin-top: 3px;
-    margin-bottom: 17px;
-  }
+	@media screen and (min-width: $tablet) {
+		font-size: 16px;
+		line-height: 1.377;
+		font-weight: 500;
+		margin-top: 3px;
+		margin-bottom: 17px;
+	}
 
-  @media screen and (min-width: $desktop) {
-    font-size: 18px;
-  }
+	@media screen and (min-width: $desktop) {
+		font-size: 18px;
+	}
 
   @media screen and (min-width: $full){
     font-size: 26px;
@@ -253,11 +253,7 @@ p {
   }
 }
 
-.image {
-  width: 100%;
-}
-
-.work__img.image{
+.work__img img.image{
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -290,9 +286,9 @@ p {
 }
 
 .email {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 18px;
+	display: flex;
+	justify-content: flex-start;
+	font-size: 18px;
 
   @media screen and (min-width: $full) {
     font-size: 24px;
@@ -321,11 +317,11 @@ p {
 }
 
 .email__img {
-  margin-right: 12px;
+	margin-right: 12px;
 
-  @media screen and (min-width: $tablet) {
-    width: 32px;
-  }
+	@media screen and (min-width: $tablet) {
+		width: 32px;
+	}
 
   @media screen and (min-width: $full){
     width: 46px;
@@ -333,11 +329,11 @@ p {
 }
 
 .phone__img {
-  margin-right: 12px;
+	margin-right: 12px;
 
-  @media screen and (min-width: $tablet) {
-    width: 32px;
-  }
+	@media screen and (min-width: $tablet) {
+		width: 32px;
+	}
 
   @media screen and (min-width: $full){
    width: 46px;
@@ -352,11 +348,11 @@ p {
   margin-left: 16px;
   width: 311px;
 
-  &:hover,
-  &:focus {
-    color: $yellow;
-    background-color: $main-blue;
-  }
+	&:hover,
+	&:focus {
+		color: $yellow;
+		background-color: $main-blue;
+	}
 
   @media screen and (min-width: $tablet) {
     font-size: 20px;
@@ -385,13 +381,13 @@ p {
   }
 }
 .description__main {
-  @media screen and (min-width: $tablet) {
-    margin: 0px;
-  }
+	@media screen and (min-width: $tablet) {
+		margin: 0px;
+	}
 
-  @media screen and (min-width: $desktop) {
-    padding-right: 106px;
-  }
+	@media screen and (min-width: $desktop) {
+		padding-right: 106px;
+	}
 
   @media screen and (min-width: $full) {
     padding-right: 0px;
@@ -401,13 +397,13 @@ p {
 }
 
 .description__command {
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 0px;
-  }
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0px;
+	}
 
-  @media screen and (min-width: $desktop) {
-    padding-right: 98px;
-  }
+	@media screen and (min-width: $desktop) {
+		padding-right: 98px;
+	}
 
   @media screen and (min-width: $full) {
     padding-right: 130px;
@@ -449,8 +445,8 @@ p {
 }
 
 .description__morehelp {
-  display: block;
-  margin-top: 10px;
+	display: block;
+	margin-top: 10px;
 
     @media screen and (min-width: $tablet) {
       display: none;

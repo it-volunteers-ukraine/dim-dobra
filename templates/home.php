@@ -8,163 +8,157 @@ get_header();
   <div class="container ">
     <section class="house">
       <div class="house__title-wraper">
-        <h1 class="house__title">Дім Добра: рука допомоги для тих, хто потребує - від людей до тварин</h1>
+        <h1 class="house__title"><?php the_field('hero_title'); ?></h1>
       </div> 
       <button class="button house__button" type="button" aria-label="support"   aria-expanded="false"
-      aria-controls="modal-window">ПІДТРИМАТИ<span class="house__span">ФОНД</span> </button>
+      aria-controls="modal-window"><?php the_field('hero_btn_text'); ?></button>
     </section>
 
     <section class="support">
-      <h2 class="support__title">Кожен місяць завдяки нашій організації:</h2>    
+      <h2 class="support__title"><?php the_field('support__title'); ?></h2>    
       <ul class="support__list">
-        <li class="support__item">
-          <p class="support__count">50</p>
-          <p class="support__t  ext">сімей отримують разову допомогу</p>
-        </li>
-        <li class="support__item">
-          <p class="support__count">3000</p>
-          <p class="support__text">людей отримують різного роду допомогу: харчі, одяг, гігієна, тощо.</p>
-        </li>
-        <li class="support__item">
-          <p class="support__count">100</p>
-          <p class="support__text">котиків ЗСУ на різних напрямках отримують бокси з гігієною, їжею, солодощами, медициною, тощо.</p>
-        </li>
-        <li class="support__item">
-          <p class="support__count">100</p>
-          <p class="support__text">врятованих тварин знаходять новий дім</p>
-        </li>
-        <li class="support__item">
-          <p class="support__count">50</p>
-          <p class="support__text">тварин проживають у нашому притулку і постійно працюють з зоо-психологами та кінологами</p>
-        </li>
-        <li class="support__item">
-          <p class="support__count">200</p>
-          <p class="support__text">тварин отримують корма від нашого фонду</p>
-        </li>
+
+      <?php
+      $support__list = get_field("support__list");
+
+      if($support__list) : ?>
+        <?php foreach($support__list as $support) : 
+          $count = $support['support__count'];
+          $text = $support['support__text'];
+        ?>
+          <li class="support__item">
+            <p class="support__count"><?php echo $count; ?></p>
+            <p class="support__text"><?php echo $text; ?></p>       
+          </li>
+        <?php endforeach; ?>
+      <?php endif; ?>
 
       </ul>
     </section>
-   
+
     <section class="about">
-        <h3 class="about__title">Про “Дім Добра”</h3> 
+        <h3 class="about__title"><?php the_field('about__title'); ?></h3> 
 
         <div class="about__wraper">
-          <p class="about__text">З початку повномаштабного вторгнення наша організація систематично допомогає та забезпечує усім необхідним людей та тварин, що постраждали під час війни, тимчасово або назавжди залишились без домівки. <br> <br> Наші волонтери регулярно безкоштовно годують переселенців в Кривому Розі, видають продукти харчування, хімію, гігієну, одяг, надають житло та прихисток.
+          <p class="about__text">
+            <?php the_field('about_text_first'); ?>
+          <br> <br> 
+            <?php the_field('about_text_second'); ?>
           </p>  
 
-          <p class="about__text-tablet">З початку повномаштабного вторгнення наша організація систематично допомогає та забезпечує усім необхідним людей та тварин, що постраждали під час війни, тимчасово або назавжди залишились без домівки. Наші волонтери регулярно безкоштовно годують переселенців в Кривому Розі, видають продукти харчування, хімію, гігієну, одяг, надають житло та прихисток.<br><br> 
-          Двічі на місяць ми виїжджаємо до Херсонської області та годуємо людей гарячими обідами, роздаємо хліб, продуктові набори, допомогаємо по побуту літнім людям. Крім того, ми не залишаємо без уваги тварин - евакуюємо собак з зони бойових дій та шукаємо для них нові домівки. Наш фонд щиро вірить у потужну силу добра та прагне змінювати життя до кращого для тих, хто опинився у складних життєвих обставинах.</p>
+          <p class="about__text-tablet">
+            <?php the_field('about_text_first'); ?> 
+            <?php the_field('about_text_second'); ?>
+          <br><br> 
+            <?php the_field('about_text_thirdth'); ?> 
+            <?php the_field('about_text_fourth'); ?>
+          </p>
   
-      <div class="swiper-container">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper" style="margin-bottom: 32px">
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/01-2-1024x790.jpg' alt=''/></div>
-            <div class="swiper-slide">  <img src='http://dim-dobra/wp-content/uploads/2023/09/02-2-1024x790.jpg' alt=''/></div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/03-2-1024x790.jpg' alt=''/></div>
-            <div class="swiper-slide">  <img src='http://dim-dobra/wp-content/uploads/2023/09/04-1-1024x790.jpg' alt=''/></div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/05-2-1024x790.jpg' alt=''/></div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/06-2-1024x790.jpg' alt=''/></div>
+        <?php if (have_rows('about_slider')) : ?>
+          <div class="swiper-container">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper" style="margin-bottom: 32px">      
+
+            <?php while(have_rows('about_slider')) : the_row(); 
+            $img = get_sub_field('about_slider_img'); ?>
+              <div class="swiper-slide"> 
+                <img src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
+              </div>
+            <?php endwhile; ?>      
+
+              </div>
+                <div class="swiper-pagination" style="position: inherit"></div>
+            </div>       
           </div>
-            <div class="swiper-pagination" style="position: inherit"></div>
-        </div>       
-      </div>
+        <?php endif; ?>
 
       </div>
 
-        <p class="about__text">Двічі на місяць ми виїжджаємо до Херсонської області та годуємо людей гарячими обідами, роздаємо хліб, продуктові набори, допомогаємо по побуту літнім людям. Крім того, ми не залишаємо без уваги тварин - евакуюємо собак з зони бойових дій та шукаємо для них нові домівки. <br> <br> Наш фонд щиро вірить у потужну силу добра та прагне змінювати життя до кращого для тих, хто опинився у складних життєвих обставинах.
+        <p class="about__text">
+            <?php the_field('about_text_thirdth'); ?> 
+          <br> <br> 
+            <?php the_field('about_text_fourth'); ?>
         </p>    
     </section>
 
     <?php get_template_part( 'template-parts/founding-documents'); ?>
 
     <section class="news">
-      <h3 class="news__title">Новини та події</h3> 
-  
+      <h3 class="news__title"><?php the_field('news__title'); ?></h3> 
+
+
       <div class="swiper-container news__hide">
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-1-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Херсон</p>
-              <p class="news__text">23.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Допомога Херсонцям. Видача гуманітарної допомоги</h4>
-          </div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-2-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">Гарячі напрямки</p>
-              <p class="news__text">20.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Допомога ЗСУ. Закупівля продуктів для ії потреб</h4>
-          </div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-3-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Кривий Ріг</p>
-              <p class="news__text">15.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Зібрали гуманітарну допомогу для пунктів незламності</h4>
-          </div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-4-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Кривий Ріг</p>
-              <p class="news__text">21.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Врятований лабрадор. Лікування у клініці.</h4>
-          </div>
-            <div class="swiper-slide"> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-5-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">В дорозі</p>
-              <p class="news__text">05.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Екскурсія для дітей</h4>
-          </div>         
-          
+          <div class="swiper-wrapper">  
+
+          <?php if(have_rows('news_slider')) : ?>
+
+          <?php while(have_rows('news_slider')) : the_row();          
+          $img = get_sub_field('news_img'); ?>
+
+            <div class="swiper-slide"> 
+              <img src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
+              <div class="news__wraper">
+                <p class="news__text"><?php the_sub_field('news_text_left') ?></p>
+                <p class="news__text"><?php the_sub_field('news_text_right') ?></p>
+              </div>
+              <h4 class="news__subTitle"><?php the_sub_field('news_slider_subtitle') ?></h4>
+            </div>  
+
+          <?php endwhile; ?> 
+          <?php endif; ?>
+
           </div>
             <div class="swiper-pagination" style="position: inherit"></div>
-        </div>       
+        </div>  
       </div>
 
+      
       <div class="news__gallery">
         <div class="news__flexWraper" >
-          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-1-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Херсон</p>
-              <p class="news__text">23.07.2023</p>
+
+        <?php
+        global $post;
+
+        $myposts = get_posts([ 
+	      'numberposts' => -1,
+        ]);
+
+        if( $myposts ){
+	        foreach( $myposts as $post ){
+		      setup_postdata( $post );
+
+          $title = get_the_title();
+          $content = get_the_content();
+		    ?>
+
+          <div class="news__wraper"> 
+          <?php the_post_thumbnail(); ?>
+        
+          <?php 
+            if ($content) : ?>
+            <div class="news__text">
+              <?php echo $content; ?>
             </div>
-              <h4 class="news__subTitle">Допомога Херсонцям. Видача гуманітарної допомоги</h4>
-          </div>
-          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-2-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">Гарячі напрямки</p>
-              <p class="news__text">20.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Допомога ЗСУ. Закупівля продуктів для ії потреб</h4>
-          </div>
+
+          <?php endif; ?>         
+         
+            <h4 class="news__subTitle"><?php echo $title; ?></h4>
           </div>
 
-          <div class="news__flexWraper">
-          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-3-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Кривий Ріг</p>
-              <p class="news__text">15.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Зібрали гуманітарну допомогу для пунктів незламності</h4>
-          </div>
-          <div> <img src='http://dim-dobra/wp-content/uploads/2023/09/img-news-3-1024x1015.jpg' alt=''/>
-            <div class="news__wraper">
-              <p class="news__text">м. Кривий Ріг</p>
-              <p class="news__text">21.07.2023</p>
-            </div>
-              <h4 class="news__subTitle">Врятований лабрадор. Лікування у клініці.</h4>
-          </div>
-    </div>
+          <?php 
+	    }
+    } 
+    wp_reset_postdata(); ?>
 
+        </div>
       </div>
     </section>
 
     <section class="bank-details">
-      <h3 class="bank-details__title">Наші реквізити</h3>
+      <h3 class="bank-details__title"><?php the_field('bank_details_title'); ?></h3>
       
+      <?php if (have_rows('bank_details_tabs')) : ?>
       <div class="tabs">
         <ul>
           <li> 
@@ -180,99 +174,46 @@ get_header();
             <span class="tabs-span2">EUR</span> 
           </li>      
         </ul>
+
         <div>
+          <?php while(have_rows('bank_details_tabs')) : the_row(); 
+          $img = get_sub_field('qr-code'); ?>
 
           <div class="tabs__wraper">
             <div class="tabs__flexWraper">
               <div style="padding-top: 0">
                 <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">Отримувач:</p>     
-                  <p class="bank-details__text-second">ЗУБЕНКО ОЛЕНА ВОЛОДИМИРІВНА</p>     
+                  <p class="bank-details__text-first"><?php the_sub_field('recipient_first') ?></p>     
+                  <p class="bank-details__text-second"><?php the_sub_field('recipient_second') ?></p>     
                 </div>
                 <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">ЄДРПОУ:</p>     
-                  <p class="bank-details__text-second">3192013863</p> 
+                  <p class="bank-details__text-first"><?php the_sub_field('edrpou_first') ?></p>     
+                  <p class="bank-details__text-second"><?php the_sub_field('edrpou_second') ?></p> 
                 </div>
                 <div class="tabs__textWraper" style="padding-top: 0">    
-                  <p class="bank-details__text-first">Банк:</p>     
-                  <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>
+                  <p class="bank-details__text-first"><?php the_sub_field('bank_first') ?></p>     
+                  <p class="bank-details__text-second"><?php the_sub_field('bank_second') ?></p>
                 </div>
                 <div class="tabs__textWraper" style="padding-top: 0">      
-                  <p class="bank-details__text-first">IBAN:</p>     
-                  <p class="bank-details__text-second">UA683052990000026207742096747</p>
+                  <p class="bank-details__text-first"><?php the_sub_field('iban_first') ?></p>     
+                  <p class="bank-details__text-second"><?php the_sub_field('iban_second') ?></p>
                 </div>   
               </div>
               <div class="tabs__wraper-img"> 
-                <img class="tabs-img" src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
+                <img class="tabs-img" src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
               </div>  
             </div>        
             <div style="	display: flex; justify-content: center; padding-top: 0">
               <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
-              aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
+              aria-controls="modal-window"><?php the_sub_field('tabs_button') ?></button>
             </div>
           </div>
 
-          <div class="tabs__wraper">
-            <div class="tabs__flexWraper">
-              <div style="padding-top: 0">
-                <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">Отримувач:</p>     
-                  <p class="bank-details__text-second">ZUBENKO OLENA VOLODYMYRIVNA</p>     
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">ЄДРПОУ:</p>     
-                  <p class="bank-details__text-second">3192013863</p> 
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">    
-                  <p class="bank-details__text-first">Банк:</p>     
-                  <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">      
-                  <p class="bank-details__text-first">IBAN:</p>     
-                  <p class="bank-details__text-second">UA683052990000026207742096747</p>
-                </div>   
-              </div>
-              <div class="tabs__wraper-img"> 
-                <img class="tabs-img" src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
-              </div>  
-            </div>        
-            <div style="	display: flex; justify-content: center; padding-top: 0">
-              <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
-              aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
-            </div>
-          </div>
-
-          <div class="tabs__wraper">
-            <div class="tabs__flexWraper">
-              <div style="padding-top: 0">
-                <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">Отримувач:</p>     
-                  <p class="bank-details__text-second">ZUBENKO ELENA WOLODYMYRIWNA</p>     
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">
-                  <p class="bank-details__text-first">ЄДРПОУ:</p>     
-                  <p class="bank-details__text-second">3192013863</p> 
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">    
-                  <p class="bank-details__text-first">Банк:</p>     
-                  <p class="bank-details__text-second">АТ КБ «ПРИВАТБАНК»</p>
-                </div>
-                <div class="tabs__textWraper" style="padding-top: 0">      
-                  <p class="bank-details__text-first">IBAN:</p>     
-                  <p class="bank-details__text-second">UA683052990000026207742096747</p>
-                </div>   
-              </div>
-              <div class="tabs__wraper-img"> 
-                <img class="tabs-img" src='http://dim-dobra/wp-content/uploads/2023/09/qr-code.jpg' alt=''/>
-              </div>  
-            </div>        
-            <div style="	display: flex; justify-content: center; padding-top: 0">
-              <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
-              aria-controls="modal-window">ПІДТРИМАТИ ФОНД</button>
-            </div>
-          </div>
-                
+          <?php endwhile; ?>
+        </div>                
       </div>
+
+      <?php endif; ?>
     </section>
 
     <?php get_template_part( 'template-parts/need-help'); ?>

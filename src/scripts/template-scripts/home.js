@@ -12,9 +12,12 @@ const swiper = new Swiper(".mySwiper", {
 	},
 });
 
-$(document).ready(function () {
+jQuery.noConflict();
+
+jQuery(document).ready(function ($) {
 	$(".tabs").lightTabs();
 });
+
 (function ($) {
 	jQuery.fn.lightTabs = function (options) {
 		var createTabs = function () {

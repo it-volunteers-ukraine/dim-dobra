@@ -17,6 +17,10 @@
 		margin-left: -75px;
 		padding: 48px 75px 64px 75px;
 	}
+
+	@media screen and (min-width: 1920px) {
+		padding: 100px 80px;
+	}
 }
 
 .documents__title {
@@ -34,14 +38,13 @@
 	}
 
 	@media screen and (min-width: $desktop) {
-		margin-bottom: 0px;
+		margin-bottom: 56px;
 		font-size: 40px;
 	}
 
-	@media screen and (min-width: 1920px){
+	@media screen and (min-width: 1920px) {
 		font-size: 56px;
-		margin-bottom: 50px;
-		margin-top: 50px;
+		margin-bottom: 80px;
 	}
 }
 
@@ -53,20 +56,15 @@
 
 	@media screen and (min-width: $desktop) {
 		display: flex;
-		gap: 29px;
+		gap: 0px;
 		justify-content: space-between;
-		padding-right: 66px;
-		padding-left: 46px;
+		padding-right: 80px;
+		padding-left: 20px;
 	}
 
-
-	@media screen and (min-width: 1920px){
-		gap: 104px;
+	@media screen and (min-width: 1920px) {
 		-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
-		justify-content: space-between;
-		padding-right: 231px;
-		padding-left: 139px;
 	}
 }
 
@@ -74,16 +72,13 @@
 	display: flex;
 	gap: 24px;
 	align-items: center;
-	margin-bottom: 37px;
+	margin-bottom: 32px;
 	transition: color $transition-function;
-	height: 112px;
-	margin-left: 36px;
 
 	@media screen and (min-width: $tablet) {
 		position: relative;
-		margin-left: 56px;
-		height: 313px;
-		margin-bottom: 20px;
+		margin-left: 60px;
+		margin-bottom: 40px;
 	}
 
 	&:hover,
@@ -100,7 +95,8 @@
 
 .documents__img {
 	display: block;
-	height: 50px;
+	width: 90px;
+	height: 118px;
 
 	@media screen and (min-width: $tablet) {
 		display: none;
@@ -117,8 +113,13 @@
 	}
 
 	@media screen and (min-width: $desktop) {
-		width: 214px;
-		height: 260px;
+		width: 190px;
+		height: 250px;
+	}
+
+	@media screen and (min-width: 1920px) {
+		width: 225px;
+		height: 280px;
 	}
 }
 
@@ -149,17 +150,17 @@
 	}
 
 	@media screen and (min-width: 1920px) {
-		width: 186px;
-		left: 37px;
-		bottom: 28px;
-		font-size: 17px;
+		width: 194px;
+		left: 19px;
+		bottom: 36px;
+		font-size: 18px;
 		line-height: 1.2;
 	}
 }
 
 .documents__text {
 	margin: 0;
-	margin-top: 43px;
+	margin-top: 40px;
 	color: $white;
 	font-size: 18px;
 	font-weight: 400;
@@ -168,6 +169,7 @@
 	@media screen and (min-width: $tablet) {
 		margin-right: auto;
 		margin-left: auto;
+		margin-top: -8px;
 		max-width: 750px;
 		text-align: center;
 		font-weight: 600;
@@ -178,7 +180,7 @@
 		margin-top: 37px;
 		font-size: 20px;
 	}
-	@media  screen and (min-width: 1920px) {
+	@media screen and (min-width: 1920px) {
 		max-width: 1035px;
 		margin-top: 62px;
 		font-size: 26px;
@@ -209,8 +211,7 @@
 
 	@media screen and (min-width: 1920px) {
 		max-width: 1035px;
-        font-size: 26px;
+		font-size: 26px;
 		margin-bottom: 32px;
-    }
+	}
 }
-

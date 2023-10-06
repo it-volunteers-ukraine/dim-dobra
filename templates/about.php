@@ -22,7 +22,8 @@ get_header();
             </div>
             <div class="phone">
                 <img src="<?php echo get_template_directory_uri();?> ../src/images/carbon_phone.png" alt="email" class="phone__img">
-                <a class="phone__link__first" href="tel:+<?php the_field('first-phone'); ?>"><?php the_field('first-phone'); ?> </a>&nbsp|&nbsp <a class="phone__link" href="tel:<?php the_field('second-phone'); ?>"> <?php the_field('second-phone'); ?></a> 
+                <a class="phone__link__first" href="tel:+<?php the_field('first-phone'); ?>"><?php the_field('first-phone'); ?> </a>&nbsp|&nbsp 
+                <a class="phone__link" href="tel:<?php the_field('second-phone'); ?>"> <?php the_field('second-phone'); ?></a> 
             </div>
         </div>
         <div class="work__img">

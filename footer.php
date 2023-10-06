@@ -9,9 +9,9 @@
                 ?>                
             </a>         
         </div>
-        <div class="working-hours">
-            <p class="working__days">Пн-Пт 10:00 - 15:00</p>
-            <p class="day__off">Сб., Нед., - вихідні</p>
+        <div class="working__hours">
+            <p class="working__days"><?php the_field ('working-days');?></p>
+            <p class="day__off"><?php the_field ('day-off'); ?></p>
         </div>
     </section>
     <section class="nav">
@@ -37,44 +37,45 @@
     </section>
     <section class="footer__contacts">
         <div class="contacts__container">
-            <div class="contacts__text" >Контакти</div>
+            <div class="contacts__text">Контакти</div>
             <div class="footer__address contacts__flex">
                 <img src="<?php echo get_template_directory_uri();?> /assets/images/geolocation.png" alt="address" class="footer__img">
-                <p class="footer__text">Кривий Ріг, Україна</p>
+                <p class="footer__text"><?php the_field('address'); ?></p>
             </div>
             <div class="footer__email contacts__flex">
                 <img src="<?php echo get_template_directory_uri();?> /assets/images/carbon_email.png" alt="email" class="footer__img">
-                <a class="footer__link" href="mailto:dimdobra.kr@gmail.com">dimdobra.kr@gmail.com</a>
+                <a class="footer__link" href="<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
             </div>
             <div class="footer__phone contacts__flex">
-                <img src="<?php echo get_template_directory_uri();?> /assets/images/carbon_phone.png" alt="email" class="footer__img">
-                <a class="phone__link__first" href="tel:+380960292222">+380960292222 </a>&nbsp|&nbsp <a class="phone__link" href="tel:+380680292222"> +380680292222</a> 
+                <img src="<?php echo get_template_directory_uri();?> /assets/images/carbon_phone.png" alt="phone" class="footer__img">
+                <a class="phone__link__first" href="<?php the_field('first-phone'); ?>"><?php the_field('first-phone'); ?> </a>&nbsp|&nbsp
+                <a class="phone__link" href="<?php the_field('second-phone'); ?>"><?php the_field('second-phone'); ?></a> 
             </div>
         </div>
             <div class="mob__social">
-                <li class="social__item"><a class="mob-social__link" href=""><svg class="icon-socials"
+                <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('viber', 2) ); ?>"><svg class="icon-socials"
                          width="40px" height="40px">
                     <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#viber"></use>
                  </svg></a></li>
-                <li class="social__item"><a class="mob-social__link" href=""><svg class="icon-socials"
+                <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('telegram', 2) ); ?>"><svg class="icon-socials"
                                                 width="40px" height="40px">
                     <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#telegram"></use>
                 </svg></a></li>
-                <li class="social__item"><a class="mob-social__link" href=""><svg class="icon-socials"
+                <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('whatsapp', 2) ); ?>"><svg class="icon-socials"
                                                 width="40px" height="40px">
                     <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#whatsapp"></use>
                 </svg></a></li>
             </div> 
             <div class="tablet__social">   
-                <li class="social__item"><a class="tablet-social__link" href=""><svg class="icon-socials"
+                <li class="social__item"><a class="tablet-social__link" href="<?php echo esc_attr(get_field('viber', 2) ); ?>"><svg class="icon-socials"
                          width="32px" height="32px">
                     <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#viber"></use>
                  </svg></a></li>
-                <li class="social__item"><a class="tablet-social__link" href=""><svg class="icon-socials"
+                <li class="social__item"><a class="tablet-social__link" href="<?php echo esc_attr(get_field('telegram', 2) ); ?>"><svg class="icon-socials"
                                                 width="32px" height="32px">
                     <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#telegram"></use>
                 </svg></a></li>
-                <li class="social__item"><a class="tablet-social__link" href=""><svg class="icon-socials"
+                <li class="social__item"><a class="tablet-social__link" href="<?php echo esc_attr(get_field('whatsapp', 2) ); ?>"><svg class="icon-socials"
                                                 width="32px" height="32px">
                     <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#whatsapp"></use>
                 </svg></a></li>
