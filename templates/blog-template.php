@@ -16,7 +16,7 @@ get_header();
             <h1 class="help-people__title"><?php the_field('page_title', $postID) ?></h1>
             
             <?php
-            $category = ($postID === 6) ? 'help-people' : 'help-animals';
+            $category = ($postID === 95) ? 'help-people' : 'help-animals';
             $args = array(
                 'posts_per_page' => get_option('posts_per_page'),
                 'paged'          => $current_page,

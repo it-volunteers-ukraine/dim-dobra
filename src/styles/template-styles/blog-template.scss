@@ -43,11 +43,6 @@
 
 .page-numbers {
   cursor: pointer;
-  transition: font-weight $transition-function;
-  &:hover,
-  &:focus {
-    font-weight: 600;
-  }
 }
 
 .page-numbers:not(:last-child) {

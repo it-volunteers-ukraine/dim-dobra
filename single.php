@@ -1,25 +1,39 @@
- <?php get_header(); ?>
+<?php
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package wp-it-volunteers
+ */
 
- <main>
-    <?php get_template_part( 'template-parts/breadcrumbs');
+get_header();
+?>
 
- 		$postID = $post->ID;
- 		$category = get_the_category($postID);
-		$catID = get_cat_ID($category[0]->cat_name);
+	<main id="primary" class="site-main">
 
-			$q = new WP_Query( 'cat=$catID&p=$postID' );	
+		<?php
+		while ( have_posts() ) :
+			the_post();
 
-				if( $q->have_posts() ) :
-				
-					get_template_part( 'template-parts/content', get_post_type() );
+			get_template_part( 'template-parts/breadcrumbs');
+			
+			get_template_part( 'template-parts/content', get_post_type() );
 
-					get_template_part( 'template-parts/navigation' );
-						
-				endif;
+			get_template_part( 'template-parts/navigation' );
 
-				wp_reset_postdata();
+			// If comments are open or we have at least one comment, load up the comment template.
+			// if ( comments_open() || get_comments_number() ) :
+			// 	comments_template();
+			// endif;
+
+		endwhile; // End of the loop.
+		
 	
-     get_template_part( 'template-parts/need-help'); ?>
-</main>
+     get_template_part( 'template-parts/need-help');?>
 
-<?php get_footer();
+	</main><!-- #main -->
+
+<?php
+get_sidebar();
+get_footer();

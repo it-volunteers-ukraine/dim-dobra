@@ -40,6 +40,10 @@
   }
 }
 
+.helpform p {
+  margin: 0;
+}
+
 //helpform grid
 .helpform form {
   @media screen and (min-width: $desktop) {
@@ -50,7 +54,8 @@
   }
 }
 
-.contact-needs {
+.contact-needs,
+.acceptance__wrap {
   grid-column-end: span 2;
 }
 
@@ -63,12 +68,6 @@
   @media screen and (min-width: $desktop) {
     margin-bottom: 0;
   }
-}
-
-.input__wrap p,
-.contact-needs p,
-.helpform-btn__wrap p {
-  margin: 0;
 }
 
 .contact__label {
@@ -93,6 +92,21 @@ textarea.contact__input {
   font-size: 14px;
   line-height: 1;
   border-radius: $btn-border-radius;
+}
+
+.acceptance__wrap {
+  color: $grey;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1;
+  margin: 17px 0 33px;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    margin: 20px 0 40px;
+  }
 }
 
 //form button
