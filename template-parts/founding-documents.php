@@ -1,43 +1,29 @@
 <section class="documents">
-  <h3 class="documents__title">Установчі документи</h3>
+  <h3 class="documents__title"><?php the_field('documents_title', 'option'); ?></h3>
+
   <ul class="documents__list">
+    
+    <?php if(have_rows('documents_list', 'option')) : ?>
+
+    <?php while(have_rows('documents_list', 'option')) : the_row();          
+      $img = get_sub_field('documents_img');         
+    ?>
+
     <li>
-    <a href="#">
+    <a href="<?php the_sub_field('documents_link') ?>" target="_blank">
       <div class="documents__wraper">                   
-        <img class="documents__img" src="http://dim-dobra/wp-content/uploads/2023/09/file.png" alt="extract">
-        <img class="documents__img-desktop" src="http://dim-dobra/wp-content/uploads/2023/09/file-LG.png" alt="extract">
-        <p class="documents__subtitle">Витяг з реєстру неприбуткових установ та організацій</p>
+        <img class="documents__img" src=<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'>
+        <img class="documents__img-desktop" src="<?php the_sub_field('documents_img_desktop') ?>" alt="file-icon">
+        <p class="documents__subtitle"><?php the_sub_field('documents_subtitle') ?></p>
       </div>
     </a>
     </li>
-    <li>
-    <a href="#">
-      <div class="documents__wraper">             
-        <img class="documents__img" src="http://dim-dobra/wp-content/uploads/2023/09/file.png" alt="regulations">
-        <img class="documents__img-desktop" src="http://dim-dobra/wp-content/uploads/2023/09/file-LG.png" alt="regulations">
-        <p class="documents__subtitle">Статут благодійної організації</p>
-      </div>
-    </a>
-    </li>
-    <li>
-    <a href="#">
-      <div class="documents__wraper">             
-        <img class="documents__img" src="http://dim-dobra/wp-content/uploads/2023/09/file.png" alt="protocol">
-        <img class="documents__img-desktop" src="http://dim-dobra/wp-content/uploads/2023/09/file-LG.png" alt="protocol">
-        <p class="documents__subtitle">Протокол загальних зборів засновників 2021</p>
-      </div>
-    </a>
-    </li>
-    <li>
-    <a href="#">
-      <div class="documents__wraper">            
-        <img class="documents__img" src="http://dim-dobra/wp-content/uploads/2023/09/file.png" alt="details">
-        <img class="documents__img-desktop" src="http://dim-dobra/wp-content/uploads/2023/09/file-LG.png" alt="details">
-        <p class="documents__subtitle">Реквізити для платежів</p>
-      </div>
-    </a>
-    </li>
+
+    <?php endwhile; ?>
+    <?php endif; ?>  
   </ul>
-      <p class="documents__text">Дім Добра - це Благодійний Фонд, що  є неприбутковою організацією. Наша історія бере свій початок ще з 2021 року як "Біг Фут" коли ми допомагали лише тваринам.</p> <p class="documents__text-bottom">У Фонду є Статут, який визначає нашу сферу діяльності та мету роботи.</p>
+
+  <p class="documents__text"><?php the_field('documents_text', 'option'); ?></p> 
+  <p class="documents__text-bottom"><?php the_field('documents_text_bottom', 'option'); ?></p>
             
 </section>
