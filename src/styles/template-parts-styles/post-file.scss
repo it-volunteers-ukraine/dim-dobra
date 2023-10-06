@@ -1,0 +1,106 @@
+@import "../variables.scss";
+
+.post-box {
+  padding: 24px 16px;
+  box-shadow: 0px 4px 11px 0px rgba(137, 137, 137, 0.25);
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    padding: 0;
+    height: 343px;
+    max-width: fit-content;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: fit-content;
+  }
+}
+
+.post-box:not(:last-child) {
+  margin-bottom: 32px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.feature-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+    width: 332px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 342px;
+  }
+}
+
+.feature-image__link {
+  width: 100%;
+}
+
+.description {
+  @media screen and (min-width: $tablet) {
+    padding: 20px 20px 0 24px;
+    width: 356px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 24px 64px 0;
+    width: 618px;
+  }
+}
+
+.entry-date {
+  color: $grey;
+  margin-bottom: 16px;
+  @media screen and (min-width: $tablet) {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 16px;
+  }
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 22px;
+  }
+}
+
+.details-btn {
+  display: flex;
+  width: 100%;
+  padding: 14px 32px;
+  justify-content: center;
+  align-items: center;
+  border-radius: $btn-border-radius;
+  border: 1px solid $main-blue;
+  background-color: $white;
+  color: $main-blue;
+  margin-top: 32px;
+  transition: $transition-function;
+  @media screen and (min-width: $tablet) {
+    width: fit-content;
+    margin-top: 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 32px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+  }
+}

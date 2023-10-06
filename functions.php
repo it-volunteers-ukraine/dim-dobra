@@ -40,6 +40,7 @@ function wp_it_volunteers_scripts() {
 
   if ( is_page_template('templates/helpform.php') ) {
     wp_enqueue_style( 'helpform-style', get_template_directory_uri() . '/assets/styles/template-styles/helpform.css', array('main') );
+    wp_enqueue_script( 'helpform-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/help-form.js', array(), false, true );
   }  
 
   if ( is_page_template('templates/blog-template.php') ) {
@@ -59,7 +60,20 @@ function wp_it_volunteers_scripts() {
       }
 
   if (is_singular() && locate_template('template-parts/breadcrumbs.php')) {
-      wp_enqueue_style( 'breadcrumbs', get_template_directory_uri() . '/assets/styles/template-parts-styles/breadcrumbs.css', array('main') );
+      wp_enqueue_style( 'breadcrumbs-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/breadcrumbs.css', array('main') );
+      }
+
+  if (is_singular() && locate_template('template-parts/post-file.php')) {
+      wp_enqueue_style( 'post-file-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/post-file.css', array('main') );
+      }
+
+  if (is_singular() && locate_template('template-parts/navigation.php')) {
+      wp_enqueue_style( 'navigation-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/navigation.css', array('main') );
+      }
+
+  if (is_singular() && locate_template('template-parts/content-post.php')) {
+     wp_enqueue_style( 'post-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/content-post.css', array('main') );
+      wp_enqueue_script( 'post-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/content-post.js', array(), false, true );
       }
   
 }
@@ -113,4 +127,13 @@ if( function_exists('acf_add_options_page') ) {
   ));
 }
 
+/** length of excerpted text on blog-page */
+
+add_filter( 'excerpt_length', function(){
+	return 20;
+} );
+
+add_filter( 'excerpt_more', function( $more ) {
+	return '...';
+} );
 
