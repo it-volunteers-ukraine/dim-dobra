@@ -10,7 +10,7 @@
             </a>         
         </div>
         <div class="working__hours">
-            <p class="working__days"><?php the_field ('working-days');?></p>
+            <p class="working__days"><?php the_field ('working-days'); ?></p>
             <p class="day__off"><?php the_field ('day-off'); ?></p>
         </div>
     </section>
@@ -26,30 +26,23 @@
                 'items_wrap'          => '<ul id="%1$s" class="%2$s">%3$s</ul>',
               ] );
              ?> 
-			<!-- <ul class="footer__menu">
-				<li><a href="home.html"><span>Головна</span></a></li>
-				<li><a href="about.html"><span>Про нас</span></a></li>
-				<li><a href="#"><span>Допомога людям</span></a></li>
-                <li><a href="#"><span>Допомога тваринам</span></a></li>
-				<li><a href="#"><span>Реквізити</span></a></li>
-			</ul> -->
-        </nav>
+		</nav>
     </section>
     <section class="footer__contacts">
         <div class="contacts__container">
             <div class="contacts__text">Контакти</div>
             <div class="footer__address contacts__flex">
                 <img src="<?php echo get_template_directory_uri();?> /assets/images/geolocation.png" alt="address" class="footer__img">
-                <p class="footer__text"><?php the_field('address'); ?></p>
+                <p class="footer__text"><?php the_field('address', 8); ?></p>
             </div>
             <div class="footer__email contacts__flex">
                 <img src="<?php echo get_template_directory_uri();?> /assets/images/carbon_email.png" alt="email" class="footer__img">
-                <a class="footer__link" href="<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
+                <a class="footer__link" href="<?php the_field('email'); ?>"><?php the_field('email', 8); ?></a>
             </div>
             <div class="footer__phone contacts__flex">
                 <img src="<?php echo get_template_directory_uri();?> /assets/images/carbon_phone.png" alt="phone" class="footer__img">
-                <a class="phone__link__first" href="<?php the_field('first-phone'); ?>"><?php the_field('first-phone'); ?> </a>&nbsp|&nbsp
-                <a class="phone__link" href="<?php the_field('second-phone'); ?>"><?php the_field('second-phone'); ?></a> 
+                <a class="phone__link__first" href="<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 8); ?> </a>&nbsp|&nbsp
+                <a class="phone__link" href="<?php the_field('second-phone'); ?>"><?php the_field('second-phone', 8); ?></a> 
             </div>
         </div>
             <div class="mob__social">
