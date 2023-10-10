@@ -1,5 +1,16 @@
 .error-404 {
-  background-color: aqua;
+  background-color: aquamarine;
+  color: $white;
+}
+
+.error-text {
+  font-weight: 500;
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 28px;
+  }
 }
 
 .error-button {
