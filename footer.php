@@ -10,8 +10,8 @@
             </a>         
         </div>
         <div class="working__hours">
-            <p class="working__days"><?php the_field ('working-days'); ?></p>
-            <p class="day__off"><?php the_field ('day-off'); ?></p>
+            <p class="working__days"><?php the_field ('working-days', 'options'); ?></p>
+            <p class="day__off"><?php the_field ('day-off', 'options'); ?></p>
         </div>
     </section>
     <section class="nav">
@@ -33,7 +33,7 @@
             <div class="contacts__text">Контакти</div>
             <div class="footer__address contacts__flex">
                 <img src="<?php echo get_template_directory_uri();?> /assets/images/geolocation.png" alt="address" class="footer__img">
-                <p class="footer__text"><?php the_field('address', 8); ?></p>
+                <p class="footer__text"><?php the_field('address', 'options'); ?></p>
             </div>
             <div class="footer__email contacts__flex">
                 <img src="<?php echo get_template_directory_uri();?> /assets/images/carbon_email.png" alt="email" class="footer__img">
