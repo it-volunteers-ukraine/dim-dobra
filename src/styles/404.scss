@@ -1,0 +1,33 @@
+.error-404 {
+  background-color: aqua;
+}
+
+.error-button {
+  display: inline-block;
+  padding: 14px 32px;
+  margin-bottom: 39px;
+  text-align: center;
+  width: fit-content;
+  background-color: $yellow;
+  border-radius: $btn-border-radius;
+
+  color: $main-blue;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  order: -1;
+  @media screen and (min-width: $mobile) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 14px 24px;
+    margin-bottom: 0;
+    font-size: 16px;
+    order: initial;
+  }
+}
