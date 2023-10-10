@@ -18,14 +18,14 @@
                             }
                         ?>
                         <button class="menu-open__btn" id="js-open-menu" type="button">
-                            <svg class="menu-icon" width="24px" height="24px">
+                            <svg class="menu-icon">
                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#menu"></use>
                             </svg>
                         </button>
                         <div class="menu__container" id="js-menu">
                             <div class="menu__wrapper">
                                 <button class="menu-close__btn" id="js-close-menu" type="button">
-                                    <svg class="menu-icon" width="40px" height="40px">
+                                    <svg class="menu-icon">
                                         <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#close"></use>
                                     </svg>
                                 </button>             
@@ -50,21 +50,21 @@
                                         </li>
                                     </ul>
                                     <ul class="mob-menu__social">
-                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('viber', 2) ); ?>"><svg class="icon-socials"
+                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('viber', 'option') ); ?>"><svg class="icon-socials"
                                             width="40px" height="40px">
                                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#viber"></use>
                                             </svg></a></li>
-                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('telegram', 2) ); ?>"><svg class="icon-socials"
+                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('telegram', 'option') ); ?>"><svg class="icon-socials"
                                             width="40px" height="40px">
                                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#telegram"></use>
                                             </svg></a></li>
-                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('whatsapp', 2) ); ?>"><svg class="icon-socials"
+                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('whatsapp', 'option') ); ?>"><svg class="icon-socials"
                                             width="40px" height="40px">
                                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#whatsapp"></use>
                                             </svg></a></li>
                                     </ul>
                                 </div>
-                                <a class="menu__btn" href="<?php echo get_permalink('12'); ?>"><?php the_field('need-help_button', 2) ?></a>
+                                <a class="button menu__btn" href="<?php echo get_permalink('12'); ?>"><?php the_field('need-help_button', 'option') ?></a>
                             </div>
                         </div> 
                 </div>  

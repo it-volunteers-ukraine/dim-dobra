@@ -1,0 +1,32 @@
+@import "../variables.scss";
+
+.navigation-wrapper {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 119px;
+  }
+}
+
+.navigation-text {
+  color: $grey;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navigation-icon {
+  fill: $main-blue;
+  transition: $transition-function;
+}
+
+.navigation-box:hover,
+.navigation-box:focus {
+  .navigation-icon {
+    transform: scale(1.1);
+  }
+}
