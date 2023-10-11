@@ -14,6 +14,13 @@ if ( ! function_exists('wp_it_volunteers_setup')) {
   add_action( 'after_setup_theme', 'wp_it_volunteers_setup' );
 }
 
+add_filter( 'get_custom_logo_image_attributes', function(  
+  $custom_logo_attr, $custom_logo_id, $blog_id  ){
+      $custom_logo_attr['class'] = 'footer__logo';
+  
+      return $custom_logo_attr;
+  } ,10,3);
+
 /**
  * Enqueue scripts and styles.
  */
@@ -99,6 +106,14 @@ function wp_it_volunteers_menus() {
 }
 
 add_action( 'init', 'wp_it_volunteers_menus');
+
+add_filter ('nav_menu_css_class', 'custom_nav_menu_css_class', 10, 1);
+
+function custom_nav_menu_css_class($classes) {
+  $classes [] = 'footer__item';
+
+  return $classes;
+}
 
 /** Display a representative image for Posts, Pages or Custom Post Types*/
 add_theme_support( 'post-thumbnails' );
