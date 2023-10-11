@@ -8,12 +8,13 @@
     <?php wp_head(); ?>
     <title>Dim Dobra</title>
 </head>
-<main id="primary" class="container main">
-
+<main id="primary" class="main-404">
+    <div class="background-404">
+    <img class="img-404" src="<?php the_field('error-image', 'option')?>" alt=""></div>
 	<section class="error-404 not-found">
-		<div class="error-text">сталася помилка....</div>
-		<div class="error-oops">oops</div>
-		<a class="button error-button" href="<?php echo get_home_url(); ?>">Повернутися на головну</a>
+		<p class="error-text">сталася помилка....</p>
+		<p class="error-oops">oops</p>
+		<a class="error-button" href="<?php echo get_home_url(); ?>">Повернутися на головну</a>
 	</section><!-- .error-404 -->
 
 </main><!-- #main -->
