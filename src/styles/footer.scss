@@ -138,8 +138,12 @@ footer img.footer__logo{
 }
 .footer__menu li.footer__item:not(:first-child){
     margin-top: -30px;
-    
-    @media screen and (min-width: $desktop){
+
+    @media screen and (min-width: 1200px){
+        margin-top: 8px;
+    }
+
+        @media screen and (min-width: $desktop){
         margin-top: 10px;
     }
 
@@ -150,6 +154,11 @@ footer img.footer__logo{
 
 li.footer__item:first-child{
 
+    @media screen and (min-width: 1200px){
+        margin-left: 48px;
+    }
+    
+
     @media screen and (min-width: $desktop){
         margin-left: 48px;
     }
@@ -157,6 +166,9 @@ li.footer__item:first-child{
 
 .footer li.footer__item:last-child{
 
+    @media screen and (min-width: 1200px){
+        display: block;
+    }
     @media screen and (min-width: $desktop){
         display: block;
     }
