@@ -253,10 +253,13 @@ ul.mob-menu__social {
   border-radius: $btn-border-radius;
 
   color: $main-blue;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1;
   order: -1;
+  @media screen and (min-width: $mobile) {
+    font-size: 18px;
+  }
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 32px;

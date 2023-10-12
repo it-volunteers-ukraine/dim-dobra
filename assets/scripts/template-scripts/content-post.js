@@ -1,1 +1,1 @@
-const postSwiper=new Swiper(".single-post__slider",{pagination:{el:".swiper-pagination",clickable:!0}});
+const postSwiper=new Swiper(".single-post__slider",{pagination:{el:".swiper-pagination",clickable:!0,slideToClickedSlide:!0}});

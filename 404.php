@@ -1,60 +1,20 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package wp-it-volunteers
- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <?php wp_head(); ?>
+    <title>Dim Dobra</title>
+</head>
+<main id="primary" class="main-404">
+    <div class="background-404">
+    <img class="img-404" src="<?php the_field('error-image', 'option')?>" alt=""></div>
+	<section class="error-404 not-found">
+		<h2 class="error-text"><?php the_field('error-text', 'option'); ?></h2>
+		<h1 class="error-oops"><?php the_field('error-oops', 'option'); ?></h1>
+		<a class="error-button" href="<?php echo get_home_url(); ?>"><?php the_field('error-button', 'option'); ?></a>
+	</section>
 
-get_header();
-?>
-
-	<main id="primary" class="site-main">
-
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-it-volunteers' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wp-it-volunteers' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wp-it-volunteers' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$wp_it_volunteers_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wp-it-volunteers' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$wp_it_volunteers_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
-
-<?php
-get_footer();
+</main>
