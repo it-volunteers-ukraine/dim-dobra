@@ -42,13 +42,10 @@
                                     ?>   
                                 </nav> 
                                 <div class="buttons__wrap">
-                                    <ul class="lang__list list">
-                                        <li class="lang__item">
-                                            <button type="button" class="lang__btn active">UA</button>
-                                        </li>
-                                        <li class="lang__item">
-                                            <button type="button" class="lang__btn ">EN</button>
-                                        </li>
+                                     <ul class="list-unstyled lang lang__list list"> 
+                                        <?php if(function_exists('pll_the_languages')){ 
+                                            pll_the_languages(array('show_names'=>1)); 
+                                        } ?> 
                                     </ul>
                                     <ul class="mob-menu__social">
                                         <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('viber', 'option') ); ?>"><svg class="icon-socials"

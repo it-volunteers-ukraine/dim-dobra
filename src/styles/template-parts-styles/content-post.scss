@@ -4,8 +4,13 @@
   font-size: 28px;
   font-weight: 600;
   line-height: 1.4;
+  margin-bottom: 16px;
+  @media screen and (min-width: $desktop) {
+    line-height: 1;
+  }
   @media screen and (min-width: $desktop) {
     font-size: 32px;
+    margin-bottom: 40px;
   }
 }
 
