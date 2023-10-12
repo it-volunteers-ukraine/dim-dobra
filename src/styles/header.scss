@@ -280,7 +280,7 @@ ul.mob-menu__social {
   }
 }
 
-.lang__item:not(:last-child) {
+.lang-item:not(:last-child) {
   margin-right: 24px;
 
   @media screen and (min-width: $tablet) {
@@ -294,7 +294,7 @@ ul.mob-menu__social {
   }
 }
 
-.lang__btn {
+.lang-item a {
   padding: 0;
   border: none;
   font-family: inherit;
@@ -302,6 +302,6 @@ ul.mob-menu__social {
   background-color: transparent;
 }
 
-.lang__btn.active {
+.current-lang a {
   color: $black;
 }
