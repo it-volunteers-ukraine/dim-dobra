@@ -32,17 +32,17 @@
         <div class="contacts__container">
             <div class="contacts__text">Контакти</div>
             <div class="footer__address contacts__flex">
-                <img src="<?php echo get_template_directory_uri();?> /assets/images/geolocation.png" alt="address" class="footer__img">
+                <img src="<?php echo get_template_directory_uri();?>/assets/images/geolocation.png" alt="address" class="footer__img">
                 <p class="footer__text"><?php the_field('address', 'options'); ?></p>
             </div>
             <div class="footer__email contacts__flex">
-                <img src="<?php echo get_template_directory_uri();?> /assets/images/carbon_email.png" alt="email" class="footer__img">
-                <a class="footer__link" href="<?php the_field('email'); ?>"><?php the_field('email', 8); ?></a>
+                <img src="<?php echo get_template_directory_uri();?>/assets/images/carbon_email.png" alt="email" class="footer__img">
+                <a class="footer__link" href="<?php the_field('email'); ?>"><?php the_field('email', 4); ?></a>
             </div>
             <div class="footer__phone contacts__flex">
-                <img src="<?php echo get_template_directory_uri();?> /assets/images/carbon_phone.png" alt="phone" class="footer__img">
-                <a class="phone__link__first" href="<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 8); ?> </a>&nbsp|&nbsp
-                <a class="phone__link" href="<?php the_field('second-phone'); ?>"><?php the_field('second-phone', 8); ?></a> 
+                <img src="<?php echo get_template_directory_uri();?>/assets/images/carbon_phone.png" alt="phone" class="footer__img">
+                <a class="phone__link__first" href="<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 4); ?> </a>&nbsp|&nbsp
+                <a class="phone__link" href="<?php the_field('second-phone'); ?>"><?php the_field('second-phone', 4); ?></a> 
             </div>
         </div>
             <div class="mob__social">

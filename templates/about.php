@@ -17,13 +17,13 @@ get_header();
         <p class="about__description description__other"><?php the_field('description-other'); ?></p>
         <div class="about__contact">
             <div class="email">
-                <img src="<?php echo get_template_directory_uri();?> ../src/images/carbon_email.png" alt="email" class="email__img">
-                <a class="email__link" href="mailto:<?php the_field('email', 8); ?>"><?php the_field('email'); ?></a>
+                <img src="<?php echo get_template_directory_uri();?> ../assets/images/carbon_email.png" alt="email" class="email__img">
+                <a class="email__link" href="mailto:<?php the_field('email', 8); ?>"><?php the_field('email', 4); ?></a>
             </div>
             <div class="phone">
-                <img src="<?php echo get_template_directory_uri();?> ../src/images/carbon_phone.png" alt="email" class="phone__img">
-                <a class="phone__link__first" href="tel:+<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 8); ?> </a>&nbsp|&nbsp 
-                <a class="phone__link" href="tel:<?php the_field('second-phone'); ?>"> <?php the_field('second-phone', 8); ?></a> 
+                <img src="<?php echo get_template_directory_uri();?> ../assets/images/carbon_phone.png" alt="email" class="phone__img">
+                <a class="phone__link__first" href="tel:+<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 4); ?></a>&nbsp|&nbsp 
+                <a class="phone__link" href="tel:<?php the_field('second-phone'); ?>"><?php the_field('second-phone', 4); ?></a> 
             </div>
         </div>
         <div class="work__img">
