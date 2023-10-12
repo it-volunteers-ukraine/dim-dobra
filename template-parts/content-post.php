@@ -22,7 +22,7 @@
                                     <ul class="single-post__wrap swiper-wrapper">
                                         <?php foreach( $images as $image ): ?>
                                             <li class="swiper-slide img-slider__image">
-                                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                                <?php echo wp_get_attachment_image( $image['id'] ); ?>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>
@@ -31,7 +31,7 @@
                                 <ul class="single-post__flex">
                                     <?php foreach( $images as $image ): ?>
                                         <li class="single-post__item">
-                                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                            <?php echo wp_get_attachment_image( $image['id'] ); ?>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>

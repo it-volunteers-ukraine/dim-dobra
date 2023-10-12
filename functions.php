@@ -152,3 +152,17 @@ add_filter( 'excerpt_more', function( $more ) {
 	return '...';
 } );
 
+/**Link to a Page Rather Than the Category Archive in a Breadcrumb*/
+
+add_filter('bcn_breadcrumb_url', 'my_breadcrumb_url_changer', 3, 10);
+function my_breadcrumb_url_changer($url, $type, $id)
+{
+    if(in_array('category', $type) && (int) $id === 4)
+    {
+        $url = get_permalink(6);
+    } else if(in_array('category', $type) && (int) $id === 5)
+    {
+        $url = get_permalink(8);
+    } else {$url = get_home_url();}
+    return $url;
+}
