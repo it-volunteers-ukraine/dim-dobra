@@ -65,7 +65,7 @@
                                             </svg></a></li>
                                     </ul>
                                 </div>
-                                <a class="button menu__btn" href="<?php echo get_permalink('12'); ?>"><?php echo esc_attr(get_field('need-help_button', 'option')); ?></a>
+                                <a class="button menu__btn" href="<?php echo get_permalink('12'); ?>"><?php the_field('need-help_button', 'option'); ?></a>
                             </div>
                         </div> 
                 </div>  

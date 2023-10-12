@@ -12,9 +12,9 @@
     <div class="background-404">
     <img class="img-404" src="<?php the_field('error-image', 'option')?>" alt=""></div>
 	<section class="error-404 not-found">
-		<h2 class="error-text"><?php echo esc_attr(get_field('error-text', 'option')); ?></h2>
-		<h1 class="error-oops"><?php echo esc_attr(get_field('error-oops', 'option')); ?></h1>
-		<a class="error-button" href="<?php echo get_home_url(); ?>"><?php echo esc_attr(get_field('error-button', 'option')); ?></a>
+		<h2 class="error-text"><?php the_field('error-text', 'option'); ?></h2>
+		<h1 class="error-oops"><?php the_field('error-oops', 'option'); ?></h1>
+		<a class="error-button" href="<?php echo get_home_url(); ?>"><?php the_field('error-button', 'option'); ?></a>
 	</section>
 
 </main>
