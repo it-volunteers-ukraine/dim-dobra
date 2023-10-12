@@ -152,3 +152,24 @@ add_filter( 'excerpt_more', function( $more ) {
 	return '...';
 } );
 
+pll_register_string('Повне ім’я', 'Повне ім’я');
+pll_register_string('Введіть ваше ПІБ', 'Введіть ваше ПІБ');
+
+$to_translate = array(
+    'Повне ім’я' => pll__('Повне ім’я'),
+    'Введіть ваше ПІБ' => pll__('Введіть ваше ПІБ'),
+);
+
+add_filter('gettext', function($translation, $text) {
+
+    global $to_translate; 
+
+    if(!empty($to_translate[$text])) { 
+        // если по выбранному ключу есть значение в массиве, то возвращаем его
+        return $to_translate[$text]; 
+    }
+
+    // если значение не было найдено, возвращаем исходный текст
+    return $translation; 
+
+}, 10, 3);
