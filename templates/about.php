@@ -4,9 +4,9 @@ Template Name: About
 */
 get_header();
 ?>
-
+<?php get_template_part( 'template-parts/breadcrumbs'); ?>
 <div class="container">
-    <?php get_template_part( 'template-parts/breadcrumbs'); ?>
+    
     <section class="about">
         <h1 class="about__title"><?php the_field('about-title'); ?></h1>
         <p class="about__description description__main"><?php the_field('description-main'); ?></p>
