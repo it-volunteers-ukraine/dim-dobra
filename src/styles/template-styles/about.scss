@@ -318,6 +318,7 @@ p {
 
 .email__img {
 	margin-right: 12px;
+  width: 25px;
 
 	@media screen and (min-width: $tablet) {
 		width: 32px;
@@ -330,6 +331,7 @@ p {
 
 .phone__img {
 	margin-right: 12px;
+  width: 25px;
 
 	@media screen and (min-width: $tablet) {
 		width: 32px;
@@ -350,8 +352,8 @@ p {
 
 	&:hover,
 	&:focus {
-		color: $yellow;
-		background-color: $main-blue;
+		color: $main-blue;
+		background-color: $white;
 	}
 
   @media screen and (min-width: $tablet) {
