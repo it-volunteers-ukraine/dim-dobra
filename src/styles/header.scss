@@ -253,10 +253,13 @@ ul.mob-menu__social {
   border-radius: $btn-border-radius;
 
   color: $main-blue;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1;
   order: -1;
+  @media screen and (min-width: $mobile) {
+    font-size: 18px;
+  }
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 32px;
@@ -280,7 +283,7 @@ ul.mob-menu__social {
   }
 }
 
-.lang__item:not(:last-child) {
+.lang-item:not(:last-child) {
   margin-right: 24px;
 
   @media screen and (min-width: $tablet) {
@@ -294,7 +297,7 @@ ul.mob-menu__social {
   }
 }
 
-.lang__btn {
+.lang-item a {
   padding: 0;
   border: none;
   font-family: inherit;
@@ -302,6 +305,6 @@ ul.mob-menu__social {
   background-color: transparent;
 }
 
-.lang__btn.active {
+.current-lang a {
   color: $black;
 }

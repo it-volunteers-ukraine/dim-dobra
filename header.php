@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <?php wp_head(); ?>
     <title>Dim Dobra</title>
@@ -41,13 +42,10 @@
                                     ?>   
                                 </nav> 
                                 <div class="buttons__wrap">
-                                    <ul class="lang__list list">
-                                        <li class="lang__item">
-                                            <button type="button" class="lang__btn active">UA</button>
-                                        </li>
-                                        <li class="lang__item">
-                                            <button type="button" class="lang__btn ">EN</button>
-                                        </li>
+                                     <ul class="list-unstyled lang lang__list list"> 
+                                        <?php if(function_exists('pll_the_languages')){ 
+                                            pll_the_languages(array('show_names'=>1)); 
+                                        } ?> 
                                     </ul>
                                     <ul class="mob-menu__social">
                                         <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('viber', 'option') ); ?>"><svg class="icon-socials"
@@ -64,7 +62,7 @@
                                             </svg></a></li>
                                     </ul>
                                 </div>
-                                <a class="button menu__btn" href="<?php echo get_permalink('12'); ?>"><?php the_field('need-help_button', 'option') ?></a>
+                                <a class="button menu__btn" href="<?php echo get_permalink('12'); ?>"><?php the_field('need-help_button', 'option'); ?></a>
                             </div>
                         </div> 
                 </div>  

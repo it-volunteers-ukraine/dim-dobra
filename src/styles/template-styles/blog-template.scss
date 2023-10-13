@@ -1,5 +1,17 @@
 @import "../variables.scss";
 
+.help-people__title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  @media screen and (min-width: $tablet) {
+    line-height: 1;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+  }
+}
+
 .help__section {
   margin-bottom: 64px;
   @media screen and (min-width: $tablet) {
