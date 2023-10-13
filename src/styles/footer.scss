@@ -16,6 +16,14 @@
         flex-wrap: nowrap;
     }
 
+    @media screen and (min-width: 1200px){
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 81px;
+        flex-wrap: nowrap;
+    }
+
     @media screen and (min-width: $desktop){
         margin-top: 132px;
         flex-direction: row;
@@ -44,6 +52,13 @@
         margin-right: 32px;
         margin-left: 22px;
     }
+
+    @media screen and (min-width: 1200px){
+        margin-top: 29px;
+        margin-right: 180px;
+        margin-left: 22px;
+    }
+
     @media screen and (min-width: $desktop){
         margin-top: 35px;
         margin-left: 5px;
@@ -124,6 +139,13 @@ footer img.footer__logo{
         margin-right: 55px;
         margin-top: 22px;
     }
+
+    @media screen and (min-width: 1200px){
+        margin-top: 42px;
+        margin-right: 230px;
+        margin-left: 0px;
+    }
+
     @media screen and (min-width: $desktop){
         margin-top: 42px;
         margin-right: 43px;

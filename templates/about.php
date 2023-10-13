@@ -31,7 +31,11 @@ get_header();
         </div>
         <p class="about__description description__animals"><?php the_field('animals'); ?></p>
         <p class="about__description description__morehelp"><?php the_field('more-help'); ?></p>
-        <button class="support__btn button">ПІДТРИМАТИ ФОНД</button>
+        <a href="<?php the_field('button-link-support'); ?>">
+            <button class="support__btn button" type="button" aria-label="apply" aria-expanded="false" aria-controls="modal-window">
+              <?php the_field('button-text-support'); ?>
+            </button>
+        </a>
     </section>
     <!-- documents -->
     <?php get_template_part('template-parts/founding-documents'); ?>
