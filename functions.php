@@ -50,8 +50,12 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_script( 'helpform-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/help-form.js', array(), false, true );
   }  
 
-  if ( is_page_template('templates/blog-template.php') ) {
-    wp_enqueue_style( 'blog-style', get_template_directory_uri() . '/assets/styles/template-styles/blog-template.css', array('main') );
+  if ( is_page_template('templates/help-people.php') ) {
+    wp_enqueue_style( 'help-people-style', get_template_directory_uri() . '/assets/styles/template-styles/blog-template.css', array('main') );
+  } 
+
+  if ( is_page_template('templates/help-animals.php') ) {
+    wp_enqueue_style( 'help-animals-style', get_template_directory_uri() . '/assets/styles/template-styles/blog-template.css', array('main') );
   } 
 
   if (is_singular() && locate_template('template-parts/founding-documents.php')) {
@@ -163,7 +167,13 @@ function my_breadcrumb_url_changer($url, $type, $id)
     } else if(in_array('category', $type) && (int) $id === 5)
     {
         $url = get_permalink(8);
-    } else {$url = get_home_url();}
+    } else if(in_array('category', $type) && (int) $id === 27)
+    {
+        $url = get_permalink(240);
+    } else if(in_array('category', $type) && (int) $id === 29)
+    {
+        $url = get_permalink(245);
+    }else {$url = get_home_url();}
     return $url;
 }
 
