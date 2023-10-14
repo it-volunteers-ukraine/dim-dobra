@@ -4,9 +4,9 @@ Template Name: About
 */
 get_header();
 ?>
-
+<?php get_template_part( 'template-parts/breadcrumbs'); ?>
 <div class="container">
-    <?php get_template_part( 'template-parts/breadcrumbs'); ?>
+    
     <section class="about">
         <h1 class="about__title"><?php the_field('about-title'); ?></h1>
         <p class="about__description description__main"><?php the_field('description-main'); ?></p>
@@ -17,11 +17,11 @@ get_header();
         <p class="about__description description__other"><?php the_field('description-other'); ?></p>
         <div class="about__contact">
             <div class="email">
-                <img src="<?php echo get_template_directory_uri();?> ../assets/images/carbon_email.png" alt="email" class="email__img">
-                <a class="email__link" href="mailto:<?php the_field('email', 8); ?>"><?php the_field('email', 4); ?></a>
+                <img src="<?php echo get_template_directory_uri();?>/assets/images/carbon_email.png" alt="email" class="email__img">
+                <a class="email__link" href="mailto:<?php the_field('email'); ?>"><?php the_field('email', 4); ?></a>
             </div>
             <div class="phone">
-                <img src="<?php echo get_template_directory_uri();?> ../assets/images/carbon_phone.png" alt="email" class="phone__img">
+                <img src="<?php echo get_template_directory_uri();?>/assets/images/carbon_phone.png" alt="email" class="phone__img">
                 <a class="phone__link__first" href="tel:+<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 4); ?></a>&nbsp|&nbsp 
                 <a class="phone__link" href="tel:<?php the_field('second-phone'); ?>"><?php the_field('second-phone', 4); ?></a> 
             </div>
@@ -31,7 +31,11 @@ get_header();
         </div>
         <p class="about__description description__animals"><?php the_field('animals'); ?></p>
         <p class="about__description description__morehelp"><?php the_field('more-help'); ?></p>
-        <button class="support__btn button">ПІДТРИМАТИ ФОНД</button>
+        <a href="<?php the_field('button-link-support'); ?>">
+            <button class="support__btn button" type="button" aria-label="apply" aria-expanded="false" aria-controls="modal-window">
+              <?php the_field('button-text-support'); ?>
+            </button>
+        </a>
     </section>
     <!-- documents -->
     <?php get_template_part('template-parts/founding-documents'); ?>
