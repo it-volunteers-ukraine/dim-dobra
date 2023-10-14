@@ -177,3 +177,12 @@ function my_breadcrumb_url_changer($url, $type, $id)
     return $url;
 }
 
+add_filter('bcn_breadcrumb_title', 'my_breadcrumb_title_swapper', 3, 10);
+function my_breadcrumb_title_swapper($title, $type, $id)
+{
+    if(in_array('home', $type))
+    {
+        $title = __('Головна');
+    }
+    return $title;
+}
