@@ -47,3 +47,18 @@ jQuery(document).ready(function ($) {
 		return this.each(createTabs);
 	};
 })(jQuery);
+
+// Додаємо обробник кліку для кнопок із класом scroll-to-bank-details
+jQuery(document).ready(function ($) {
+	$(".scroll-to-bank-details").click(function () {
+		var offsetTop = $(".bank-details").offset().top;
+
+		// Анімовано прокручуємо до секції банківських даних
+		$("html, body").animate(
+			{
+				scrollTop: offsetTop,
+			},
+			800,
+		);
+	});
+});
