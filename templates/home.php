@@ -203,11 +203,13 @@ get_header();
                 <img class="tabs-img" src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
               </div>  
             </div>        
-            <div style="	display: flex; justify-content: center; padding-top: 0">
-              <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
-              aria-controls="modal-window"><?php the_sub_field('tabs_button') ?></button>
+            <div style="display: flex; justify-content: center; padding-top: 0">
+              <a href="<?php the_sub_field('bank_link') ?>" target="_blank">
+                <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
+                aria-controls="modal-window"><?php the_sub_field('tabs_button') ?></button>
+              </a>
             </div>
-          </div>
+          </div> 
 
           <?php endwhile; ?>
         </div>                

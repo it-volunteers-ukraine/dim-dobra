@@ -540,9 +540,17 @@
 	}
 }
 .tabs-img {
+	width: auto;
+	margin-top: 16px;
+
+	@media screen and (max-width: $mobile) {
+		margin-top: -8px;
+	}
+
 	@media screen and (min-width: $tablet) {
 		width: 130px;
 		height: 140px;
+		margin-top: 0;
 	}
 }
 
@@ -559,7 +567,6 @@
 }
 
 .bank-details__text-first {
-	margin: 0;
 	margin-bottom: 14px;
 	color: $black;
 	font-size: 18px;
@@ -581,7 +588,6 @@
 }
 
 .bank-details__text-second {
-	margin: 0;
 	margin-bottom: 24px;
 	color: $black;
 	font-size: 18px;
@@ -589,6 +595,7 @@
 	line-height: auto;
 
 	@media screen and (max-width: $mobile) {
+		margin-bottom: 48px;
 		font-size: 17px;
 		letter-spacing: -0.05em;
 	}
