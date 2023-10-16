@@ -281,6 +281,13 @@
 	}
 }
 
+.swiper-slide img {
+	@media screen and (min-width: $tablet) {
+		max-width: 630px;
+		max-height: 490px;
+	}
+}
+
 .news {
 	margin-top: 64px;
 	margin-bottom: 64px;
