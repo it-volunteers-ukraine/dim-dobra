@@ -3,6 +3,10 @@ const swiper = new Swiper(".mySwiper", {
 	slidesPerView: "auto",
 	spaceBetween: 20,
 	loop: true,
+	grabCursor: true,
+	autoHeight: true,
+	freeMode: true,
+	speed: 800,
 	keyboard: {
 		enabled: true,
 	},

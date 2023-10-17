@@ -84,72 +84,79 @@ get_header();
     <?php get_template_part( 'template-parts/founding-documents'); ?>
 
     <section class="news">
-      <h3 class="news__title"><?php the_field('news__title'); ?></h3> 
-
+      <h3 class="news__title"><?php the_field('news__title'); ?></h3>
 
       <div class="swiper-container news__hide">
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper">  
+          <div class="swiper-wrapper">
 
-          <?php if(have_rows('news_slider')) : ?>
+          <?php
+            $args = array(
+            'posts_per_page' => 6,
+            'category_name' => 'help-people, help-animals',
+            );
 
-          <?php while(have_rows('news_slider')) : the_row();          
-          $img = get_sub_field('news_img'); ?>
+            $query = new WP_Query($args);
 
-            <div class="swiper-slide"> 
-              <img src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
-              <div class="news__wraper">
-                <p class="news__text"><?php the_sub_field('news_text_left') ?></p>
-                <p class="news__text"><?php the_sub_field('news_text_right') ?></p>
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                  $query->the_post();
+                  $title = get_the_title();
+          ?>
+
+            <div class="swiper-slide">
+              <div class="image-container">
+                <?php the_post_thumbnail(); ?>
               </div>
-              <h4 class="news__subTitle"><?php the_sub_field('news_slider_subtitle') ?></h4>
-            </div>  
+              <div class="news__wraper">
+                <p class="news__text"><?php the_time('d.m.Y'); ?></p>
+                <p class="news__text"><?php the_time('d.m.Y'); ?></p>
+              </div>
+                <h4 class="news__subTitle"><?php echo $title; ?></h4>
+            </div>
 
-          <?php endwhile; ?> 
-          <?php endif; ?>
+          <?php
+              }
+              wp_reset_postdata();
+            }
+          ?>
 
           </div>
             <div class="swiper-pagination" style="position: inherit"></div>
-        </div>  
+        </div>
       </div>
-
       
       <div class="news__gallery">
         <div class="news__flexWraper" >
 
         <?php
-        global $post;
+        $args = array(
+            'posts_per_page' => 4,
+            'category_name' => 'help-people, help-animals',
+        );
 
-        $myposts = get_posts([ 
-	      'numberposts' => -1,
-        ]);
+        $query = new WP_Query($args);
 
-        if( $myposts ){
-	        foreach( $myposts as $post ){
-		      setup_postdata( $post );
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                $title = get_the_title();
+        ?>
 
-          $title = get_the_title();
-          $content = get_the_content();
-		    ?>
-
-          <div class="news__wraper"> 
-          <?php the_post_thumbnail(); ?>
-        
-          <?php 
-            if ($content) : ?>
+          <div class="news__wraper">
+            <?php the_post_thumbnail(); ?>
+                  
             <div class="news__text">
-              <?php echo $content; ?>
+              <?php the_time('d.m.Y'); ?>
             </div>
-
-          <?php endif; ?>         
-         
-            <h4 class="news__subTitle"><?php echo $title; ?></h4>
+              <h4 class="news__subTitle"><?php echo $title; ?></h4>
           </div>
 
-          <?php 
-	    }
-    } 
-    wp_reset_postdata(); ?>
+        <?php
+          }
+            wp_reset_postdata();
+        }
+        ?>
 
         </div>
       </div>
