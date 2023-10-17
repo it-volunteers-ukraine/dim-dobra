@@ -61,7 +61,7 @@ get_header();
 
             <?php while(have_rows('about_slider')) : the_row(); 
             $img = get_sub_field('about_slider_img'); ?>
-              <div class="swiper-slide"> 
+              <div class="swiper-slide about__img-wrap"> 
                 <img src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
               </div>
             <?php endwhile; ?>      
@@ -104,7 +104,7 @@ get_header();
                   $title = get_the_title();
           ?>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-hover">
               <a href="<?php the_permalink(); ?>">
                 <div class="news__wraper-img">
                   <?php the_post_thumbnail(); ?>
