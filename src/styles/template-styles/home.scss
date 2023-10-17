@@ -345,6 +345,29 @@
 	}
 }
 
+.news__wraper-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	height: 457px;
+
+	@media screen and (min-width: $tablet) {
+		height: 443px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		height: 400px;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
 .news__gallery {
 	display: none;
 

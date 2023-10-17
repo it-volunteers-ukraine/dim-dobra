@@ -105,14 +105,16 @@ get_header();
           ?>
 
             <div class="swiper-slide">
-              <div class="image-container">
-                <?php the_post_thumbnail(); ?>
-              </div>
-              <div class="news__wraper">
-                <p class="news__text"><?php the_time('d.m.Y'); ?></p>
-                <p class="news__text"><?php the_time('d.m.Y'); ?></p>
-              </div>
-                <h4 class="news__subTitle"><?php echo $title; ?></h4>
+              <a href="<?php the_permalink(); ?>">
+                <div class="news__wraper-img">
+                  <?php the_post_thumbnail(); ?>
+                </div>           
+                <div class="news__wraper">
+                  <p class="news__text"><?php the_time('d.m.Y'); ?></p>
+                  <p class="news__text"><?php the_time('d.m.Y'); ?></p>
+                </div>
+                  <h4 class="news__subTitle"><?php echo $title; ?></h4>
+              </a>
             </div>
 
           <?php
@@ -144,12 +146,16 @@ get_header();
         ?>
 
           <div class="news__wraper">
-            <?php the_post_thumbnail(); ?>
+            <a href="<?php the_permalink(); ?>">
+              <div class="news__wraper-img">
+                <?php the_post_thumbnail(); ?>
+              </div> 
                   
-            <div class="news__text">
-              <?php the_time('d.m.Y'); ?>
-            </div>
+              <div class="news__text">
+                <?php the_time('d.m.Y'); ?>
+              </div>
               <h4 class="news__subTitle"><?php echo $title; ?></h4>
+            </a>
           </div>
 
         <?php
