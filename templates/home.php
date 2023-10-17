@@ -64,10 +64,15 @@ get_header();
               <div class="swiper-slide about__img-wrap"> 
                 <img src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
               </div>
-            <?php endwhile; ?>      
+            <?php endwhile; ?> 
+              </div>
+                <div class="swiper-pagination pagination-pos" style="position: inherit">       
 
               </div>
-                <div class="swiper-pagination" style="position: inherit"></div>
+                <div class="pagination-wrap">
+                  <div class="custom-prev-icon"></div>
+                  <div class="custom-next-icon"></div>              
+                </div>
             </div>       
           </div>
         <?php endif; ?>
