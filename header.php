@@ -60,7 +60,15 @@
                                             </svg></a></li>
                                     </ul>
                                 </div>
-                                <a class="button menu__btn" href="<?php echo get_permalink('12'); ?>"><?php the_field('need-help_button', 'option'); ?></a>
+                                <a class="button menu__btn" href="
+                                <?php if(function_exists('pll_current_language')){
+                                if( pll_current_language() === 'en' ) :
+                                        echo get_permalink('242');
+                                    else :
+                                        echo get_permalink('12');
+                                    endif;
+                                    } else echo get_permalink('12');
+                                 ?>"><?php the_field('need-help_button', 'option'); ?></a>
                             </div>
                         </div> 
                 </div>  
