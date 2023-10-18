@@ -1,4 +1,15 @@
-<section class="need-help">
+<section class="need-help" >
+
+  <style>   
+    .need-help {
+      background-image: url('<?php the_field('need_help_sm_img', 'option')?>');
+
+      @media screen and (min-width: 768px) {
+	      background-image: url('<?php the_field('need_help_lg_img', 'option')?>'); 
+	    }
+    }   
+  </style>
+
   <h3 class="need-help__title"><?php the_field('need-help__title', 'option'); ?></h3>  
   <a href="<?php echo get_permalink('12'); ?>">  
     <button class="button need-help__button" type="button" aria-label="apply" aria-expanded="false" aria-controls="modal-window">

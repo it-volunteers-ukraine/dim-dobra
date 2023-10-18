@@ -6,11 +6,12 @@ get_header();
 ?>
 
   <div class="container ">
-    <section class="house">
+    <section class="house" style="background-image: url('<?php the_field('hero_img_background')?>')">
+
       <div class="house__title-wraper">
         <h1 class="house__title"><?php the_field('hero_title'); ?></h1>
       </div> 
-      <button class="button house__button scroll-to-bank-details" type="button" aria-label="support"   aria-expanded="false"
+      <button class="button house__button scroll-to-bank-details" type="button" aria-label="support"  aria-expanded="false"
       aria-controls="modal-window"><?php the_field('hero_btn_text'); ?></button>
     </section>
 

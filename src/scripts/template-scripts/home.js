@@ -19,11 +19,6 @@ const swiper = new Swiper(".mySwiper", {
 		prevEl: ".custom-prev-icon",
 	},
 	breakpoints: {
-		// when window width is >= 320px
-		320: {},
-		// when window width is >= 480px
-		480: {},
-		// when window width is >= 640px
 		768: {
 			pagination: {
 				type: "fraction",
