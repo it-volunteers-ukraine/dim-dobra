@@ -2,6 +2,7 @@ const wpcf7Elm = document.querySelector(".wpcf7");
 const notificationEl = document.getElementById("notification");
 const closeNotificationBtn = document.getElementById("js-close-notification");
 const telInputEl = document.getElementById("contactPhone");
+const phoneNotificationEl = document.getElementById("phone-notification");
 
 wpcf7Elm.addEventListener("wpcf7mailsent", getNotification, false);
 
@@ -27,9 +28,8 @@ function checkNumber() {
     /^[\+]?3?[\s]?8?[\s]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$/;
   check = pattern.test(value);
   if (check) {
-    telInputEl.classList.remove("invalid");
+    phoneNotificationEl.classList.remove("active");
   } else {
-    console.log("no");
-    telInputEl.classList.add("invalid");
+    phoneNotificationEl.classList.add("active");
   }
 }

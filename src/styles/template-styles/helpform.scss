@@ -192,7 +192,7 @@ textarea.contact__input {
 }
 
 .required {
-  color: rgb(207, 72, 72);
+  color: #dc3232;
 }
 
 //notification
@@ -298,6 +298,14 @@ textarea.contact__input {
 .wpcf7 form.sent .wpcf7-response-output {
   display: none;
 }
-input.contact__input.invalid {
-  border: 1px solid red;
+
+//phone-field validation
+.phone-notification {
+  display: none;
+}
+
+.phone-notification.active {
+  display: block;
+  color: #dc3232;
+  font-size: 16px;
 }
