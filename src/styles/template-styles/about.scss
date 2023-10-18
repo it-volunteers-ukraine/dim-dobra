@@ -48,7 +48,7 @@ p {
       "description__command about__contact"
       "work__img description__other"
       "work__img description__animals"
-      "support__btn description__animals" ;
+      "support__btn support__btn " ;
   }
 
 	.about__title {
@@ -149,8 +149,7 @@ p {
         gap: 0px 169px;
         margin-bottom: 76px;
       }
-          
-}
+  }
     
 .about__title{
   font-size: 28px;
@@ -185,6 +184,10 @@ p {
 		font-weight: 500;
 		margin-top: 3px;
 		margin-bottom: 17px;
+	}
+
+  @media screen and (min-width: 1200px) {
+		font-size: 18px;
 	}
 
 	@media screen and (min-width: $desktop) {
@@ -234,6 +237,13 @@ p {
   @media screen and (min-width: $tablet) {
     margin-top: 45px; 
     max-width: 455px;
+    margin-bottom: 18px;
+    min-height: 370px;
+    }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 45px; 
+    max-width: 575px;
     margin-bottom: 18px;
     min-height: 370px;
     }
@@ -343,6 +353,7 @@ p {
 }
 
 .support__btn {
+  display: block;
   font-size: 20px;
   cursor: pointer;
   margin-top: 25px;
@@ -360,7 +371,14 @@ p {
     font-size: 20px;
     margin-top: 2px;
     margin-bottom: 18px;
-    margin-left: 8px;
+    margin-left: 52%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    margin-top: -74px;
+    margin-bottom: 18px;
+    margin-left: 52%;
   }
 
   @media screen and (min-width: $desktop) {

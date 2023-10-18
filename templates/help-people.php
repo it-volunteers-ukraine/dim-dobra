@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: blog
+Template Name: help-people
 */
 get_header();
 ?>
@@ -16,7 +16,6 @@ get_header();
             <h1 class="help-people__title"><?php the_field('page_title', $postID) ?></h1>
             
             <?php
-            $category = ($postID === 6) ? 'help-people' : 'help-animals';
             $args = array(
                 'posts_per_page' => get_option('posts_per_page'),
                 'paged'          => $current_page,
@@ -24,7 +23,7 @@ get_header();
                     array(
                         'taxonomy'=> 'category',
                         'field' => 'slug',
-                        'terms' => $category
+                        'terms' => array('help-people', 'help-people-en')
                     )
                 )
             );

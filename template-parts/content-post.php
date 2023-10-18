@@ -13,7 +13,13 @@
                 
                 <section>
                     <div class="container">
-                        <h1 class="single-post__title"><?php if($title) : echo $title; endif; ?> від <?php the_time('d.m.Y'); ?></h1>
+                        <h1 class="single-post__title"><?php if($title) : echo $title; endif;?> 
+                        <span> 
+                            <?php { if(function_exists('pll_e'))
+                            pll_e('від');
+                        } ?> 
+                        </span>
+                        <?php the_time('d.m.Y'); ?></h1>
                         <div class="single-post__description"><?php if($content) : echo $content; endif; ?></div>
                         <?php 
                             $images = get_field('image_gallery');
