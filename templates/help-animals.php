@@ -44,7 +44,7 @@ get_header();
             </div>
                 
     </section>
-    <?php get_template_part( 'template-parts/need-help'); ?>
+    <?php get_template_part( 'template-parts/need-help-animals'); ?>
 </main>
 
 <?php get_footer(); ?>
