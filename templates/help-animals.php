@@ -6,8 +6,9 @@ get_header();
 ?>
 <main>
     <?php get_template_part( 'template-parts/breadcrumbs'); ?>
-    <div class="container">
-        <section class="help__section">
+    <section class="help__section">
+        <div class="container">
+            
             <?php 
             $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $postID = $post->ID; ?>
@@ -40,9 +41,10 @@ get_header();
             
             the_posts_pagination();
             wp_reset_query(); ?>
-        </section>
+            </div>
+                
+    </section>
     <?php get_template_part( 'template-parts/need-help-animals'); ?>
-    </div>
 </main>
 
 <?php get_footer(); ?>

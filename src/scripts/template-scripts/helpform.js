@@ -24,6 +24,7 @@ telInputEl.addEventListener("keyup", function () {
 });
 
 telInputEl.addEventListener("blur", checkNumber);
+telInputEl.addEventListener("input", checkNumber);
 
 function checkNumber() {
   const value = telInputEl.value;
