@@ -1,4 +1,6 @@
 <section class="documents">
+  <div class="container ">
+    
   <h3 class="documents__title"><?php the_field('documents_title', 'option'); ?></h3>
 
   <ul class="documents__list">
@@ -25,5 +27,6 @@
 
   <p class="documents__text"><?php the_field('documents_text', 'option'); ?></p> 
   <p class="documents__text-bottom"><?php the_field('documents_text_bottom', 'option'); ?></p>
-            
+  
+  </div> 
 </section>

@@ -1,21 +1,15 @@
 @import "../variables.scss";
 
 .documents {
-	margin-left: -16px;
-	margin-right: -16px;
-	padding: 32px 16px 40px 16px;
+	padding: 32px 0 40px 0;
 	background: $main-blue;
 
 	@media screen and (min-width: $tablet) {
-		margin-left: -40px;
-		margin-right: -40px;
-		padding: 40px 40px 60px 40px;
+		padding: 40px 0 60px 0;
 	}
 
 	@media screen and (min-width: $desktop) {
-		margin-right: -75px;
-		margin-left: -75px;
-		padding: 48px 75px 64px 75px;
+		padding: 48px 0 64px 0;
 	}
 
 	@media screen and (min-width: 1920px) {

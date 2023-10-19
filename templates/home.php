@@ -11,8 +11,13 @@ get_header();
       <div class="house__title-wraper">
         <h1 class="house__title"><?php the_field('hero_title'); ?></h1>
       </div> 
-      <button class="button house__button scroll-to-bank-details" type="button" aria-label="support"  aria-expanded="false"
-      aria-controls="modal-window"><?php the_field('hero_btn_text'); ?></button>
+      
+      <a href="#bank-details" class="house__link">
+        <button class="button house__button" type="button" aria-label="support"  
+        aria-controls="bank-details-section">
+          <?php the_field('hero_btn_text'); ?>
+        </button>
+      </a>
     </section>
 
     <section class="support">
@@ -87,8 +92,13 @@ get_header();
         </p>    
     </section>
 
+  </div>
+
     <?php get_template_part( 'template-parts/founding-documents'); ?>
 
+  <div class="container ">
+
+    <!-- section news  -->
     <section class="news">
       <h3 class="news__title"><?php the_field('news__title'); ?></h3>
 
@@ -97,17 +107,33 @@ get_header();
           <div class="swiper-wrapper">
 
           <?php
-            $args = array(
-            'posts_per_page' => 6,
-            'category_name' => 'help-people, help-animals',
-            );
+          // Запит для категорії "help-people"
+          $args_help_people = array(
+            'posts_per_page' => 3,
+            'category_name' => 'help-people',
+            'orderby' => 'date',
+            'order' => 'DESC',
+          );
 
-            $query = new WP_Query($args);
+          $query_help_people = new WP_Query($args_help_people);
 
-            if ($query->have_posts()) {
-                while ($query->have_posts()) {
-                  $query->the_post();
-                  $title = get_the_title();
+          // Запит для категорії "help-animals"
+          $args_help_animals = array(
+            'posts_per_page' => 3,
+            'category_name' => 'help-animals',
+            'orderby' => 'date',
+            'order' => 'DESC',
+          );
+
+          $query_help_animals = new WP_Query($args_help_animals);
+
+          // Об'єднання результатів запитів, спочатку help-people, потім help-animals
+          $merged_posts = array_merge($query_help_people->posts, $query_help_animals->posts);
+
+          // Вивід постів
+          foreach ($merged_posts as $post) {
+          setup_postdata($post);
+          $title = get_the_title();
           ?>
 
             <div class="swiper-slide swiper-hover">
@@ -116,7 +142,7 @@ get_header();
                   <?php the_post_thumbnail(); ?>
                 </div>           
                 <div class="news__wraper">
-                  <p class="news__text"><?php the_time('d.m.Y'); ?></p>
+                  <p class="news__text"><?php the_field('subtext_posts'); ?></p>
                   <p class="news__text"><?php the_time('d.m.Y'); ?></p>
                 </div>
                   <h4 class="news__subTitle"><?php echo $title; ?></h4>
@@ -124,9 +150,8 @@ get_header();
             </div>
 
           <?php
-              }
-              wp_reset_postdata();
             }
+            wp_reset_postdata();            
           ?>
 
           </div>
@@ -138,43 +163,61 @@ get_header();
         <div class="news__flexWraper" >
 
         <?php
-        $args = array(
-            'posts_per_page' => 4,
-            'category_name' => 'help-people, help-animals',
+        // Запит для категорії "help-people"
+        $args_help_people = array(
+          'posts_per_page' => 2,
+          'category_name' => 'help-people',
+          'orderby' => 'date',
+          'order' => 'DESC',
         );
 
-        $query = new WP_Query($args);
+        $query_help_people = new WP_Query($args_help_people);
 
-        if ($query->have_posts()) {
-            while ($query->have_posts()) {
-                $query->the_post();
-                $title = get_the_title();
+        // Запит для категорії "help-animals"
+        $args_help_animals = array(
+          'posts_per_page' => 2,
+          'category_name' => 'help-animals',
+          'orderby' => 'date',
+          'order' => 'DESC',
+        );
+
+        $query_help_animals = new WP_Query($args_help_animals);
+
+        // Об'єднання результатів запитів, спочатку help-people, потім help-animals
+        $merged_posts = array_merge($query_help_people->posts, $query_help_animals->posts);
+
+        // Вивід постів
+        foreach ($merged_posts as $post) {
+          setup_postdata($post);
+          $title = get_the_title();
         ?>
 
-          <div class="news__wraper">
-            <a href="<?php the_permalink(); ?>">
-              <div class="news__wraper-img">
-                <?php the_post_thumbnail(); ?>
-              </div> 
-                  
-              <div class="news__text">
-                <?php the_time('d.m.Y'); ?>
-              </div>
-              <h4 class="news__subTitle"><?php echo $title; ?></h4>
-            </a>
-          </div>
+        <div class="news__wraper">
+          <a href="<?php the_permalink(); ?>">
+            <div class="news__wraper-img">
+              <?php the_post_thumbnail(); ?>
+            </div> 
+                
+            <div class="news__text">
+              <p><?php the_field('subtext_posts'); ?></p>
+              <p><?php the_time('d.m.Y'); ?></p>
+            </div>
+            <h4 class="news__subTitle"><?php echo $title; ?></h4>
+          </a>
+        </div>
 
         <?php
-          }
-            wp_reset_postdata();
-        }
-        ?>
+      }
+
+      wp_reset_postdata();
+      ?>
 
         </div>
       </div>
     </section>
 
-    <section class="bank-details">
+    <!-- section bank-details  -->
+    <section id="bank-details">
       <h3 class="bank-details__title"><?php the_field('bank_details_title'); ?></h3>
       
       <?php if (have_rows('bank_details_tabs')) : ?>
@@ -222,10 +265,11 @@ get_header();
                 <img class="tabs-img" src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
               </div>  
             </div>        
-            <div style="display: flex; justify-content: center; padding-top: 0">
+            <div class="tabs__wraper-btn" style="padding-top: 0">
               <a href="<?php the_sub_field('bank_link') ?>" target="_blank">
                 <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
-                aria-controls="modal-window"><?php the_sub_field('tabs_button') ?></button>
+                aria-controls="modal-window"><?php the_sub_field('tabs_button') ?>
+                </button>
               </a>
             </div>
           </div> 
