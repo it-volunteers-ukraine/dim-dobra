@@ -19,8 +19,11 @@ function closeNotification() {
   closeNotificationBtn.removeEventListener("click", closeNotification);
 }
 
+telInputEl.addEventListener("keyup", function () {
+  telInputEl.value = telInputEl.value.replace(/[^\d?^\+]/g, "");
+});
+
 telInputEl.addEventListener("blur", checkNumber);
-telInputEl.addEventListener("input", checkNumber);
 
 function checkNumber() {
   const value = telInputEl.value;
