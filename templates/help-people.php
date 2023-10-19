@@ -6,9 +6,8 @@ get_header();
 ?>
 <main>
     <?php get_template_part( 'template-parts/breadcrumbs'); ?>
-    <section class="help__section">
-        <div class="container">
-            
+    <div class="container">
+        <section class="help__section">
             <?php 
             $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $postID = $post->ID; ?>
@@ -41,10 +40,9 @@ get_header();
             
             the_posts_pagination();
             wp_reset_query(); ?>
-            </div>
-                
-    </section>
+        </section>
     <?php get_template_part( 'template-parts/need-help'); ?>
+    </div>
 </main>
 
 <?php get_footer(); ?>
