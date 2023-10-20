@@ -12,5 +12,3 @@
         <a class="button details-btn" href="<?php the_permalink(); ?>"><?php the_field('learn-more_button', 'option'); ?></a>
     </div>
 </article>
-
-<!-- https://drive.google.com/drive/folders/1zdhguW9DuGOj2kcb5UaNRPqPWx6CHCjT?usp=sharing -->
