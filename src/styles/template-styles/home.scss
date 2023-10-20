@@ -10,12 +10,6 @@
 	background-size: cover;
 	background-position: center;
 
-	background-image: url(../../images/main-bg-image.jpg);
-
-	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-		background-image: url(../../images/main-bg-image-2X.jpg);
-	}
-
 	@media screen and (min-width: $tablet) {
 		padding: 125px 55px;
 		margin-left: 0;
@@ -40,6 +34,7 @@
 	margin: 0;
 	margin-bottom: 32px;
 	color: $white;
+	font-size: 32px;
 	font-weight: 600;
 	line-height: 1.3;
 
@@ -254,11 +249,26 @@
 }
 
 .about__img-wrap {
-	width: 100%;
-	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	max-height: 350px;
 
-	@media screen and (min-width: $mobile) {
-		width: 343px;
+	@media screen and (min-width: $tablet) {
+		max-height: 466px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		max-height: 490px;
+		max-width: 630px;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
 	}
 }
 
@@ -271,6 +281,45 @@
 
 	@media screen and (min-width: $desktop) {
 		margin-right: -75px;
+	}
+}
+
+.pagination-wrap {
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		gap: 62px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+.pagination-pos {
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		position: absolute;
+		bottom: 4.5px;
+		left: 50px;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.3;
+	}
+}
+.custom-next-icon,
+.custom-prev-icon {
+	display: none;
+	cursor: pointer;
+
+	@media screen and (min-width: $tablet) {
+		display: block;
+		background: url("../../../assets/images/arrow-left.svg") center center no-repeat;
+		width: 32px;
+		height: 32px;
+		z-index: 10;
+	}
+}
+.custom-next-icon {
+	@media screen and (min-width: $tablet) {
+		background: url("../../../assets/images/arrow-right.svg") center center no-repeat;
 	}
 }
 
@@ -334,6 +383,50 @@
 
 	img {
 		width: 100%;
+		transition: $transition-function;
+	}
+
+	&:hover,
+	&:focus {
+		img {
+			transform: scale(1.02);
+		}
+	}
+}
+
+.swiper-hover {
+	img {
+		transition: $transition-function;
+	}
+
+	&:hover,
+	&:focus {
+		img {
+			transform: scale(1.02);
+		}
+	}
+}
+
+.news__wraper-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	height: 457px;
+
+	@media screen and (min-width: $tablet) {
+		height: 443px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		height: 400px;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
 	}
 }
 
@@ -539,9 +632,17 @@
 	}
 }
 .tabs-img {
+	width: auto;
+	margin-top: 16px;
+
+	@media screen and (max-width: $mobile) {
+		margin-top: -8px;
+	}
+
 	@media screen and (min-width: $tablet) {
 		width: 130px;
 		height: 140px;
+		margin-top: 0;
 	}
 }
 
@@ -558,7 +659,6 @@
 }
 
 .bank-details__text-first {
-	margin: 0;
 	margin-bottom: 14px;
 	color: $black;
 	font-size: 18px;
@@ -580,7 +680,6 @@
 }
 
 .bank-details__text-second {
-	margin: 0;
 	margin-bottom: 24px;
 	color: $black;
 	font-size: 18px;
@@ -588,6 +687,7 @@
 	line-height: auto;
 
 	@media screen and (max-width: $mobile) {
+		margin-bottom: 48px;
 		font-size: 17px;
 		letter-spacing: -0.05em;
 	}

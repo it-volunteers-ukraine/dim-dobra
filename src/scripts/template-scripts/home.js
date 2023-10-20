@@ -3,12 +3,27 @@ const swiper = new Swiper(".mySwiper", {
 	slidesPerView: "auto",
 	spaceBetween: 20,
 	loop: true,
+	grabCursor: true,
+	autoHeight: true,
+	freeMode: true,
+	speed: 800,
 	keyboard: {
 		enabled: true,
 	},
 	pagination: {
 		el: ".swiper-pagination",
 		clickable: true,
+	},
+	navigation: {
+		nextEl: ".custom-next-icon",
+		prevEl: ".custom-prev-icon",
+	},
+	breakpoints: {
+		768: {
+			pagination: {
+				type: "fraction",
+			},
+		},
 	},
 });
 
@@ -47,3 +62,18 @@ jQuery(document).ready(function ($) {
 		return this.each(createTabs);
 	};
 })(jQuery);
+
+// Додаємо обробник кліку для кнопок із класом scroll-to-bank-details
+jQuery(document).ready(function ($) {
+	$(".scroll-to-bank-details").click(function () {
+		var offsetTop = $(".bank-details").offset().top;
+
+		// Анімовано прокручуємо до секції банківських даних
+		$("html, body").animate(
+			{
+				scrollTop: offsetTop,
+			},
+			800,
+		);
+	});
+});

@@ -6,11 +6,12 @@ get_header();
 ?>
 
   <div class="container ">
-    <section class="house">
+    <section class="house" style="background-image: url('<?php the_field('hero_img_background')?>')">
+
       <div class="house__title-wraper">
         <h1 class="house__title"><?php the_field('hero_title'); ?></h1>
       </div> 
-      <button class="button house__button" type="button" aria-label="support"   aria-expanded="false"
+      <button class="button house__button scroll-to-bank-details" type="button" aria-label="support"  aria-expanded="false"
       aria-controls="modal-window"><?php the_field('hero_btn_text'); ?></button>
     </section>
 
@@ -61,13 +62,18 @@ get_header();
 
             <?php while(have_rows('about_slider')) : the_row(); 
             $img = get_sub_field('about_slider_img'); ?>
-              <div class="swiper-slide"> 
+              <div class="swiper-slide about__img-wrap"> 
                 <img src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
               </div>
-            <?php endwhile; ?>      
+            <?php endwhile; ?> 
+              </div>
+                <div class="swiper-pagination pagination-pos" style="position: inherit">       
 
               </div>
-                <div class="swiper-pagination" style="position: inherit"></div>
+                <div class="pagination-wrap">
+                  <div class="custom-prev-icon"></div>
+                  <div class="custom-next-icon"></div>              
+                </div>
             </div>       
           </div>
         <?php endif; ?>
@@ -84,72 +90,85 @@ get_header();
     <?php get_template_part( 'template-parts/founding-documents'); ?>
 
     <section class="news">
-      <h3 class="news__title"><?php the_field('news__title'); ?></h3> 
-
+      <h3 class="news__title"><?php the_field('news__title'); ?></h3>
 
       <div class="swiper-container news__hide">
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper">  
+          <div class="swiper-wrapper">
 
-          <?php if(have_rows('news_slider')) : ?>
+          <?php
+            $args = array(
+            'posts_per_page' => 6,
+            'category_name' => 'help-people, help-animals',
+            );
 
-          <?php while(have_rows('news_slider')) : the_row();          
-          $img = get_sub_field('news_img'); ?>
+            $query = new WP_Query($args);
 
-            <div class="swiper-slide"> 
-              <img src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
-              <div class="news__wraper">
-                <p class="news__text"><?php the_sub_field('news_text_left') ?></p>
-                <p class="news__text"><?php the_sub_field('news_text_right') ?></p>
-              </div>
-              <h4 class="news__subTitle"><?php the_sub_field('news_slider_subtitle') ?></h4>
-            </div>  
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                  $query->the_post();
+                  $title = get_the_title();
+          ?>
 
-          <?php endwhile; ?> 
-          <?php endif; ?>
+            <div class="swiper-slide swiper-hover">
+              <a href="<?php the_permalink(); ?>">
+                <div class="news__wraper-img">
+                  <?php the_post_thumbnail(); ?>
+                </div>           
+                <div class="news__wraper">
+                  <p class="news__text"><?php the_time('d.m.Y'); ?></p>
+                  <p class="news__text"><?php the_time('d.m.Y'); ?></p>
+                </div>
+                  <h4 class="news__subTitle"><?php echo $title; ?></h4>
+              </a>
+            </div>
+
+          <?php
+              }
+              wp_reset_postdata();
+            }
+          ?>
 
           </div>
             <div class="swiper-pagination" style="position: inherit"></div>
-        </div>  
+        </div>
       </div>
-
       
       <div class="news__gallery">
         <div class="news__flexWraper" >
 
         <?php
-        global $post;
+        $args = array(
+            'posts_per_page' => 4,
+            'category_name' => 'help-people, help-animals',
+        );
 
-        $myposts = get_posts([ 
-	      'numberposts' => -1,
-        ]);
+        $query = new WP_Query($args);
 
-        if( $myposts ){
-	        foreach( $myposts as $post ){
-		      setup_postdata( $post );
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                $title = get_the_title();
+        ?>
 
-          $title = get_the_title();
-          $content = get_the_content();
-		    ?>
-
-          <div class="news__wraper"> 
-          <?php the_post_thumbnail(); ?>
-        
-          <?php 
-            if ($content) : ?>
-            <div class="news__text">
-              <?php echo $content; ?>
-            </div>
-
-          <?php endif; ?>         
-         
-            <h4 class="news__subTitle"><?php echo $title; ?></h4>
+          <div class="news__wraper">
+            <a href="<?php the_permalink(); ?>">
+              <div class="news__wraper-img">
+                <?php the_post_thumbnail(); ?>
+              </div> 
+                  
+              <div class="news__text">
+                <?php the_time('d.m.Y'); ?>
+              </div>
+              <h4 class="news__subTitle"><?php echo $title; ?></h4>
+            </a>
           </div>
 
-          <?php 
-	    }
-    } 
-    wp_reset_postdata(); ?>
+        <?php
+          }
+            wp_reset_postdata();
+        }
+        ?>
 
         </div>
       </div>
@@ -203,11 +222,13 @@ get_header();
                 <img class="tabs-img" src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'/>
               </div>  
             </div>        
-            <div style="	display: flex; justify-content: center; padding-top: 0">
-              <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
-              aria-controls="modal-window"><?php the_sub_field('tabs_button') ?></button>
+            <div style="display: flex; justify-content: center; padding-top: 0">
+              <a href="<?php the_sub_field('bank_link') ?>" target="_blank">
+                <button class="button tabs-button" type="button" aria-label="support the fund"   aria-expanded="false"
+                aria-controls="modal-window"><?php the_sub_field('tabs_button') ?></button>
+              </a>
             </div>
-          </div>
+          </div> 
 
           <?php endwhile; ?>
         </div>                
