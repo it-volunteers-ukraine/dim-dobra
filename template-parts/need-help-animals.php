@@ -1,4 +1,4 @@
-<div class="container"></div>
+<div class="container">
     <div class="help-animals">
         <img src="<?php the_field('need-help-img', 'option'); ?>" class="help-animals__img" alt="Потрібна допомога">
         <h3 class="help-animals__title"><?php the_field('need-help-title', 'option'); ?></h3>  

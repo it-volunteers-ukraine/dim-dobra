@@ -12,7 +12,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 81px;
         flex-wrap: nowrap;
     }
 
@@ -20,12 +19,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 81px;
         flex-wrap: nowrap;
     }
 
     @media screen and (min-width: $desktop){
-        margin-top: 132px;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-around;
@@ -34,7 +31,6 @@
 
     @media screen and (min-width: $full){
         display: flex;
-        margin-top: 64px;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: flex-start;

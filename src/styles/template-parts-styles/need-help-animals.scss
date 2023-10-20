@@ -11,15 +11,18 @@
 		margin: 0;
 		margin-top: 80px;
 		height: auto;
+		margin-bottom: 81px;
 	}
 
 	@media screen and (min-width: $desktop) {
         margin-top: 132px;
+		margin-bottom: 132px;
 	}
 
     @media screen and (min-width: $full) {
         margin-top: 63px;
 	    height: 900px;
+		margin-bottom: 64px;
   }
 }
 
