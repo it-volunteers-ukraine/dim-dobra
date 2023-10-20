@@ -11,21 +11,18 @@
     @media screen and (min-width: $tablet){
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        margin-top: 81px;
+        justify-content: space-between;
         flex-wrap: nowrap;
     }
 
     @media screen and (min-width: 1200px){
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        margin-top: 81px;
+        justify-content: space-between;
         flex-wrap: nowrap;
     }
 
     @media screen and (min-width: $desktop){
-        margin-top: 132px;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-around;
@@ -34,7 +31,6 @@
 
     @media screen and (min-width: $full){
         display: flex;
-        margin-top: 64px;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: flex-start;
@@ -48,9 +44,9 @@
     padding-left: 18px;
 
     @media screen and (min-width: $tablet){
-        margin-top: 29px;
-        margin-right: 32px;
-        margin-left: 22px;
+        margin-top: 30px;
+        margin-right: 27px;
+        margin-left: 20px;
     }
 
     @media screen and (min-width: 1200px){
@@ -60,9 +56,9 @@
     }
 
     @media screen and (min-width: $desktop){
-        margin-top: 35px;
-        margin-left: 5px;
-        margin-right: 70px;
+        margin-top: 29px;
+        margin-left: 0px;
+        margin-right: 54px;
         padding-left: 0px;
     }
 
@@ -136,19 +132,20 @@ footer img.footer__logo{
     margin-top: 28px;
 
     @media screen and (min-width: $tablet){
-        margin-right: 55px;
-        margin-top: 22px;
+        margin-right: 0px;
+        margin-top: 25px;
+        margin-left: -95px;
     }
 
     @media screen and (min-width: 1200px){
-        margin-top: 42px;
+        margin-top: 25px;
         margin-right: 230px;
         margin-left: 0px;
     }
 
     @media screen and (min-width: $desktop){
-        margin-top: 42px;
-        margin-right: 43px;
+        margin-top: 33px;
+        margin-right: 31px;
         margin-left: 0px;
     }
 
@@ -216,13 +213,14 @@ li.footer__item:first-child{
     margin-top: 41px;
 
     @media screen and (min-width: $tablet){
-        margin-top: 25px;
-        margin-left: 0px;
+        margin-top: 26px;
+        margin-left: -64px;
+        margin-right: 68px;
     }
 
     @media screen and (min-width: $desktop) {
         display: flex;
-        margin-top: 42px;
+        margin-top: 34px;
         align-items: flex-start;
     }
 
@@ -236,12 +234,12 @@ li.footer__item:first-child{
     flex-direction: column;
 
     @media screen and (min-width: $desktop) {
-       margin-right: 214px;
+       margin-right: 107px;
     }
 
     @media screen and (min-width: $full){
         font-size: 22px;
-        margin-right: 158px;
+        margin-right: 0px;
     }
 
 }
@@ -348,8 +346,8 @@ footer a.mob-social__link {
     @media screen and (min-width: $tablet) {
         display: flex; 
         margin: 2px -9px 0px -120px;
-        justify-content: center;   
-        margin-left: -21px;
+        justify-content: flex-start;   
+        margin-left: -13px;
     }
     @media screen and (min-width: $desktop){
         margin-top: 103px;
@@ -357,7 +355,7 @@ footer a.mob-social__link {
 
     @media screen and (min-width: $full){
         display: none;
-     }
+    }
 }
 
 
