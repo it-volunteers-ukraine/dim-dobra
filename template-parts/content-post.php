@@ -26,11 +26,17 @@
 
                                 <ul class="single-post__wrap swiper-wrapper">
                                 <?php while(have_rows('images')): the_row();
-                                $link = get_sub_field('link'); 
-                                print_r($link); ?>
+                                $link = get_sub_field('link');
+
+                                $arr = explode("/", $link);
+                                if (in_array("d", $arr)) {
+                                $index = array_search("d", $arr) + 1;
+                                $id = $arr[$index];
+                                $link = "https://drive.google.com/uc?id=" . $id;}; ?>
+
                                  <li class="swiper-slide img-slider__image">
-                                    <img src="<?php echo esc_url($link); ?>" alt="">
-                                    </li>
+                                    <img id="image-link" src="<?php echo esc_url($link); ?>" alt="">
+                                </li>
                                 <?php endwhile;?>
                                 </ul>
 
@@ -38,9 +44,17 @@
                             </div>
 
                             <ul class="single-post__flex">
-                                <?php while(have_rows('images')): the_row();?>
+                                <?php while(have_rows('images')): the_row();
+                                 $link = get_sub_field('link');
+
+                                $arr = explode("/", $link);
+                                if (in_array("d", $arr)) {
+                                $index = array_search("d", $arr) + 1;
+                                $id = $arr[$index];
+                                $link = "https://drive.google.com/uc?id=" . $id;}; ?>
+
                                     <li class="single-post__item">
-                                        <img src="<?php echo get_sub_field('link') ?>" alt="">
+                                        <img src="<?php echo esc_url($link); ?>" alt="">
                                     </li>
                                 <?php endwhile;?>
                             </ul>

@@ -45,10 +45,17 @@
   align-items: center;
 }
 
+.single-post__item {
+  display: block;
+  overflow: hidden;
+  max-height: 450px;
+}
+
 .single-post__flex {
   display: none;
   @media screen and (min-width: $tablet) {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
     margin-bottom: 32px;
