@@ -63,17 +63,24 @@ jQuery(document).ready(function ($) {
 	};
 })(jQuery);
 
-// Додаємо обробник кліку для кнопок із класом scroll-to-bank-details
-jQuery(document).ready(function ($) {
-	$(".scroll-to-bank-details").click(function () {
-		var offsetTop = $(".bank-details").offset().top;
+// Затримка для плавної прокрутки до секції
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener("click", function (e) {
+		e.preventDefault();
 
-		// Анімовано прокручуємо до секції банківських даних
-		$("html, body").animate(
-			{
-				scrollTop: offsetTop,
-			},
-			800,
-		);
+		const targetId = this.getAttribute("href").substring(1);
+		const targetElement = document.getElementById(targetId);
+
+		if (targetElement) {
+			const offsetTop = targetElement.offsetTop;
+			const delay = 300;
+
+			setTimeout(() => {
+				window.scrollTo({
+					top: offsetTop,
+					behavior: "smooth",
+				});
+			}, delay);
+		}
 	});
 });

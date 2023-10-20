@@ -486,18 +486,6 @@
 	}
 }
 
-.bank-details {
-	margin-bottom: 64px;
-
-	@media screen and (min-width: $tablet) {
-		margin-bottom: 80px;
-	}
-
-	@media screen and (min-width: $desktop) {
-		margin-bottom: 117px;
-	}
-}
-
 .bank-details__title {
 	margin: 0;
 	margin-bottom: 32px;
@@ -643,6 +631,20 @@
 		width: 130px;
 		height: 140px;
 		margin-top: 0;
+	}
+}
+
+.tabs__wraper-btn {
+	justify-content: center;
+
+	@media screen and (min-width: $mobile) {
+		display: flex;
+	}
+}
+
+.house__link {
+	@media screen and (min-width: $tablet) {
+		display: inline-block;
 	}
 }
 

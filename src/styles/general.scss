@@ -14,6 +14,11 @@ html {
 	/* 3 */
 }
 
+html,
+body {
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: 0;
 
