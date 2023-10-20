@@ -30,7 +30,7 @@
     </section>
     <section class="footer__contacts">
         <div class="contacts__container">
-            <div class="contacts__text">Контакти</div>
+            <div class="contacts__text"><?php the_field('contacts-title', 'options'); ?></div>
             <div class="footer__address contacts__flex">
                 <img src="<?php echo get_template_directory_uri();?>/assets/images/geolocation.png" alt="address" class="footer__img">
                 <p class="footer__text"><?php the_field('address', 'options'); ?></p>

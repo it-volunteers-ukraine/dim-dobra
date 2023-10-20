@@ -5,9 +5,8 @@ Template Name: About
 get_header();
 ?>
 <?php get_template_part( 'template-parts/breadcrumbs'); ?>
-<div class="container">
-    
-    <section class="about">
+
+    <section class="about container">
         <h1 class="about__title"><?php the_field('about-title'); ?></h1>
         <p class="about__description description__main"><?php the_field('description-main'); ?></p>
         <div class="about__img">
@@ -37,9 +36,11 @@ get_header();
             </button>
         </a>
     </section>
+
     <!-- documents -->
     <?php get_template_part('template-parts/founding-documents'); ?>
+
     <!-- help-->
     <?php get_template_part('template-parts/need-help-animals'); ?>
-   </div>
+
     <?php get_footer(); ?>
