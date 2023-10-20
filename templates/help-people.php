@@ -43,9 +43,7 @@ get_header();
             wp_reset_query(); ?>
             </div>         
     </section>
-    <div class="container">
-        <?php get_template_part( 'template-parts/need-help'); ?>
-    </div>
+    <?php get_template_part( 'template-parts/need-help'); ?>
 </main>
 
 <?php get_footer(); ?>
