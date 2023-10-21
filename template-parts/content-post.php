@@ -21,27 +21,49 @@
                         </span>
                         <?php the_time('d.m.Y'); ?></h1>
                         <div class="single-post__description"><?php if($content) : echo $content; endif; ?></div>
-                        <?php 
-                            $images = get_field('image_gallery');
-                            if( $images ): ?>
-                                <div class="single-post__slider swiper-container">
-                                    <ul class="single-post__wrap swiper-wrapper">
-                                        <?php foreach( $images as $image ): ?>
-                                            <li class="swiper-slide img-slider__image">
-                                                <?php echo wp_get_attachment_image( $image['id'] ); ?>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                    <div class="swiper-pagination" style="position: inherit"></div>
-                                </div>
-                                <ul class="single-post__flex">
-                                    <?php foreach( $images as $image ): ?>
-                                        <li class="single-post__item">
-                                            <?php echo wp_get_attachment_image( $image['id'] ); ?>
-                                        </li>
-                                    <?php endforeach; ?>
+                        <?php if(have_rows('images-gallery')):?>
+                             <div class="single-post__slider swiper-container">
+
+                                <ul class="single-post__wrap swiper-wrapper" id="lightgallery">
+                                <?php while(have_rows('images-gallery')): the_row();
+                                $link = get_sub_field('link');
+
+                                $arr = explode("/", $link);
+                                if (in_array("d", $arr)) {
+                                $index = array_search("d", $arr) + 1;
+                                $id = $arr[$index];
+                                $link = "https://drive.google.com/uc?id=" . $id;}; ?>
+
+                                 <li class="swiper-slide img-slider__image">
+                                    <a class="image__wrap" href="<?php echo esc_url($link); ?>" data-lightbox="swiper-images">
+                                        <img id="image-link" src="<?php echo esc_url($link); ?>" alt="">
+                                    </a>
+                                </li>
+                                <?php endwhile;?>
                                 </ul>
-                            <?php endif; ?>
+
+                                <div class="swiper-pagination" style="position: inherit"></div>
+                            </div>
+
+                            <ul id="lightgallery" class="single-post__flex">
+                                <?php while(have_rows('images-gallery')): the_row();
+                                 $link = get_sub_field('link');
+
+                                $arr = explode("/", $link);
+                                if (in_array("d", $arr)) {
+                                $index = array_search("d", $arr) + 1;
+                                $id = $arr[$index];
+                                $link = "https://drive.google.com/uc?id=" . $id;}; ?>
+
+                                    <li class="single-post__item">
+                                        <a class="single-post__link" href="<?php echo esc_url($link); ?>" data-lightbox="images">
+                                            <img src="<?php echo esc_url($link); ?>" alt="">
+                                        </a>
+                                    </li>
+                                <?php endwhile;?>
+                            </ul>
+
+                        <?php endif; ?>
                     </div>	
                 </section>
 

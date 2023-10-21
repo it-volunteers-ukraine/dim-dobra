@@ -12,16 +12,6 @@
   }
 }
 
-.help__section {
-  margin-bottom: 64px;
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 80px;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 126px;
-  }
-}
-
 .help__title {
   margin: 0;
   font-size: 28px;

@@ -3,6 +3,7 @@ const notificationEl = document.getElementById("notification");
 const closeNotificationBtn = document.getElementById("js-close-notification");
 const telInputEl = document.getElementById("contactPhone");
 const phoneNotificationEl = document.getElementById("phone-notification");
+const submitNotificationEl = document.getElementById("submit-notification");
 
 wpcf7Elm.addEventListener("wpcf7mailsent", getNotification, false);
 
@@ -18,6 +19,19 @@ function closeNotification() {
   notificationEl.classList.remove("active");
   closeNotificationBtn.removeEventListener("click", closeNotification);
 }
+
+wpcf7Elm.addEventListener("wpcf7invalid", getSubmitNotification, false);
+
+function getSubmitNotification() {
+  submitNotificationEl.classList.add("active");
+  setTimeout(() => {
+    submitNotificationEl.classList.remove("active");
+  }, 3000);
+}
+
+telInputEl.addEventListener("keyup", function () {
+  telInputEl.value = telInputEl.value.replace(/[^\d?^\+]/g, "");
+});
 
 telInputEl.addEventListener("blur", checkNumber);
 telInputEl.addEventListener("input", checkNumber);
