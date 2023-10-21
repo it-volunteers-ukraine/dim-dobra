@@ -21,11 +21,11 @@
                         </span>
                         <?php the_time('d.m.Y'); ?></h1>
                         <div class="single-post__description"><?php if($content) : echo $content; endif; ?></div>
-                        <?php if(have_rows('images')):?>
+                        <?php if(have_rows('images-gallery')):?>
                              <div class="single-post__slider swiper-container">
 
-                                <ul class="single-post__wrap swiper-wrapper">
-                                <?php while(have_rows('images')): the_row();
+                                <ul class="single-post__wrap swiper-wrapper" id="lightgallery">
+                                <?php while(have_rows('images-gallery')): the_row();
                                 $link = get_sub_field('link');
 
                                 $arr = explode("/", $link);
@@ -35,9 +35,9 @@
                                 $link = "https://drive.google.com/uc?id=" . $id;}; ?>
 
                                  <li class="swiper-slide img-slider__image">
-                                    <div class="image__wrap">
+                                    <a class="image__wrap" href="<?php echo esc_url($link); ?>" data-lightbox="swiper-images">
                                         <img id="image-link" src="<?php echo esc_url($link); ?>" alt="">
-                                    </div>
+                                    </a>
                                 </li>
                                 <?php endwhile;?>
                                 </ul>
@@ -46,7 +46,7 @@
                             </div>
 
                             <ul id="lightgallery" class="single-post__flex">
-                                <?php while(have_rows('images')): the_row();
+                                <?php while(have_rows('images-gallery')): the_row();
                                  $link = get_sub_field('link');
 
                                 $arr = explode("/", $link);

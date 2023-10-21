@@ -42,7 +42,7 @@
 
 .swiper-slide {
   position: relative;
-  padding-bottom: 140%;
+  padding-bottom: 110%;
   height: 0;
   overflow: hidden;
 }
@@ -112,10 +112,4 @@
     row-gap: 50px;
     margin-bottom: 56px;
   }
-}
-
-.lb-closeContainer .lb-close {
-  position: absolute;
-  right: 20px;
-  top: -30px;
 }

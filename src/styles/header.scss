@@ -57,7 +57,7 @@
     height: 100%;
     opacity: 0;
     transform: translateX(100%);
-    transition: transform $transition-function, opacity $transition-function;
+    transition: $transition-function;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -66,8 +66,8 @@
 }
 
 .menu__container.is-open {
-  transform: translateX(0);
   opacity: 1;
+  transform: translateX(0);
 }
 
 .menu__wrapper {

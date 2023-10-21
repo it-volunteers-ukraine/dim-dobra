@@ -7,7 +7,7 @@ const postSwiper = new Swiper(".single-post__slider", {
 });
 
 lightbox.option({
-  alwaysShowNavOnTouchDevices: true,
   disableScrolling: true,
   wrapAround: true,
+  positionFromTop: 60,
 });
