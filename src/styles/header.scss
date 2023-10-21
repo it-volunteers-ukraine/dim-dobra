@@ -1,12 +1,3 @@
-img {
-  display: block;
-}
-
-a,
-button {
-  cursor: pointer;
-}
-
 .header {
   padding: 16px 0;
 
@@ -66,7 +57,7 @@ button {
     height: 100%;
     opacity: 0;
     transform: translateX(100%);
-    transition: transform $transition-function;
+    transition: transform $transition-function, opacity $transition-function;
   }
   @media screen and (min-width: 1200px) {
     display: flex;

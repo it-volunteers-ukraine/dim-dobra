@@ -5,3 +5,9 @@ const postSwiper = new Swiper(".single-post__slider", {
     slideToClickedSlide: true,
   },
 });
+
+lightbox.option({
+  alwaysShowNavOnTouchDevices: true,
+  disableScrolling: true,
+  wrapAround: true,
+});

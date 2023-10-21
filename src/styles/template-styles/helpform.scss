@@ -222,6 +222,7 @@ textarea.contact__input {
   border: 2px solid $main-blue;
   background: $white;
   box-shadow: 0px 12px 12px 0px rgba(82, 113, 255, 0.04);
+  opacity: 0;
   transition: transform 250ms var(--timing-funcion);
   @media screen and (min-width: $tablet) {
     padding: 56px 83px;
@@ -235,6 +236,7 @@ textarea.contact__input {
 
 .notification.active {
   right: 20px;
+  opacity: 1;
   transform: scale(1);
 }
 
@@ -305,16 +307,20 @@ textarea.contact__input {
   }
 }
 
-.wpcf7 form.sent .wpcf7-response-output {
+.wpcf7 form.sent .wpcf7-response-output,
+.wpcf7 form.invalid .wpcf7-response-output {
   display: none;
 }
 
 //phone-field validation
-.phone-notification {
+.phone-notification,
+.submit-notification {
   display: none;
+  transition: $transition-function;
 }
 
-.phone-notification.active {
+.phone-notification.active,
+.submit-notification.active {
   display: block;
   color: #dc3232;
   font-size: 16px;

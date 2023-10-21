@@ -35,7 +35,9 @@
                                 $link = "https://drive.google.com/uc?id=" . $id;}; ?>
 
                                  <li class="swiper-slide img-slider__image">
-                                    <img id="image-link" src="<?php echo esc_url($link); ?>" alt="">
+                                    <div class="image__wrap">
+                                        <img id="image-link" src="<?php echo esc_url($link); ?>" alt="">
+                                    </div>
                                 </li>
                                 <?php endwhile;?>
                                 </ul>
@@ -43,7 +45,7 @@
                                 <div class="swiper-pagination" style="position: inherit"></div>
                             </div>
 
-                            <ul class="single-post__flex">
+                            <ul id="lightgallery" class="single-post__flex">
                                 <?php while(have_rows('images')): the_row();
                                  $link = get_sub_field('link');
 
@@ -54,7 +56,9 @@
                                 $link = "https://drive.google.com/uc?id=" . $id;}; ?>
 
                                     <li class="single-post__item">
-                                        <img src="<?php echo esc_url($link); ?>" alt="">
+                                        <a class="single-post__link" href="<?php echo esc_url($link); ?>" data-lightbox="images">
+                                            <img src="<?php echo esc_url($link); ?>" alt="">
+                                        </a>
                                     </li>
                                 <?php endwhile;?>
                             </ul>

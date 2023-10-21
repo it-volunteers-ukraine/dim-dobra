@@ -1,1 +1,1 @@
-const postSwiper=new Swiper(".single-post__slider",{pagination:{el:".swiper-pagination",clickable:!0,slideToClickedSlide:!0}});
+const postSwiper=new Swiper(".single-post__slider",{pagination:{el:".swiper-pagination",clickable:!0,slideToClickedSlide:!0}});lightbox.option({alwaysShowNavOnTouchDevices:!0,disableScrolling:!0,wrapAround:!0});
