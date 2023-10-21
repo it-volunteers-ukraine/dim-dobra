@@ -41,18 +41,17 @@
     display: flex;
     flex-direction: column;
     margin-top: 31px;
-    padding-left: 18px;
-
+    
     @media screen and (min-width: $tablet){
         margin-top: 30px;
-        margin-right: 27px;
-        margin-left: 20px;
+        margin-right: 36px;
+        margin-left: 37px;
     }
 
     @media screen and (min-width: 1200px){
         margin-top: 29px;
-        margin-right: 180px;
-        margin-left: 22px;
+        margin-right: 141px;
+        margin-left: 37px;
     }
 
     @media screen and (min-width: $desktop){
@@ -222,6 +221,8 @@ li.footer__item:first-child{
         display: flex;
         margin-top: 34px;
         align-items: flex-start;
+        margin-left: 12px;
+        margin-right: 0px;
     }
 
     @media screen and (min-width: $full){
@@ -350,7 +351,8 @@ footer a.mob-social__link {
         margin-left: -13px;
     }
     @media screen and (min-width: $desktop){
-        margin-top: 103px;
+        margin-top: 107px;
+        margin: -3px -6px 0px -22px;
     }
 
     @media screen and (min-width: $full){
