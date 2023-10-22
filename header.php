@@ -3,7 +3,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <?php wp_head(); ?>
 </head>
 <body>  
@@ -46,15 +46,15 @@
                                         } ?> 
                                     </ul>
                                     <ul class="mob-menu__social">
-                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('viber', 'option') ); ?>"><svg class="icon-socials"
+                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('viber', 'option') ) ; ?>" aria-label="Viber"><svg class="icon-socials"
                                             width="40px" height="40px">
                                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#viber"></use>
                                             </svg></a></li>
-                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('telegram', 'option') ); ?>"><svg class="icon-socials"
+                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('telegram', 'option') ); ?>" aria-label="Telegram"><svg class="icon-socials"
                                             width="40px" height="40px">
                                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#telegram"></use>
                                             </svg></a></li>
-                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('whatsapp', 'option') ); ?>"><svg class="icon-socials"
+                                        <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('whatsapp', 'option') ); ?>" aria-label="Whatsapp"><svg class="icon-socials"
                                             width="40px" height="40px">
                                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#whatsapp"></use>
                                             </svg></a></li>
