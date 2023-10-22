@@ -26,6 +26,7 @@
 
                                 <ul class="single-post__wrap swiper-wrapper" id="lightgallery">
                                 <?php while(have_rows('images-gallery')): the_row();
+                                $alt = get_sub_field('alt');
                                 $link = get_sub_field('link');
 
                                 $arr = explode("/", $link);
@@ -35,8 +36,8 @@
                                 $link = "https://drive.google.com/uc?id=" . $id;}; ?>
 
                                  <li class="swiper-slide img-slider__image">
-                                    <a class="image__wrap" href="<?php echo esc_url($link); ?>" data-lightbox="swiper-images">
-                                        <img id="image-link" src="<?php echo esc_url($link); ?>" alt="">
+                                    <a class="one-image__wrap" href="<?php echo esc_url($link); ?>" data-lightbox="swiper-images" aria-label="Подивитись фото у повному розмірі">
+                                        <img id="image-link" src="<?php echo esc_url($link); ?>" alt="<?php if($alt): echo $alt; endif; ?>">
                                     </a>
                                 </li>
                                 <?php endwhile;?>
@@ -56,8 +57,8 @@
                                 $link = "https://drive.google.com/uc?id=" . $id;}; ?>
 
                                     <li class="single-post__item">
-                                        <a class="single-post__link" href="<?php echo esc_url($link); ?>" data-lightbox="images">
-                                            <img src="<?php echo esc_url($link); ?>" alt="">
+                                        <a class="single-post__link" href="<?php echo esc_url($link); ?>" data-lightbox="images" aria-label="Подивитись фото у повному розмірі">
+                                            <img src="<?php echo esc_url($link); ?>" alt="<?php if($alt): echo $alt; endif; ?>">
                                         </a>
                                     </li>
                                 <?php endwhile;?>
