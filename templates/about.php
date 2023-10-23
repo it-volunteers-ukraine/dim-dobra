@@ -18,12 +18,12 @@ get_header();
         <div class="about__contact">
             <div class="email">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/carbon_email.png" alt="email" class="email__img">
-                <a class="email__link" href="mailto:<?php the_field('email'); ?>"><?php the_field('email', 4); ?></a>
+                <a class="email__link" href="mailto:<?php the_field('email'); ?>"><?php the_field('email', 'options'); ?></a>
             </div>
             <div class="phone">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/carbon_phone.png" alt="email" class="phone__img">
-                <a class="phone__link__first" href="tel:+<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 4); ?></a>&nbsp|&nbsp
-                <a class="phone__link" href="tel:<?php the_field('second-phone'); ?>"><?php the_field('second-phone', 4); ?></a>
+                <a class="phone__link__first" href="tel:+<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 'options'); ?></a>&nbsp|&nbsp
+                <a class="phone__link" href="tel:<?php the_field('second-phone'); ?>"><?php the_field('second-phone', 'options'); ?></a>
             </div>
         </div>
         <div class="work__img">

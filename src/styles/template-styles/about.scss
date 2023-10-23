@@ -24,11 +24,6 @@ p {
 .container {
   width: 100%;
   margin: 0 auto;
-
-  @media screen and (min-width: $full) {
-   max-width: 1920px;
-    
-  }
 }
 
 .about {
@@ -142,14 +137,7 @@ p {
 	.description__morehelp {
 		grid-area: description__morehelp;
 	}
-
-    @media screen and (min-width: $full) {
-        grid-template-rows: auto;
-        margin-top: -2px;
-        gap: 0px 169px;
-        margin-bottom: 76px;
-      }
-  }
+}
     
 .about__title{
   font-size: 28px;
@@ -165,11 +153,6 @@ p {
 		font-size: 32px;
 		margin: 4px 0px 11px 0px;
 	}
-
-  @media screen and (min-width: $full) {
-    font-size: 48px;
-    margin: 27px 0px 11px 0px;
-  }
 }
 
 .about__description {
@@ -193,11 +176,6 @@ p {
 	@media screen and (min-width: $desktop) {
 		font-size: 18px;
 	}
-
-  @media screen and (min-width: $full){
-    font-size: 26px;
-    font-weight: 400;
-  }
 }
 
 .about__img{
@@ -217,12 +195,6 @@ p {
     min-width: 630px;
     margin-top: 0px;
     margin-bottom: -200px;
-  }
-
-  @media screen and (min-width: $full) {
-    min-width: 869px;
-    margin-top: -133px;
-    height: 716px;
   }
 }
 
@@ -255,12 +227,6 @@ p {
     height: 459px;
     max-width: fit-content;
   }
-
-   @media screen and (min-width: $full) {
-    min-width: 722px;
-    height: auto;
-    margin-top: 77px;
-  }
 }
 
 .work__img img.image{
@@ -272,12 +238,6 @@ p {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    }
-
-  @media screen and (min-width: $full) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     }
 }
 
@@ -291,19 +251,12 @@ p {
     margin-bottom: 103px;
     margin-top: 13px;
   }
-  @media screen and (min-width: $full) {
-    margin-top: 6px;
-  }
 }
 
 .email {
 	display: flex;
 	justify-content: flex-start;
 	font-size: 18px;
-
-  @media screen and (min-width: $full) {
-    font-size: 24px;
-  }
 }
 
 .phone {
@@ -318,13 +271,6 @@ p {
   @media screen and (min-width: $desktop) {
     margin-top: 31px;
   }
-  @media screen and (min-width: $full) {
-    margin-top: 9px;
-  }
-
-  @media screen and (min-width: $full) {
-    font-size: 24px;
-  }
 }
 
 .email__img {
@@ -334,10 +280,6 @@ p {
 	@media screen and (min-width: $tablet) {
 		width: 32px;
 	}
-
-  @media screen and (min-width: $full){
-    width: 46px;
-  }
 }
 
 .phone__img {
@@ -347,10 +289,6 @@ p {
 	@media screen and (min-width: $tablet) {
 		width: 32px;
 	}
-
-  @media screen and (min-width: $full){
-   width: 46px;
-  }
 }
 
 .support__btn {
@@ -390,17 +328,8 @@ p {
     margin-top: 26px;
     margin-left: 0px;
   }
-  @media screen and (min-width: $full) {
-    display: block;
-    font-size: 23px;
-    height: auto;
-    width: 335px;
-    margin-top: 17px;
-    margin-left: 0px;
-    padding: 26px 26px;
-    margin-bottom: 22px;
-  }
 }
+
 .description__main {
 	@media screen and (min-width: $tablet) {
 		margin: 0px;
@@ -409,12 +338,6 @@ p {
 	@media screen and (min-width: $desktop) {
 		padding-right: 106px;
 	}
-
-  @media screen and (min-width: $full) {
-    padding-right: 0px;
-    margin-top: 49px;
-    margin-bottom: 0px;
-  }
 }
 
 .description__command {
@@ -425,29 +348,19 @@ p {
 	@media screen and (min-width: $desktop) {
 		padding-right: 98px;
 	}
-
-  @media screen and (min-width: $full) {
-    padding-right: 130px;
-    margin-bottom: 37px;
-  }
 }
 
 .description__other {
-  @media screen and (min-width: $tablet) {
-    padding-top: 39px;
-    margin-top: 3px ;
+    @media screen and (min-width: $tablet) {
+      padding-top: 39px;
+      margin-top: 3px ;
     }
+
     @media screen and (min-width: $desktop){
       padding-top: 0px;
       margin-top: 39px ;
     }
-    @media screen and (min-width: $full) {
-      padding-right: 25px;
-      margin-bottom: 7px;
-      padding-top: 74px;
-      
-     }
-  }
+}
     
 .description__animals {
     margin-top: 6px;
@@ -458,10 +371,6 @@ p {
     @media screen and (min-width: $desktop) {
       margin-top: 1px;
       padding-right: 11px;
-    }
-    @media screen and (min-width: $full) {
-      padding-right: 11px;
-      margin-top: 7px;
     }
 }
 
@@ -475,9 +384,5 @@ p {
     @media screen and (min-width: $desktop) {
       display: block;
       margin-top: -29px;
-    }
-    @media screen and (min-width: $full) {
-      padding-right: 11px;
-      margin-top: 0px;
     }
 }
