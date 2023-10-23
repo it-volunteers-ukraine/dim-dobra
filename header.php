@@ -16,14 +16,14 @@
                                 echo get_custom_logo();
                             }
                         ?>
-                        <button class="menu-open__btn" id="js-open-menu" type="button">
+                        <button class="menu-open__btn" id="js-open-menu" type="button" aria-label="Відкрити меню">
                             <svg class="menu-icon">
                                 <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#menu"></use>
                             </svg>
                         </button>
                         <div class="menu__container" id="js-menu">
                             <div class="menu__wrapper">
-                                <button class="menu-close__btn" id="js-close-menu" type="button">
+                                <button class="menu-close__btn" id="js-close-menu" type="button" aria-label="Закрити меню">
                                     <svg class="menu-icon">
                                         <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#close"></use>
                                     </svg>
