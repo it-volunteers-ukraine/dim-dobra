@@ -1,9 +1,7 @@
 <article class="post-box">
-    <?php
-        $excerpt = get_the_excerpt();
-        ?>
+    <?php $excerpt = get_the_excerpt(); ?>
     <div class="feature-image">
-        <a class="feature-image__link" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+        <a class="feature-image__link" href="<?php the_permalink(); ?>" aria-label="Читати детальніше про <?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
     </div>
     <div class="description">
         <div class="entry-date"><?php the_time('d.m.Y'); ?></div>
