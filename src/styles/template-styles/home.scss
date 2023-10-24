@@ -115,12 +115,13 @@
 		flex-wrap: wrap;
 		flex-basis: 200px;
 		gap: 24px;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 
 	@media screen and (min-width: $desktop) {
 		flex-basis: 350px;
 		gap: 56px;
+		justify-content: space-between;
 		padding-right: 64px;
 		padding-left: 64px;
 	}
@@ -129,6 +130,18 @@
 .support__item {
 	@media screen and (min-width: $tablet) {
 		width: 200px;
+	}
+
+	@media screen and (min-width: 900px) {
+		width: 255px;
+	}
+
+	@media screen and (min-width: 1120px) {
+		width: 300px;
+	}
+
+	@media screen and (min-width: 1120px) {
+		width: 330px;
 	}
 
 	@media screen and (min-width: $desktop) {

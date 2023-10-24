@@ -12,8 +12,8 @@ get_header();
         <h1 class="house__title"><?php the_field('hero_title'); ?></h1>
       </div>
 
-      <a href="#bank-details" class="house__link">
-        <button class="button house__button" type="button" aria-label="support" aria-controls="bank-details-section">
+      <a href="#bank-details" class="house__link" aria-label="support the fund">
+        <button class="button house__button" type="button" aria-label="support the fund" aria-controls="bank-details-section">
           <?php the_field('hero_btn_text'); ?>
         </button>
       </a>
@@ -135,7 +135,7 @@ get_header();
             ?>
 
               <div class="swiper-slide swiper-hover">
-                <a href="<?php the_permalink(); ?>">
+                <a href="<?php the_permalink(); ?>" aria-label="link to a separate post">
                   <div class="news__wraper-img">
                     <?php the_post_thumbnail(); ?>
                   </div>
@@ -191,7 +191,7 @@ get_header();
           ?>
 
             <div class="news__wraper">
-              <a href="<?php the_permalink(); ?>">
+              <a href="<?php the_permalink(); ?>" aria-label="link to a separate post">
                 <div class="news__wraper-img">
                   <?php the_post_thumbnail(); ?>
                 </div>

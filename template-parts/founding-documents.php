@@ -1,7 +1,7 @@
 <section class="documents">
   <div class="container ">
 
-    <h3 class="documents__title"><?php the_field('documents_title', 'option'); ?></h3>
+    <h2 class="documents__title"><?php the_field('documents_title', 'option'); ?></h2>
 
     <ul class="documents__list">
 
@@ -12,7 +12,7 @@
         ?>
 
           <li>
-            <a href="<?php the_sub_field('documents_link') ?>" target="_blank">
+            <a href="<?php the_sub_field('documents_link') ?>" target="_blank" aria-label="link to founding document">
               <div class="documents__wraper">
                 <img class="documents__img" src='<?php echo $img['url']; ?>' alt='<?php echo $img['alt']; ?>'>
                 <img class="documents__img-desktop" src="<?php the_sub_field('documents_img_desktop') ?>" alt="file-icon">
