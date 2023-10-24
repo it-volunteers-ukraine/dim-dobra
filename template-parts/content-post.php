@@ -37,7 +37,7 @@
 
                                  <li class="swiper-slide img-slider__image">
                                     <a class="one-image__wrap" href="<?php echo esc_url($link); ?>" data-lightbox="swiper-images" aria-label="Подивитись фото у повному розмірі">
-                                        <img id="image-link" src="<?php echo esc_url($link); ?>" alt="<?php if($alt): echo $alt; endif; ?>">
+                                        <img id="image-link" class="swiper-lazy" src="<?php echo esc_url($link); ?>" alt="<?php if($alt): echo $alt; endif; ?>">
                                     </a>
                                 </li>
                                 <?php endwhile;?>
