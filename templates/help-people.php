@@ -41,8 +41,7 @@ get_header();
             
             the_posts_pagination();
             wp_reset_query(); ?>
-            </div>
-                
+            </div>         
     </section>
     <?php get_template_part( 'template-parts/need-help'); ?>
 </main>

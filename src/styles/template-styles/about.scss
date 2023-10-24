@@ -1,31 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
 @import "../variables.scss";
 
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
-}
-
-body {
-	margin: 0 auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	margin: 0;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .about {
   width: 100%;
     
@@ -179,14 +154,12 @@ p {
 }
 
 .about__img{
-  min-width: 343px;
   margin-top: 40px;
   margin-bottom: 42px;
   display: flex;
   justify-content: center;
 
   @media screen and (min-width: $tablet) {
-    min-width: 677px;
     margin-top: 32px;
     margin-bottom: 16px;
   }
@@ -199,7 +172,6 @@ p {
 }
 
 .work__img{
-  min-width: 343px;
   margin-top: 40px;
   margin-bottom: 1px;
   display: flex;
@@ -295,9 +267,7 @@ p {
   display: block;
   font-size: 20px;
   cursor: pointer;
-  margin-top: 25px;
-  margin-bottom: 61px;
-  margin-left: 16px;
+  margin: 25px auto 61px auto;
   width: 311px;
 
 	&:hover,

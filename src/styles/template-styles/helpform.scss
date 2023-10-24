@@ -4,7 +4,7 @@
 .helpform__section {
   background-color: $bg-footer;
   padding: 24px 16px 16px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   @media screen and (min-width: $tablet) {
     padding: 0;
     background-color: $white;
@@ -17,12 +17,12 @@
     padding: 40px 116px 36px;
     background-color: $bg-footer;
     border-radius: 16px;
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
   @media screen and (min-width: $desktop) {
     border-radius: 0;
     padding: 56px 220px 48px;
-    margin-bottom: 130px;
+    margin-bottom: 100px;
   }
 }
 
@@ -191,7 +191,19 @@ textarea.contact__input {
   }
 }
 
+.wpcf7 .wpcf7-submit:disabled {
+  background: $grey;
+  &:hover,
+  &:focus {
+    border-color: $grey;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
 .required {
+  font-size: 16px;
+  font-weight: 500;
   color: #dc3232;
 }
 
@@ -199,7 +211,7 @@ textarea.contact__input {
 .notification {
   position: fixed;
   top: 20px;
-  right: -400px;
+  right: -1000px;
   z-index: 10;
   padding: 46px 36px;
   width: fit-content;
@@ -210,21 +222,21 @@ textarea.contact__input {
   border: 2px solid $main-blue;
   background: $white;
   box-shadow: 0px 12px 12px 0px rgba(82, 113, 255, 0.04);
-  transition: transform 250ms var(--timing-funcion);
+  opacity: 0;
+  transition: $transition-function;
   @media screen and (min-width: $tablet) {
     padding: 56px 83px;
     border-radius: 24px;
-    right: -700px;
   }
   @media screen and (min-width: $desktop) {
     padding: 67px 133px;
     border-radius: 30px;
-    right: -1000px;
   }
 }
 
 .notification.active {
   right: 20px;
+  opacity: 1;
   transform: scale(1);
 }
 
@@ -295,16 +307,20 @@ textarea.contact__input {
   }
 }
 
-.wpcf7 form.sent .wpcf7-response-output {
+.wpcf7 form.sent .wpcf7-response-output,
+.wpcf7 form.invalid .wpcf7-response-output {
   display: none;
 }
 
 //phone-field validation
-.phone-notification {
+.phone-notification,
+.submit-notification {
   display: none;
+  transition: $transition-function;
 }
 
-.phone-notification.active {
+.phone-notification.active,
+.submit-notification.active {
   display: block;
   color: #dc3232;
   font-size: 16px;
