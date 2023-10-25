@@ -18,12 +18,6 @@
         margin-top: 132px;
 		margin-bottom: 132px;
 	}
-
-    @media screen and (min-width: $full) {
-        margin-top: 63px;
-	    height: 900px;
-		margin-bottom: 64px;
-  }
 }
 
 .help-animals__img{
@@ -62,13 +56,6 @@
 		webkit-text-stroke-width: thin;
         margin: -58px 0 0 20px
 	}
-
-	@media screen and (min-width: $full) {
-		font-size: 72px;
-		margin-top: -64px;
-		margin-bottom: 8px;
-		width: 692px;
-	}
 }
 
 .help-animals__button {
@@ -92,13 +79,6 @@
 		font-size: 25px;
 		margin-top: 55px;
 		margin-left: 1px;
-	}
-
-	@media screen and (min-width: $full) {
-		width: 358px;
-		font-size: 28px;
-		height: 70px;
-		margin-top: 76px;
 	}
 
 	&:hover,
