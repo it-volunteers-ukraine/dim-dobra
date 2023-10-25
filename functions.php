@@ -96,7 +96,7 @@ add_theme_support( 'post-thumbnails' );
 
 /** add fonts */
 function add_google_fonts() {
-  wp_enqueue_style( 'google_web_fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto' );
+  wp_enqueue_style( 'google_web_fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap' );
 }
  
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
