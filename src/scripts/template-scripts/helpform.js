@@ -39,7 +39,7 @@ telInputEl.addEventListener("input", checkNumber);
 function checkNumber() {
   const value = telInputEl.value;
   const pattern =
-    /^[\+]?\d{2}[\s|-]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$/;
+    /^[\+]?\d{2}[\s|-]?\(?\d{3}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$/;
   check = pattern.test(value);
   if (check) {
     phoneNotificationEl.classList.remove("active");
