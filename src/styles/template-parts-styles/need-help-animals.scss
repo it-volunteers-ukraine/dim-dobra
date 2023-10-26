@@ -54,12 +54,13 @@
 	@media screen and (min-width: $desktop) {
 		font-size: 48px;
 		webkit-text-stroke-width: thin;
-        margin: -58px 0 0 20px
+        margin: -58px 0 0 0px
 	}
 }
 
 .help-animals__button {
 	color: $main-blue;
+	text-align: center;
 	background-color: $yellow;
 	width: 311px;
 	position: absolute;
