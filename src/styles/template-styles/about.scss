@@ -3,12 +3,13 @@
 
 .about {
   width: 100%;
+  margin-bottom: 57px;
     
   @media screen and (min-width: $tablet) {
-    margin-bottom: -8px;
+    margin-bottom: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    grid-template-rows: auto;
     gap: 0px 15px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -57,13 +58,30 @@
 	.support__btn {
 		grid-area: support__btn;
 	}
-
-  @media screen and (min-width: $desktop) {
-    margin-top: -16px;
+  @media screen and (min-width: 1200px) {
     margin-bottom: 57px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.45fr 0.6fr 0.7fr 1fr 0.1fr 0.1fr 0.01fr 0.1fr;
+    grid-template-rows: auto;
+    gap: 0px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "about__title about__title"
+      "description__main description__main"
+      "about__img about__img"
+      "description__command about__contact"
+      "work__img description__other"
+      "work__img description__animals"
+      "work__img description__morehelp"
+      "support__btn support__btn " ;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: -16px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     gap: 0px 35px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -126,7 +144,7 @@
 
 	@media screen and (min-width: $desktop) {
 		font-size: 32px;
-		margin: 4px 0px 11px 0px;
+		margin: 4px 0px 53px 0px;
 	}
 }
 
@@ -167,7 +185,7 @@
   @media screen and (min-width: $desktop) {
     min-width: 630px;
     margin-top: 0px;
-    margin-bottom: -200px;
+    margin-bottom: -199px;
   }
 }
 
@@ -193,10 +211,8 @@
     }
 
   @media screen and (min-width: $desktop) {
-    margin-top: 32px;
+    margin-top: 46px;
     margin-bottom: 24px;
-    width: 520px;
-    height: 459px;
     max-width: fit-content;
   }
 }
@@ -221,7 +237,7 @@
   }
   @media screen and (min-width: $desktop) {
     margin-bottom: 103px;
-    margin-top: 13px;
+    margin-top: 12px;
   }
 }
 
@@ -236,6 +252,14 @@
   justify-content: flex-start;
   font-size: 18px;
   margin-top: 19px;
+
+  @media screen and (min-width: 320px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    font-size: 18px;
+  }
 
   @media screen and (min-width: $tablet) {
     margin-top: 21px;
@@ -267,9 +291,8 @@
   display: block;
   font-size: 20px;
   cursor: pointer;
-  margin: 25px auto 61px auto;
-  width: 311px;
-
+  margin: 25px auto 0px auto;
+  
 	&:hover,
 	&:focus {
 		color: $main-blue;
@@ -280,14 +303,14 @@
     font-size: 20px;
     margin-top: 2px;
     margin-bottom: 18px;
-    margin-left: 52%;
+    
   }
 
   @media screen and (min-width: 1200px) {
     font-size: 20px;
-    margin-top: -74px;
+    margin-top: auto;
     margin-bottom: 18px;
-    margin-left: 52%;
+   
   }
 
   @media screen and (min-width: $desktop) {
@@ -295,8 +318,7 @@
     font-size: 24px;
     height: fit-content;
     width: 297px;
-    margin-top: 26px;
-    margin-left: 0px;
+    margin: 25px 0px 25px 0px;
   }
 }
 
@@ -317,6 +339,7 @@
 
 	@media screen and (min-width: $desktop) {
 		padding-right: 98px;
+    margin-bottom: 23px;
 	}
 }
 
@@ -328,7 +351,8 @@
 
     @media screen and (min-width: $desktop){
       padding-top: 0px;
-      margin-top: 39px ;
+      margin-top: 42px;
+      margin-bottom: 0;
     }
 }
     
@@ -339,8 +363,9 @@
       margin-top: 5px;
     }
     @media screen and (min-width: $desktop) {
-      margin-top: 1px;
+      margin-top: 0px;
       padding-right: 11px;
+      margin-bottom: 0px;
     }
 }
 
@@ -350,9 +375,17 @@
 
     @media screen and (min-width: $tablet) {
       display: none;
+      margin-top: 0px;
     }
+
+    @media screen and (min-width: 1200px) {
+      display: block;
+      margin-top: 0px;
+    }
+
     @media screen and (min-width: $desktop) {
       display: block;
-      margin-top: -29px;
+      margin-top: 0px;
+      margin-bottom: 0px;
     }
 }
