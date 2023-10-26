@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: About
+Template Name: Abouti
 */
 get_header();
 ?>
@@ -31,10 +31,8 @@ get_header();
         </div>
         <p class="about__description description__animals"><?php the_field('animals'); ?></p>
         <p class="about__description description__morehelp"><?php the_field('more-help'); ?></p>
-        <button class="button support__btn" type="button" aria-label="Підтримати фонд" aria-expanded="false" aria-controls="modal-window">
-                <?php the_field('button-text-support'); ?>
-            <a href="<?php the_field('button-link-support'); ?>" class="support__link">  </a>
-        </button>
+        <a href="<?php the_field('button-link-support'); ?>" class="button support__btn"><?php the_field('button-text-support'); ?></a>
+      
       
     </section>
 

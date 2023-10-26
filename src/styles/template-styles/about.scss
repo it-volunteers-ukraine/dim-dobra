@@ -53,6 +53,8 @@
 
 	.description__animals {
 		grid-area: description__animals;
+
+    
 	}
 
 	.support__btn {
@@ -78,7 +80,7 @@
 
   @media screen and (min-width: $desktop) {
     margin-top: -16px;
-    margin-bottom: 30px;
+    margin-bottom: 126px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -94,39 +96,7 @@
       "work__img description__morehelp"
       "work__img support__btn";
   }
-
-	.about__title {
-		grid-area: about__title;
-	}
-
-	.description__main {
-		grid-area: description__main;
-	}
-
-	.description__command {
-		grid-area: description__command;
-	}
-
-	.about__contact {
-		grid-area: about__contact;
-	}
-
-  .about__img {
-    grid-area: about__img;
-  }
-
-	.work__img {
-		grid-area: work__img;
-	}
-
-	.description__other {
-		grid-area: description__other;
-	}
-
-	.description__animals {
-		grid-area: description__animals;
-	}
-
+	
 	.description__morehelp {
 		grid-area: description__morehelp;
 	}
@@ -179,7 +149,7 @@
 
   @media screen and (min-width: $tablet) {
     margin-top: 32px;
-    margin-bottom: 16px;
+    margin-bottom: 19px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -197,7 +167,6 @@
   min-height: 267px;
 
   @media screen and (min-width: $tablet) {
-    margin-top: 45px; 
     max-width: 455px;
     margin-bottom: 18px;
     min-height: 370px;
@@ -212,7 +181,7 @@
 
   @media screen and (min-width: $desktop) {
     margin-top: 46px;
-    margin-bottom: 24px;
+    margin-bottom: 0px;
     max-width: fit-content;
   }
 }
@@ -234,6 +203,8 @@
 
   @media screen and (min-width: $tablet) {
     margin-top: 10px;
+    margin-left: 5px;
+
   }
   @media screen and (min-width: $desktop) {
     margin-bottom: 103px;
@@ -289,6 +260,7 @@
 
 .support__btn {
   display: block;
+  text-align: center;
   font-size: 20px;
   cursor: pointer;
   margin: 25px auto 0px auto;
@@ -316,9 +288,8 @@
   @media screen and (min-width: $desktop) {
     display: block;
     font-size: 24px;
-    height: fit-content;
     width: 297px;
-    margin: 25px 0px 25px 0px;
+    margin: 41px 0px 14px 0px;
   }
 }
 
@@ -360,12 +331,12 @@
     margin-top: 6px;
 
     @media screen and (min-width: $tablet) {
-      margin-top: 5px;
+      margin-top: 1px;
     }
     @media screen and (min-width: $desktop) {
-      margin-top: 0px;
+      margin-top: 14px;
       padding-right: 11px;
-      margin-bottom: 0px;
+      margin-bottom: 7px;
     }
 }
 
@@ -385,7 +356,7 @@
 
     @media screen and (min-width: $desktop) {
       display: block;
-      margin-top: 0px;
+      margin-top: 4px;
       margin-bottom: 0px;
     }
 }
