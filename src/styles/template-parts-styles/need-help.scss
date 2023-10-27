@@ -31,9 +31,10 @@
 	font-size: 32px;
 	font-weight: 600;
 	line-height: 1;
+	text-align: center;
 
 	@media screen and (max-width: $mobile) {
-		font-size: 29px;
+		font-size: 27px;
 	}
 
 	@media screen and (min-width: $tablet) {

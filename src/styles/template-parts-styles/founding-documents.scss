@@ -106,13 +106,12 @@
 
 	@media screen and (min-width: $tablet) {
 		display: block;
-		width: 243px;
-		height: 320px;
+		width: 195px;
+		height: 250px;
 	}
 
 	@media screen and (min-width: $desktop) {
 		width: 190px;
-		height: 250px;
 	}
 
 	@media screen and (min-width: 1920px) {
@@ -130,7 +129,7 @@
 
 	@media screen and (min-width: $tablet) {
 		position: absolute;
-		width: 211px;
+		width: 170px;
 		left: 16px;
 		bottom: 20px;
 		color: $black;

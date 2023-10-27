@@ -5,8 +5,7 @@ const homeSlyder = new Swiper(".mySwiper", {
 	loop: true,
 	grabCursor: true,
 	autoHeight: true,
-	freeMode: true,
-	speed: 800,
+	speed: 600,
 	keyboard: {
 		enabled: true,
 	},
