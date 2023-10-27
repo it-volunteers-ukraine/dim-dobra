@@ -13,22 +13,8 @@
     @media screen and (min-width: $tablet){
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-    }
-
-    @media screen and (min-width: 1200px){
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-    }
-
-    @media screen and (min-width: $desktop){
-        flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
-        display: flex;
     }
 }
 
@@ -38,22 +24,15 @@
     margin-top: 31px;
     
     @media screen and (min-width: $tablet){
-        margin-top: 30px;
-        margin-right: 69px;
-        margin-left: 1px;
+        margin: 30px 28px 0 0;
     }
 
     @media screen and (min-width: 1200px){
-        margin-top: 29px;
-        margin-right: 170px;
-        margin-left: 1px;
+        margin: 29px 0px 0 1px;
     }
 
     @media screen and (min-width: $desktop){
-        margin-top: 35px;
-        margin-left: -8px;
-        margin-right: 62px;
-        padding-left: 0px;
+        margin: 34px 0 0 0;
     }
 }
 
@@ -61,14 +40,12 @@ footer a.custom-logo-link{
     display: inline-block;
 
     @media screen and (min-width: $tablet){
-      margin-left: 0px;
-      margin-bottom: 3px;
-      display: block;
+        margin: 0 0 3px 0;
+        display: block;
     }
 
     @media screen and (min-width: $desktop){
-        margin-left: 10px;
-        margin-bottom: 3px;
+        margin: 0 0 3px 10px;
         display: block;
     }
 }
@@ -76,12 +53,11 @@ footer a.custom-logo-link{
 footer img.footer__logo{
     width: 200px;
     height: 48px;
-    margin-left: -2px;
+    margin-left: 0px;
 
     @media screen and (min-width: $tablet){
         width: 122px;
         height: 28px;
-        margin-left: 0px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -95,32 +71,24 @@ footer img.footer__logo{
     margin-top: 22px;
 
     @media screen and (min-width: $desktop) {
-        margin-top: 29px;
-        margin-left: 9px;
+        margin: 29px 0 0 3px;
     }
 } 
 
 .nav{
-    margin-left: 1px;
-    margin-top: 28px;
-
+    margin: 28px 0px 0 1px;
+    
     @media screen and (min-width: $tablet){
-        margin-right: 1px;
-        margin-top: 25px;
-        margin-left: -95px;
-    }
+        margin: 25px 23px 0 0;
+        }
 
     @media screen and (min-width: 1200px){
-        margin-top: 25px;
-        margin-right: 230px;
-        margin-left: 0px;
-    }
+        margin: 25px 25px 0 0;
+       }
 
     @media screen and (min-width: $desktop){
-        margin-top: 39px;
-        margin-right: 31px;
-        margin-left: 10px;
-    }
+        margin: 39px 0 0 43px;
+       }
 }
 
 .footer__menu{
@@ -156,9 +124,7 @@ li.footer__item:first-child{
     @media screen and (min-width: 1200px){
         display: block;
     }
-    @media screen and (min-width: $desktop){
-        display: block;
-    }
+   
 }
 .footer__menu li.footer__item a{
     font-size: 16px;
@@ -169,21 +135,16 @@ li.footer__item:first-child{
 }
 
 .footer__contacts{
-    margin-left: 1px;
-    margin-top: 41px;
-
+    margin: 41px 0 0 1px;
+    
     @media screen and (min-width: $tablet){
-        margin-top: 26px;
-        margin-left: -24px;
-        margin-right: 24px;
+        margin: 23px 24px 0 7px;
     }
 
     @media screen and (min-width: $desktop) {
         display: flex;
-        margin-top: 40px;
         align-items: flex-end;
-        margin-left: 12px;
-        margin-right: -12px;
+        margin: 40px 0px 0 12px;
     }
 }
 
@@ -192,7 +153,7 @@ li.footer__item:first-child{
     flex-direction: column;
 
     @media screen and (min-width: $desktop) {
-       margin-right: 107px;
+       margin-right: 81px;
     }
 }
 
@@ -250,16 +211,14 @@ footer a.mob-social__link {
     list-style-type: none;
     margin-top: 15px;
 
-    @media screen and (min-width: $tablet) {
-        margin-top: 15px;
-        margin-left: 13px;
-     }
-   
-     @media screen and (min-width: $desktop) {
-        margin-top: 15px;
-        margin-left: 7px;
-        margin-right: 19px;
-     }
+    @media screen and (min-width: $tablet){
+        margin-right: 34px;
+    }
+
+    @media screen and (min-width: $desktop){
+        margin-right: 0px;
+        margin-left: 21px;
+    }
 }
 
 .mob__social{
@@ -279,13 +238,11 @@ footer a.mob-social__link {
 
     @media screen and (min-width: $tablet) {
         display: flex; 
-        margin: 2px -9px 0px -120px;
-        justify-content: flex-start;   
-        margin-left: -13px;
-    }
+        margin: 2px 0px 0px 0px;
+         }
     @media screen and (min-width: $desktop){
         margin-top: 107px;
-        margin: -3px -9px 22px -22px
+        margin: 0px 0px 22px 0px
     }
 }
 
