@@ -51,7 +51,15 @@
 	}
 }
 
+.house__link {
+	@media screen and (min-width: $tablet) {
+		display: inline-block;
+	}
+}
+
 .house__button {
+	display: block;
+	margin: 0 auto;
 	@media screen and (min-width: $tablet) {
 		width: 332px;
 		display: flex;
@@ -656,13 +664,12 @@
 	}
 }
 
-.house__link {
-	@media screen and (min-width: $tablet) {
-		display: inline-block;
-	}
-}
-
 .tabs-button {
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
+
 	@media screen and (min-width: $tablet) {
 		width: 332px;
 	}
