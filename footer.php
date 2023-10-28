@@ -2,13 +2,11 @@
     <div class="footer container">
         <section class="main__information">
         <div class="logo">
-            <a href="#">
                 <?php
                 if (has_custom_logo()) {
                     echo get_custom_logo();
                 }
                 ?>
-            </a>
         </div>
         <div class="working__hours">
             <p class="working__days"><?php the_field('working-days', 'options'); ?></p>
