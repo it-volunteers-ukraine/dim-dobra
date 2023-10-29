@@ -4,11 +4,13 @@ const postSwiper = new Swiper(".single-post__slider", {
     clickable: true,
     slideToClickedSlide: true,
   },
+  touchAngle: 30,
   preloadImages: false,
   lazy: {
     loadOnTransitionStart: true,
     loadPrevNext: true,
   },
+  lazyPreloadPrevNext: 2,
 });
 
 lightbox.option({
