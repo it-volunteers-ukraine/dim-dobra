@@ -20,12 +20,12 @@
 
 .internal__wrap {
   @media screen and (min-width: $tablet) {
-    padding: 40px 116px 16px;
+    padding: 40px 104px 16px;
     background-color: $bg-footer;
     border-radius: 16px;
     margin-bottom: 72px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     border-radius: 0;
     padding: 56px 220px 32px;
     margin-bottom: 100px;
@@ -42,7 +42,7 @@
     line-height: 1;
     text-align: center;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 56px;
     font-size: 32px;
     text-align: left;
@@ -51,7 +51,7 @@
 
 //helpform grid
 .helpform .form__wrapper {
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
@@ -69,7 +69,7 @@
   @media screen and (min-width: $tablet) {
     margin-bottom: 28px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 0;
   }
 }
@@ -83,7 +83,7 @@
   @media screen and (min-width: $tablet) {
     margin-bottom: 10px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 12px;
   }
 }
@@ -115,7 +115,7 @@ textarea.contact__input {
     margin: 18px 0 33px;
     font-size: 14px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     margin: 20px 0 40px;
     font-size: 16px;
   }
@@ -143,7 +143,7 @@ textarea.contact__input {
     border-radius: 5px;
     border-width: 2px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     width: 20px;
     height: 20px;
     border-radius: 3px;
@@ -164,7 +164,7 @@ textarea.contact__input {
 //form button
 .helpform-btn__wrap {
   margin-top: 32px;
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     margin-top: 0;
   }
 }
@@ -185,7 +185,7 @@ textarea.contact__input {
   @media screen and (min-width: $tablet) {
     font-size: 16px;
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: 1200px) {
     font-size: 24px;
   }
 
@@ -232,7 +232,7 @@ textarea.contact__input {
     padding: 56px 83px;
     border-radius: 24px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     padding: 67px 133px;
     border-radius: 30px;
   }
@@ -251,7 +251,7 @@ textarea.contact__input {
     width: 89px;
     margin-right: 18px;
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: 1200px) {
     width: 123px;
     margin-right: 24px;
   }
@@ -271,7 +271,7 @@ textarea.contact__input {
     top: 18px;
     right: 18px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     top: 22px;
     right: 22px;
   }
@@ -292,7 +292,7 @@ textarea.contact__input {
     top: 18px;
     right: 18px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     width: 36px;
     border-radius: 36px;
     top: 22px;
@@ -306,7 +306,7 @@ textarea.contact__input {
   @media screen and (min-width: $tablet) {
     font-size: 24px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     font-size: 32px;
   }
 }
