@@ -43,13 +43,18 @@
 	font-weight: 600;
 	line-height: 1;
 	text-align: center;
-	font-size: 32px;
+	font-size: 27px;
 	margin-bottom: 32px;
+
+	@media screen and (min-width: $mobile) {
+		font-size: 32px;
+	}
 
 	@media screen and (min-width: $tablet) {
 		font-size: 40px;
 		line-height: 1.4;
 		font-weight: 600;
+		font-size: 32px;
 	}
 
 	@media screen and (min-width: $desktop) {
@@ -70,14 +75,16 @@
 	font-style: normal;
 	font-weight: 500;
 	line-height: 1;
-	width: 311px;
+	width: fit-content;
+	min-width: 286px;
+	padding: 14px 32px;
 		
 	@media screen and (min-width: $tablet) {
-		width: 332px;
+		min-width: 332px;
 	}
 
 	@media screen and (min-width: $desktop) {
-		width: 296px;
+		min-width: 296px;
 		font-size: 24px;
 	}
 

@@ -226,6 +226,9 @@
   cursor: pointer;
   margin: 25px auto 0px auto;
   grid-area: support__btn;
+  min-width: 311px;
+  width: fit-content;
+  padding: 14px 32px;
   
 	&:hover,
 	&:focus {
@@ -245,9 +248,8 @@
 
   @media screen and (min-width: $desktop) {
     font-size: 24px;
-    width: 297px;
+    min-width: 297px;
     margin: 31px 0px 14px 0px;
-    min-width: auto;
   }
 }
 
