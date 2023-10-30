@@ -12,10 +12,8 @@ get_header();
         <h1 class="house__title"><?php the_field('hero_title'); ?></h1>
       </div>
 
-      <a href="#bank-details" class="house__link" aria-label="support the fund">
-        <button class="button house__button" type="button" aria-label="support the fund" aria-controls="bank-details-section">
-          <?php the_field('hero_btn_text'); ?>
-        </button>
+      <a href="#bank-details" class="button house__button house__link" aria-label="support the fund" aria-controls="bank-details-section">
+        <?php the_field('hero_btn_text'); ?>
       </a>
     </section>
   </div>
@@ -266,9 +264,8 @@ get_header();
                   </div>
                 </div>
                 <div class="tabs__wraper-btn" style="padding-top: 0">
-                  <a href="<?php the_sub_field('bank_link') ?>" target="_blank">
-                    <button class="button tabs-button" type="button" aria-label="support the fund" aria-expanded="false" aria-controls="modal-window"><?php the_sub_field('tabs_button') ?>
-                    </button>
+                  <a class="button tabs-button" href="<?php the_sub_field('bank_link') ?>" target="_blank" aria-label="support the fund" aria-controls="bank-details-section">
+                    <?php the_sub_field('tabs_button') ?>
                   </a>
                 </div>
               </div>

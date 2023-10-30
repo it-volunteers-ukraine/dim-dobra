@@ -1,12 +1,11 @@
-const swiper = new Swiper(".mySwiper", {
+const homeSlyder = new Swiper(".mySwiper", {
 	slidesPerView: 1,
 	slidesPerView: "auto",
 	spaceBetween: 20,
 	loop: true,
 	grabCursor: true,
 	autoHeight: true,
-	freeMode: true,
-	speed: 800,
+	speed: 600,
 	keyboard: {
 		enabled: true,
 	},

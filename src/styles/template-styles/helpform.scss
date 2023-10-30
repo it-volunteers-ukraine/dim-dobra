@@ -12,16 +12,27 @@
   }
 }
 
+.helpform__section .container {
+  @media screen and (max-width: 767.98px) {
+    padding: 0;
+  }
+}
+
 .internal__wrap {
   @media screen and (min-width: $tablet) {
-    padding: 40px 116px 36px;
+    padding: 40px 104px 16px;
     background-color: $bg-footer;
     border-radius: 16px;
     margin-bottom: 72px;
   }
+  @media screen and (min-width: 1200px) {
+    padding-top: 56px;
+    padding-bottom: 32px;
+  }
   @media screen and (min-width: $desktop) {
     border-radius: 0;
-    padding: 56px 220px 48px;
+    padding-right: 220px;
+    padding-left: 220px;
     margin-bottom: 100px;
   }
 }
@@ -36,7 +47,7 @@
     line-height: 1;
     text-align: center;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 56px;
     font-size: 32px;
     text-align: left;
@@ -44,8 +55,8 @@
 }
 
 //helpform grid
-.helpform form {
-  @media screen and (min-width: $desktop) {
+.helpform .form__wrapper {
+  @media screen and (min-width: 1200px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
@@ -53,8 +64,7 @@
   }
 }
 
-.contact-needs,
-.check__wrap {
+.contact-needs {
   grid-column-end: span 2;
 }
 
@@ -64,7 +74,7 @@
   @media screen and (min-width: $tablet) {
     margin-bottom: 28px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 0;
   }
 }
@@ -78,7 +88,7 @@
   @media screen and (min-width: $tablet) {
     margin-bottom: 10px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 12px;
   }
 }
@@ -99,19 +109,26 @@ textarea.contact__input {
   resize: none;
 }
 
+input.contact__input::placeholder,
+textarea.contact__input::placeholder {
+  color: $grey;
+  font-size: 14px;
+  line-height: 1;
+}
+
 // check button
 .check__wrap {
   color: $grey;
   font-size: 12px;
   font-weight: 300;
   line-height: 1;
-  margin: 16px 0 32px;
+  margin-top: 16px;
   @media screen and (min-width: $tablet) {
     margin: 18px 0 33px;
     font-size: 14px;
   }
-  @media screen and (min-width: $desktop) {
-    margin: -10px 0 10px;
+  @media screen and (min-width: 1200px) {
+    margin: 20px 0 40px;
     font-size: 16px;
   }
 }
@@ -138,7 +155,7 @@ textarea.contact__input {
     border-radius: 5px;
     border-width: 2px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     width: 20px;
     height: 20px;
     border-radius: 3px;
@@ -159,9 +176,8 @@ textarea.contact__input {
 //form button
 .helpform-btn__wrap {
   margin-top: 32px;
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     margin-top: 0;
-    grid-column-end: span 2;
   }
 }
 
@@ -181,7 +197,7 @@ textarea.contact__input {
   @media screen and (min-width: $tablet) {
     font-size: 16px;
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: 1200px) {
     font-size: 24px;
   }
 
@@ -228,7 +244,7 @@ textarea.contact__input {
     padding: 56px 83px;
     border-radius: 24px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     padding: 67px 133px;
     border-radius: 30px;
   }
@@ -247,7 +263,7 @@ textarea.contact__input {
     width: 89px;
     margin-right: 18px;
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: 1200px) {
     width: 123px;
     margin-right: 24px;
   }
@@ -267,7 +283,7 @@ textarea.contact__input {
     top: 18px;
     right: 18px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     top: 22px;
     right: 22px;
   }
@@ -288,7 +304,7 @@ textarea.contact__input {
     top: 18px;
     right: 18px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     width: 36px;
     border-radius: 36px;
     top: 22px;
@@ -302,7 +318,7 @@ textarea.contact__input {
   @media screen and (min-width: $tablet) {
     font-size: 24px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     font-size: 32px;
   }
 }
