@@ -43,13 +43,18 @@
 	font-weight: 600;
 	line-height: 1;
 	text-align: center;
-	font-size: 32px;
+	font-size: 27px;
 	margin-bottom: 32px;
+
+	@media screen and (min-width: $mobile) {
+		font-size: 32px;
+	}
 
 	@media screen and (min-width: $tablet) {
 		font-size: 40px;
 		line-height: 1.4;
 		font-weight: 600;
+		font-size: 32px;
 	}
 
 	@media screen and (min-width: $desktop) {
