@@ -60,21 +60,23 @@
 .house__button {
 	display: block;
 	margin: 0 auto;
+	padding: 14px 20px;
+	text-align: center;
+
 	@media screen and (min-width: $tablet) {
-		width: 332px;
+		min-width: 332px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin-left: auto;
 		margin-right: auto;
-		padding: 14px 0;
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 1;
 	}
 
 	@media screen and (min-width: $desktop) {
-		width: 322px;
+		min-width: 322px;
 		font-size: 24px;
 		line-height: auto;
 	}
@@ -669,13 +671,16 @@
 	margin: 0 auto;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
+	padding-right: 10px;
+	padding-left: 10px;
 
 	@media screen and (min-width: $tablet) {
-		width: 332px;
+		min-width: 332px;
 	}
 
 	@media screen and (min-width: $desktop) {
-		width: 297px;
+		min-width: 297px;
 		margin-top: -25px;
 		font-size: 24px;
 	}
