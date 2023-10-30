@@ -12,7 +12,7 @@
       </style>
 
       <h2 class="need-help__title"><?php the_field('need-help__title', 'option'); ?></h2>
-      <a class="button need-help__button" href="<?php the_field('link_helpform', 'option'); ?>" aria-label="apply for assistance" aria-controls="need-help form">
+      <a class="button need-help__button" href="<?php the_field('link_helpform', 'option'); ?>">
         <?php the_field('need_help_button', 'option'); ?>
       </a>
 

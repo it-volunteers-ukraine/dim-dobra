@@ -52,19 +52,22 @@
 	margin: 0 auto;
 	align-items: center;
 	justify-content: center;
+	padding-right: 20px;
+	padding-left: 20px;
+	text-align: center;
 	color: $main-blue;
 	background-color: $yellow;
 
 	@media screen and (min-width: $mobile) {
-		width: 311px;
+		min-width: 311px;
 	}
 
 	@media screen and (min-width: $tablet) {
-		width: 332px;
+		min-width: 332px;
 	}
 
 	@media screen and (min-width: $desktop) {
-		width: 296px;
+		min-width: 296px;
 	}
 
 	&:hover,
