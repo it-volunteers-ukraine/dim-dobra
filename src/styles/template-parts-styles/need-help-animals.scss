@@ -70,14 +70,16 @@
 	font-style: normal;
 	font-weight: 500;
 	line-height: 1;
-	width: 311px;
+	width: fit-content;
+	min-width: 286px;
+	padding: 14px 32px;
 		
 	@media screen and (min-width: $tablet) {
-		width: 332px;
+		min-width: 332px;
 	}
 
 	@media screen and (min-width: $desktop) {
-		width: 296px;
+		min-width: 296px;
 		font-size: 24px;
 	}
 
