@@ -251,9 +251,14 @@ textarea.contact__input::placeholder {
 }
 
 .notification.active {
-  right: 20px;
   opacity: 1;
   transform: scale(1);
+  @media screen and (max-width: 389.98px) {
+    right: 0;
+  }
+  @media screen and (min-width: 390px) {
+    right: 20px;
+  }
 }
 
 .notification__image {
@@ -315,6 +320,7 @@ textarea.contact__input::placeholder {
 .notification__text {
   font-size: 18px;
   font-weight: 500;
+  text-align: center;
   @media screen and (min-width: $tablet) {
     font-size: 24px;
   }

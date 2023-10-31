@@ -24,8 +24,12 @@ body {
   margin: 0;
 
   &.modal-open {
-    max-height: 100vh;
     overflow: hidden;
+    max-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
   }
 
   &::-webkit-scrollbar {
