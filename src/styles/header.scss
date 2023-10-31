@@ -37,7 +37,7 @@
     margin-top: 64px;
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199.98px) {
     width: 100%;
   }
 
@@ -56,6 +56,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
+    overflow: auto;
     transform: translateX(100%);
     transition: $transition-function;
   }
@@ -75,16 +76,19 @@
   flex-direction: column;
   align-items: start;
   position: absolute;
-  top: 73px;
+  top: 72px;
   width: 100%;
   padding: 24px 16px 32px;
   background: $white;
 
-  @media screen and (min-width: $mobile) and (max-width: 767px) {
+  @media screen and (min-width: $mobile) and (max-width: 767.98px) {
     left: 0;
+    border-top: 1px solid $main-blue;
+    border-bottom: 1px solid $main-blue;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+    border: 0;
     padding: 24px 20px 40px;
     border-radius: 8px;
     top: 30px;
@@ -109,6 +113,11 @@
   @media screen and (min-width: $desktop) {
     margin-right: 56px;
   }
+}
+
+.mob-social__link {
+  display: flex;
+  align-items: center;
 }
 
 // menu open&close buttons
@@ -143,8 +152,9 @@
 
 .menu-open__btn,
 .menu-close__btn {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   background-color: transparent;
 
@@ -214,6 +224,7 @@
 ul.mob-menu__social {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media screen and (min-width: 1200px) {
     display: none;
