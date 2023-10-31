@@ -9,7 +9,7 @@
 <body>  
     <header class="header">
         <div class="container">
-            <div class="header__content _container">
+            <div class="header__content">
                  <div class="menu__nav">  
                         <?php 
                             if ( has_custom_logo() ) {
