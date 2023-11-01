@@ -81,14 +81,13 @@
   padding: 24px 16px 32px;
   background: $white;
 
-  @media screen and (min-width: $mobile) and (max-width: 767.98px) {
+  @media screen and (max-width: 767.98px) {
     left: 0;
     border-top: 1px solid $main-blue;
     border-bottom: 1px solid $main-blue;
   }
 
   @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
-    border: 0;
     padding: 24px 20px 40px;
     border-radius: 8px;
     top: 30px;
