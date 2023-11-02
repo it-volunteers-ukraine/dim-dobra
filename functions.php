@@ -188,3 +188,12 @@ function my_breadcrumb_title_swapper($title, $type, $id)
     }
     return $title;
 }
+
+add_filter( 'kses_allowed_protocols', 'add_viber_to_allowed_protocols' );
+
+function add_viber_to_allowed_protocols( $protocols ) {
+	$protocols[] = 'viber';
+  $protocols[] = 'tg';
+
+	return $protocols;
+}
