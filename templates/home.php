@@ -37,7 +37,6 @@ get_header();
             </li>
           <?php endforeach; ?>
         <?php endif; ?>
-
       </ul>
     </div>
   </section>
