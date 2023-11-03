@@ -148,7 +148,7 @@ textarea.contact__input::placeholder {
   border: 1px solid #c8c7c7;
   border-radius: 3px;
   margin-right: 5px;
-  transition: 250ms $transition-function;
+  transition: $transition-function;
   @media screen and (min-width: $tablet) {
     width: 18px;
     height: 18px;
