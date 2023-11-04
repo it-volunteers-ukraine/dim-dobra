@@ -248,7 +248,7 @@
 .about__wraper {
   @media screen and (min-width: $tablet) {
     position: relative;
-    padding-bottom: 24px;
+    padding-bottom: 56px;
   }
   @media screen and (min-width: $desktop) {
     padding-bottom: 0;
@@ -299,7 +299,7 @@
 }
 
 .swiper_custom-wrap {
-  @media screen and (max-width: 1439.98px) {
+  @media screen and (max-width: 767.98px) {
     margin-bottom: 32px;
   }
 }
@@ -355,7 +355,7 @@
 .custom-pagination {
   @media screen and (min-width: $tablet) {
     position: absolute;
-    bottom: 6px;
+    bottom: 4px;
     left: 48px;
     font-size: 18px;
     font-weight: 500;
