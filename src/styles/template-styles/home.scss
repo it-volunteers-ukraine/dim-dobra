@@ -95,7 +95,6 @@
 }
 
 .support__title {
-	margin: 0;
 	margin-bottom: 32px;
 	color: $black;
 	font-size: 28px;
@@ -128,7 +127,7 @@
 		justify-content: space-evenly;
 	}
 
-	@media screen and (min-width: $desktop) {
+	@media screen and (min-width: 1280px) {
 		flex-basis: 350px;
 		gap: 56px;
 		justify-content: space-between;
@@ -151,11 +150,9 @@
 	}
 
 	@media screen and (min-width: 1280px) {
-		width: 330px;
 	}
 
 	@media screen and (min-width: $desktop) {
-		width: 350px;
 	}
 }
 
@@ -191,12 +188,16 @@
 	line-height: 1.4;
 	text-align: center;
 
+	@media screen and (min-width: $mobile) and (max-width: 767.9px) {
+		width: 340px;
+	}
+
 	@media screen and (min-width: $tablet) {
 		font-size: 16px;
 		line-height: 1.3;
 	}
 
-	@media screen and (min-width: $desktop) {
+	@media screen and (min-width: 1280px) {
 		font-size: 18px;
 	}
 }
