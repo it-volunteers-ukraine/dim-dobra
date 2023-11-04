@@ -248,10 +248,8 @@
 .about__wraper {
   @media screen and (min-width: $tablet) {
     position: relative;
-    padding-bottom: 56px;
   }
   @media screen and (min-width: $desktop) {
-    padding-bottom: 0;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     column-gap: 140px;
@@ -292,12 +290,7 @@
   }
 }
 
-.mySwiper {
-  @media screen and (max-width: 767.98px) {
-    margin-bottom: 32px;
-  }
-}
-
+.mySwiper,
 .swiper_custom-wrap {
   @media screen and (max-width: 767.98px) {
     margin-bottom: 32px;
@@ -344,11 +337,11 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     gap: 62px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    margin-top: 24px;
   }
   @media screen and (min-width: $desktop) {
+    position: absolute;
+    bottom: 0;
     left: 75px;
   }
 }
