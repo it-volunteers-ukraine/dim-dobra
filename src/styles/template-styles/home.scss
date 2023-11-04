@@ -443,86 +443,59 @@
 }
 
 .news__wraper {
-  @media screen and (max-width: 767.99px) {
+  @media screen and (max-width: 767.98px) {
     display: flex;
     justify-content: space-between;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 100%;
-  }
-
-  img {
-    width: 100%;
-    transition: $transition-function;
-  }
-
-  &:hover,
-  &:focus {
-    img {
-      transform: scale(1.02);
-    }
-  }
-}
-
-.swiper-hover {
-  img {
-    transition: $transition-function;
-  }
-
-  &:hover,
-  &:focus {
-    img {
-      transform: scale(1.02);
-    }
   }
 }
 
 .news__wraper-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 457px;
-    object-fit: cover;
-    object-position: center;
-
-    @media screen and (min-width: $tablet) {
-      height: 443px;
-    }
-
-    @media screen and (min-width: $desktop) {
-      height: 400px;
-    }
+  margin-bottom: 24px;
+  padding-bottom: 133%;
+  @media screen and (max-width: 767.98px) {
+    height: 0;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
   }
 }
 
-.news__gallery {
-  display: none;
+.one-new__wrap {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-  @media screen and (min-width: $tablet) {
-    display: block;
-  }
-
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    gap: 30px;
+.one-new__wrap img {
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transition: $transition-function;
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
   }
 }
 
 .news__flexWraper {
-  @media screen and (max-width: 1279.99px) {
+  display: none;
+  @media screen and (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 24px;
   }
 
-  @media screen and (min-width: 1280px) {
-    display: flex;
-    gap: 30px;
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
   }
 }
 

@@ -135,7 +135,9 @@ get_header();
               <div class="swiper-slide swiper-hover">
                 <a href="<?php the_permalink(); ?>" aria-label="link to a separate post">
                   <div class="news__wraper-img">
-                    <?php the_post_thumbnail(); ?>
+                    <div class="one-new__wrap">
+                      <?php the_post_thumbnail(); ?>
+                    </div>
                   </div>
                   <div class="news__wraper">
                     <p class="news__text"><?php the_field('subtext_posts'); ?></p>
@@ -155,7 +157,6 @@ get_header();
         </div>
       </div>
 
-      <div class="news__gallery">
         <div class="news__flexWraper">
 
           <?php
@@ -191,7 +192,9 @@ get_header();
             <div class="news__wraper">
               <a href="<?php the_permalink(); ?>" aria-label="link to a separate post">
                 <div class="news__wraper-img">
-                  <?php the_post_thumbnail(); ?>
+                  <div class="one-new__wrap">
+                    <?php the_post_thumbnail(); ?>
+                  </div>
                 </div>
 
                 <div class="news__text">
@@ -209,7 +212,6 @@ get_header();
           ?>
 
         </div>
-      </div>
     </div>
   </section>
 
