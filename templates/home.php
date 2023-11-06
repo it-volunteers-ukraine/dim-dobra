@@ -37,7 +37,6 @@ get_header();
             </li>
           <?php endforeach; ?>
         <?php endif; ?>
-
       </ul>
     </div>
   </section>
@@ -64,7 +63,7 @@ get_header();
         <?php if (have_rows('about_slider')) : ?>
           <div class="swiper-container">
             <div class="swiper mySwiper">
-              <div class="swiper-wrapper" style="margin-bottom: 32px">
+              <div class="swiper-wrapper swiper_custom-wrap">
 
                 <?php while (have_rows('about_slider')) : the_row();
                   $img = get_sub_field('about_slider_img'); ?>
@@ -73,12 +72,13 @@ get_header();
                   </div>
                 <?php endwhile; ?>
               </div>
-              <div class="swiper-pagination pagination-pos" style="position: inherit"></div>
+              <div class="swiper-pagination swiper-bullets" style="position: inherit"></div>
+          </div>
+          <div class="swiper_pagination custom-pagination"></div>
               <div class="pagination-wrap">
                 <div class="custom-prev-icon"></div>
                 <div class="custom-next-icon"></div>
               </div>
-            </div>
           </div>
         <?php endif; ?>
       </div>
@@ -99,7 +99,7 @@ get_header();
       <h3 class="news__title"><?php the_field('news__title'); ?></h3>
 
       <div class="swiper-container news__hide">
-        <div class="swiper mySwiper">
+        <div class="swiper myPostSwiper">
           <div class="swiper-wrapper">
 
             <?php
@@ -135,7 +135,9 @@ get_header();
               <div class="swiper-slide swiper-hover">
                 <a href="<?php the_permalink(); ?>" aria-label="link to a separate post">
                   <div class="news__wraper-img">
-                    <?php the_post_thumbnail(); ?>
+                    <div class="one-new__wrap">
+                      <?php the_post_thumbnail(); ?>
+                    </div>
                   </div>
                   <div class="news__wraper">
                     <p class="news__text"><?php the_field('subtext_posts'); ?></p>
@@ -155,7 +157,6 @@ get_header();
         </div>
       </div>
 
-      <div class="news__gallery">
         <div class="news__flexWraper">
 
           <?php
@@ -191,7 +192,9 @@ get_header();
             <div class="news__wraper">
               <a href="<?php the_permalink(); ?>" aria-label="link to a separate post">
                 <div class="news__wraper-img">
-                  <?php the_post_thumbnail(); ?>
+                  <div class="one-new__wrap">
+                    <?php the_post_thumbnail(); ?>
+                  </div>
                 </div>
 
                 <div class="news__text">
@@ -209,7 +212,6 @@ get_header();
           ?>
 
         </div>
-      </div>
     </div>
   </section>
 
