@@ -230,10 +230,10 @@ textarea.contact__input::placeholder {
   right: -1000px;
   z-index: 10;
   padding: 46px 36px;
-  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: fit-content;
   border-radius: 12px;
   border: 2px solid $main-blue;
   background: $white;
@@ -252,10 +252,16 @@ textarea.contact__input::placeholder {
 
 .notification.active {
   opacity: 1;
-  transform: scale(1);
+  transform: translate(0, 0);
   right: 0;
-  @media screen and (min-width: 390px) {
-    right: 20px;
+  @media screen and (min-width: 400px) {
+    right: 16px;
+  }
+  @media screen and (min-width: $tablet) {
+    right: 40px;
+  }
+  @media screen and (min-width: $desktop) {
+    right: 75px;
   }
 }
 
