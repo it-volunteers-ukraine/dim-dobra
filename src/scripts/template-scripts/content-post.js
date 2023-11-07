@@ -4,6 +4,7 @@ const postSwiper = new Swiper(".single-post__slider", {
     clickable: true,
     slideToClickedSlide: true,
   },
+  spaceBetween: 20,
   touchAngle: 30,
   preloadImages: false,
   lazy: {

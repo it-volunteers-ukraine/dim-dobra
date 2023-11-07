@@ -34,6 +34,7 @@ const myPostSwiper = new Swiper(".myPostSwiper", {
     clickable: true,
     slideToClickedSlide: true,
   },
+  spaceBetween: 20,
 });
 
 jQuery.noConflict();
