@@ -135,7 +135,7 @@ get_header();
               <div class="swiper-slide swiper-hover">
                 <a href="<?php the_permalink(); ?>" aria-label="link to a separate post">
                   <div class="news__wraper-img">
-                    <div class="one-new__wrap">
+                    <div class="one-news__wrap">
                       <?php the_post_thumbnail(); ?>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ get_header();
             <div class="news__wraper">
               <a href="<?php the_permalink(); ?>" aria-label="link to a separate post">
                 <div class="news__wraper-img">
-                  <div class="one-new__wrap">
+                  <div class="one-news__wrap">
                     <?php the_post_thumbnail(); ?>
                   </div>
                 </div>

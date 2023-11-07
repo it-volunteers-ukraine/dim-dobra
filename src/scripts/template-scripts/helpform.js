@@ -2,6 +2,7 @@ const wpcf7Elm = document.querySelector(".wpcf7");
 const notificationEl = document.getElementById("notification");
 const closeNotificationBtn = document.getElementById("js-close-notification");
 const telInputEl = document.getElementById("contactPhone");
+const nameInputEl = document.getElementById("contactName");
 const phoneNotificationEl = document.getElementById("phone-notification");
 const submitNotificationEl = document.getElementById("submit-notification");
 
@@ -28,6 +29,10 @@ function getSubmitNotification() {
     submitNotificationEl.classList.remove("active");
   }, 3000);
 }
+
+nameInputEl.addEventListener("keyup", function () {
+  nameInputEl.value = nameInputEl.value.replace(/\d/g, "");
+});
 
 telInputEl.addEventListener("keyup", function () {
   telInputEl.value = telInputEl.value.replace(/[^\d?^\+]/g, "");
