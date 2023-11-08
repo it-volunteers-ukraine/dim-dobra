@@ -813,7 +813,7 @@
   font-weight: 400;
   line-height: auto;
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 380px) {
     margin-bottom: 48px;
     font-size: 17px;
     letter-spacing: -0.05em;
