@@ -9,7 +9,7 @@
 
 <div style="display: flex; margin-bottom: 20px">
 
-<a  href="https://github.com/OlgaSmile">![GitHub](https://img.shields.io/badge/-Olha_Smilichenko-05122A?style=flat&logo=github)</a> <a  href="https://github.com/litvinenkoiryna">![GitHub](https://img.shields.io/badge/-Iryna_Litvinenko-05122A?style=flat&logo=github)</a> <a  href="https://github.com/Yevhenii2022">![GitHub](https://img.shields.io/badge/-Yevhenii_Lytvynenko-05122A?style=flat&logo=github)</a>
+<a  href="https://github.com/OlgaSmile">![GitHub](https://img.shields.io/badge/-Olha_Smilichenko-05122A?style=flat&logo=github)</a> <a  href="https://github.com/litvinenkoiryna">![GitHub](https://img.shields.io/badge/-Iryna_Lytvynenko-05122A?style=flat&logo=github)</a> <a  href="https://github.com/Yevhenii2022">![GitHub](https://img.shields.io/badge/-Yevhenii_Lytvynenko-05122A?style=flat&logo=github)</a>
 
 </div>
     
