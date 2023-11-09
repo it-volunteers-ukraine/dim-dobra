@@ -2,7 +2,7 @@
 
 <div style="display: flex; justify-content: center">
 
-<img src="./src/images/screenshot_site.png" alt="скріншот сайту">
+<img src="./src/images/Screenshot_site.png" alt="скріншот сайту">
 </div>
 
 ### Команда розробників 🚀
