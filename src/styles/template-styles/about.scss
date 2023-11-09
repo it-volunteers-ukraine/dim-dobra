@@ -175,13 +175,10 @@
   display: flex;
   justify-content: flex-start;
   margin-top: 19px;
-  font-size: 16px;
-
-  @media screen and (min-width: 380px) {
-    font-size: 18px;
-  }
+  font-size: calc(15px + (3 + 3 * 0.7) * ((100vw - 320px) / 768));
 
   @media screen and (min-width: $tablet) {
+    font-size: 18px;
     margin-top: 21px;
   }
   @media screen and (min-width: $desktop) {
