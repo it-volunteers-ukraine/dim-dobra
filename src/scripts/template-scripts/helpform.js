@@ -12,7 +12,7 @@ function getNotification() {
   notificationEl.classList.add("active");
   setTimeout(() => {
     notificationEl.classList.remove("active");
-  }, 3000);
+  }, 5000);
   closeNotificationBtn.addEventListener("click", closeNotification);
 }
 

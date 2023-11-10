@@ -2,54 +2,63 @@
 
 //containers
 .helpform__section {
-  background-color: $bg-footer;
-  padding: 24px 16px 16px;
-  margin-bottom: 32px;
-  @media screen and (min-width: $tablet) {
-    padding: 0;
-    background-color: $white;
-    margin-bottom: 0;
+  padding: 0;
+  background-color: $white;
+  margin-bottom: 0;
+  @media screen and (max-width: 680px) {
+    padding: 24px 16px 16px;
+    margin-bottom: 32px;
+    background-color: $bg-footer;
   }
 }
 
 .helpform__section .container {
-  @media screen and (max-width: 767.98px) {
+  @media screen and (max-width: 680px) {
     padding: 0;
   }
 }
 
 .internal__wrap {
-  @media screen and (min-width: $tablet) {
-    padding: 40px 104px 16px;
-    background-color: $bg-footer;
+  background-color: $bg-footer;
+  margin-bottom: 100px;
+  padding: 80px 279px 56px;
+  border-radius: 24px;
+
+  @media screen and (max-width: 1680px) {
+    padding: 56px 220px 32px;
+  }
+  @media screen and (max-width: $full) {
+    padding: 40px 104px 36px;
     border-radius: 16px;
     margin-bottom: 72px;
   }
-  @media screen and (min-width: 1200px) {
-    padding-top: 56px;
-    padding-bottom: 32px;
-  }
-  @media screen and (min-width: $desktop) {
-    border-radius: 0;
-    padding-right: 220px;
-    padding-left: 220px;
-    margin-bottom: 100px;
+
+  @media screen and (max-width: 680px) {
+    padding: 24px 0 16px;
+    margin-bottom: 0;
   }
 }
 
 //form title
 .helpform__title {
-  font-size: 28px;
+  font-size: 48px;
   font-weight: 600;
-  margin-bottom: 32px;
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 28px;
-    line-height: 1;
-    text-align: center;
-  }
-  @media screen and (min-width: 1200px) {
+  line-height: 1;
+  margin-bottom: 64px;
+  text-align: center;
+  @media screen and (max-width: 1500px) {
     margin-bottom: 56px;
     font-size: 32px;
+    text-align: left;
+  }
+
+  @media screen and (max-width: $desktop) {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+  @media screen and (max-width: 750px) {
+    margin-bottom: 32px;
     text-align: left;
   }
 }
@@ -70,12 +79,11 @@
 
 //form fields
 .input__wrap {
-  margin-bottom: 24px;
-  @media screen and (min-width: $tablet) {
+  @media screen and (max-width: 1200px) {
     margin-bottom: 28px;
   }
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 0;
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 24px;
   }
 }
 
@@ -85,10 +93,10 @@
   font-weight: 500;
   line-height: 1;
   margin-bottom: 12px;
-  @media screen and (min-width: $tablet) {
+  @media screen and (max-width: 1200px) {
     margin-bottom: 10px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: $tablet) {
     margin-bottom: 12px;
   }
 }
