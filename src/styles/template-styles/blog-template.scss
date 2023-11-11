@@ -1,6 +1,7 @@
 @import "../variables.scss";
 
-.help-people__title {
+.help__title {
+  margin: 0;
   font-size: 28px;
   font-weight: 600;
   line-height: 1.4;
@@ -10,15 +11,8 @@
   @media screen and (min-width: $desktop) {
     font-size: 32px;
   }
-}
-
-.help__title {
-  margin: 0;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1;
   @media screen and (min-width: $desktop) {
-    font-size: 32px;
+    font-size: 48px;
   }
 }
 

@@ -41,7 +41,7 @@
             </div>
             <div class="footer__phone contacts__flex">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/carbon_phone.png" alt="phone" class="footer__img">
-                <a class="phone__link__first" href="tel:<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 'options'); ?> </a>&nbsp|&nbsp
+                <a class="phone__link__first" href="tel:<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 'options'); ?> </a><span>&nbsp|&nbsp</span>
                 <a class="phone__link" href="tel:<?php the_field('second-phone', 'options'); ?>"><?php the_field('second-phone', 'options'); ?></a>
             </div>
         </div>
