@@ -1,5 +1,6 @@
 <footer class="footer-bg">
-    <div class="footer container">
+    <div class="container">
+        <div class="inner-footer">
         <section class="main__information">
         <div class="logo">
                 <?php
@@ -13,7 +14,7 @@
             <p class="day__off"><?php the_field('day-off', 'options'); ?></p>
         </div>
         </section>
-        <section class="nav">
+        <section class="footer-navigation">
         <nav class="footer__nav" id="menu">
             <?php
             wp_nav_menu([
@@ -45,28 +46,18 @@
             </div>
         </div>
         <ul class="mob__social">
-            <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('viber', 'options')); ?>" target="_blank" aria-label="Viber"><svg class="icon-socials" width="40px" height="40px">
+            <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('viber', 'options')); ?>" target="_blank" aria-label="Viber"><svg class="icon-socials" width="56px" height="56px">
                         <use href="<?php echo get_template_directory_uri() ?>/assets/images/sprite-logo.svg#viber"></use>
                     </svg></a></li>
-            <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('telegram', 'options')); ?>" target="_blank" aria-label="Telegram"><svg class="icon-socials" width="40px" height="40px">
+            <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('telegram', 'options')); ?>" target="_blank" aria-label="Telegram"><svg class="icon-socials" width="56px" height="56px">
                         <use href="<?php echo get_template_directory_uri() ?>/assets/images/sprite-logo.svg#telegram"></use>
                     </svg></a></li>
-            <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('whatsapp', 'options')); ?>" target="_blank" aria-label="Whatsapp"><svg class="icon-socials" width="40px" height="40px">
-                        <use href="<?php echo get_template_directory_uri() ?>/assets/images/sprite-logo.svg#whatsapp"></use>
-                    </svg></a></li>
-        </ul>
-        <ul class="tablet__social">
-            <li class="social__item"><a class="tablet-social__link" href="<?php echo esc_attr(get_field('viber', 'options')); ?>" target="_blank"  aria-label="Viber"><svg class="icon-socials" width="32px" height="32px">
-                        <use href="<?php echo get_template_directory_uri() ?>/assets/images/sprite-logo.svg#viber"></use>
-                    </svg></a></li>
-            <li class="social__item"><a class="tablet-social__link" href="<?php echo esc_attr(get_field('telegram', 'options')); ?>" target="_blank"  aria-label="Telegram"><svg class="icon-socials" width="32px" height="32px">
-                        <use href="<?php echo get_template_directory_uri() ?>/assets/images/sprite-logo.svg#telegram"></use>
-                    </svg></a></li>
-            <li class="social__item"><a class="tablet-social__link" href="<?php echo esc_attr(get_field('whatsapp', 'options')); ?>" target="_blank"  aria-label="Whatsapp"><svg class="icon-socials" width="32px" height="32px">
+            <li class="social__item"><a class="mob-social__link" href="<?php echo esc_attr(get_field('whatsapp', 'options')); ?>" target="_blank" aria-label="Whatsapp"><svg class="icon-socials" width="56px" height="56px">
                         <use href="<?php echo get_template_directory_uri() ?>/assets/images/sprite-logo.svg#whatsapp"></use>
                     </svg></a></li>
         </ul>
         </section>
+        </div>
     </div>
 </footer>
 <?php wp_footer(); ?>
