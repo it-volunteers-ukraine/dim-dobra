@@ -36,12 +36,12 @@
             </div>
             <div class="footer__email contacts__flex">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/carbon_email.png" alt="email" class="footer__img">
-                <a class="footer__link" href="mailto:<?php the_field('email'); ?>"><?php the_field('email', 'options'); ?></a>
+                <a class="footer__link" href="mailto:<?php the_field('email', 'options'); ?>"><?php the_field('email', 'options'); ?></a>
             </div>
             <div class="footer__phone contacts__flex">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/carbon_phone.png" alt="phone" class="footer__img">
                 <a class="phone__link__first" href="tel:<?php the_field('first-phone'); ?>"><?php the_field('first-phone', 'options'); ?> </a>&nbsp|&nbsp
-                <a class="phone__link" href="tel:<?php the_field('second-phone'); ?>"><?php the_field('second-phone', 'options'); ?></a>
+                <a class="phone__link" href="tel:<?php the_field('second-phone', 'options'); ?>"><?php the_field('second-phone', 'options'); ?></a>
             </div>
         </div>
         <ul class="mob__social">

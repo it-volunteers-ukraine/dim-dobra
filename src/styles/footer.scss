@@ -1,251 +1,235 @@
-@import "variables.scss";
-
-.footer-bg{
-    background-color: $bg-footer;
-    border-top: 2px solid $main-blue;
-    padding-bottom: 65px;
+.footer-bg {
+  background-color: $bg-footer;
+  border-top: 2px solid $main-blue;
+  padding-bottom: 65px;
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $tablet) {
     display: flex;
-    flex-direction: column;
-    
-    @media screen and (min-width: $tablet){
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
 
 .main__information {
-    display: flex;
-    flex-direction: column;
-    margin-top: 31px;
-    
-    @media screen and (min-width: $tablet){
-        margin: 30px 28px 0 0;
-    }
+  display: flex;
+  flex-direction: column;
+  margin-top: 31px;
 
-    @media screen and (min-width: 1200px){
-        margin: 29px 0px 0 1px;
-    }
+  @media screen and (min-width: $tablet) {
+    margin: 30px 28px 0 0;
+  }
 
-    @media screen and (min-width: $desktop){
-        margin: 34px 0 0 0;
-    }
+  @media screen and (min-width: 1200px) {
+    margin: 29px 0px 0 1px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin: 34px 0 0 0;
+  }
 }
 
-footer a.custom-logo-link{
-    display: inline-block;
+footer a.custom-logo-link {
+  display: inline-block;
 
-    @media screen and (min-width: $tablet){
-        margin: 0 0 3px 0;
-        display: block;
-    }
+  @media screen and (min-width: $tablet) {
+    margin: 0 0 3px 0;
+    display: block;
+  }
 
-    @media screen and (min-width: $desktop){
-        margin: 0 0 3px 0px;
-        display: block;
-    }
+  @media screen and (min-width: $desktop) {
+    margin: 0 0 3px 0px;
+    display: block;
+  }
 }
 
-footer img.footer__logo{
+footer img.footer__logo {
+  width: 200px;
+  height: 48px;
+  margin-left: 0px;
+
+  @media screen and (min-width: $tablet) {
+    width: 122px;
+    height: 28px;
+  }
+
+  @media screen and (min-width: $desktop) {
     width: 200px;
     height: 48px;
-    margin-left: 0px;
-
-    @media screen and (min-width: $tablet){
-        width: 122px;
-        height: 28px;
-    }
-
-    @media screen and (min-width: $desktop) {
-        width: 200px;
-        height: 48px;
-    }
+  }
 }
 
-.working__hours{
-    line-height: 1.7;
-    margin-top: 22px;
+.working__hours {
+  line-height: 1.7;
+  margin-top: 22px;
 
-    @media screen and (min-width: $desktop) {
-        margin: 29px 0 0 3px;
-    }
-} 
-
-.nav{
-    margin: 28px 0px 0 1px;
-    
-    @media screen and (min-width: $tablet){
-        margin: 25px 23px 0 0;
-        }
-
-    @media screen and (min-width: 1200px){
-        margin: 25px 25px 0 0;
-       }
-
-    @media screen and (min-width: $desktop){
-        margin: 39px 0 0 43px;
-       }
+  @media screen and (min-width: $desktop) {
+    margin: 29px 0 0 3px;
+  }
 }
 
-.footer__menu{
-    margin-top: 1px;
-   
-}
-.footer__menu li.footer__item:not(:first-child){
-    margin-top: -30px;
+.nav {
+  margin: 28px 0px 0 1px;
 
-    @media screen and (min-width: 1200px){
-        margin-top: 14px;
-    }
+  @media screen and (min-width: $tablet) {
+    margin: 25px 23px 0 0;
+  }
 
-        @media screen and (min-width: $desktop){
-        margin-top: 10px;
-    }
-}
+  @media screen and (min-width: 1200px) {
+    margin: 25px 25px 0 0;
+  }
 
-li.footer__item:first-child{
-
-    @media screen and (min-width: 1200px){
-        margin-left: 30px;
-    }
-    
-
-    @media screen and (min-width: $desktop){
-        margin-left: 48px;
-    }
+  @media screen and (min-width: $desktop) {
+    margin: 39px 0 0 43px;
+  }
 }
 
-.footer li.footer__item:last-child{
-
-    @media screen and (min-width: 1200px){
-        display: block;
-    }
-   
+.footer__menu {
+  margin-top: 1px;
 }
-.footer__menu li.footer__item a{
-    font-size: 16px;
+.footer__menu li.footer__item:not(:first-child) {
+  margin-top: -30px;
 
-    @media screen and (min-width: $desktop){
-        font-size: 18px;
-    }
-}
+  @media screen and (min-width: 1200px) {
+    margin-top: 14px;
+  }
 
-.footer__contacts{
-    margin: 41px 0 0 1px;
-    
-    @media screen and (min-width: $tablet){
-        margin: 23px 24px 0 7px;
-    }
-
-    @media screen and (min-width: $desktop) {
-        display: flex;
-        align-items: flex-end;
-        margin: 40px 0px 0 12px;
-    }
+  @media screen and (min-width: $desktop) {
+    margin-top: 10px;
+  }
 }
 
-.contacts__container{
+li.footer__item:first-child {
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
+}
+
+.footer li.footer__item:last-child {
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+.footer__menu li.footer__item a {
+  font-size: 16px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+  }
+}
+
+.footer__contacts {
+  margin: 41px 0 0 1px;
+
+  @media screen and (min-width: $tablet) {
+    margin: 23px 24px 0 7px;
+  }
+
+  @media screen and (min-width: $desktop) {
     display: flex;
-    flex-direction: column;
-
-    @media screen and (min-width: $desktop) {
-       margin-right: 81px;
-    }
+    align-items: flex-end;
+    margin: 40px 0px 0 12px;
+  }
 }
 
-.contacts__text{
-    display: none;
-    
-    @media screen and (min-width: $tablet){
-        display: block;
-        margin-bottom: 19px;
-    }
+.contacts__container {
+  display: flex;
+  flex-direction: column;
 
-    @media screen and (min-width: $desktop){
-        display: block;
-        margin-bottom: 30px;
-        font-size: 18px;
-    }
+  @media screen and (min-width: $desktop) {
+    margin-right: 81px;
+  }
 }
 
-.footer__img{
-    margin-right: 7px;
-    width: 20px;
-    height: 20px;
+.contacts__text {
+  display: none;
 
-    @media screen and (min-width: $desktop){
-        margin-right: 11px;
-        width: 24px;
-        height: 24px;
-        margin-top: 0px;
-    }
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-bottom: 19px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
 }
 
-.contacts__flex{
+.footer__img {
+  margin-right: 7px;
+  width: 20px;
+  height: 20px;
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 11px;
+    width: 24px;
+    height: 24px;
+    margin-top: 0px;
+  }
+}
+
+.contacts__flex {
+  display: flex;
+  margin-bottom: 18px;
+
+  @media screen and (min-width: $tablet) {
     display: flex;
     margin-bottom: 18px;
-
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        margin-bottom: 18px;        
-    }
+  }
 }
 
-.social{
-    display: flex;
-    margin-top: 15px;
+.social {
+  display: flex;
+  margin-top: 15px;
 }
 
 footer a.mob-social__link {
-    @media screen and (min-width: $tablet) {
-       width: 20px;       
-    }
+  @media screen and (min-width: $tablet) {
+    width: 20px;
+  }
 }
 
+.footer li.social__item {
+  list-style-type: none;
+  margin-top: 15px;
 
-.footer li.social__item{
-    list-style-type: none;
-    margin-top: 15px;
+  @media screen and (min-width: $tablet) {
+    margin-right: 34px;
+  }
 
-    @media screen and (min-width: $tablet){
-        margin-right: 34px;
-    }
-
-    @media screen and (min-width: $desktop){
-        margin-right: 0px;
-        margin-left: 21px;
-    }
+  @media screen and (min-width: $desktop) {
+    margin-right: 0px;
+    margin-left: 21px;
+  }
 }
 
-.mob__social{
+.mob__social {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: $tablet) {
     display: none;
-
-    @media screen and (max-width: 767px) {
-        display: flex;
-     }
-
-    @media screen and (min-width: $tablet) {
-        display: none;
-     }
+  }
 }
 
-.tablet__social{
-    display: none;
+.tablet__social {
+  display: none;
 
-    @media screen and (min-width: $tablet) {
-        display: flex; 
-        margin: 2px 0px 0px 0px;
-         }
-    @media screen and (min-width: $desktop){
-        margin-top: 107px;
-        margin: 0px 0px 22px 0px
-    }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin: 2px 0px 0px 0px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 107px;
+    margin: 0px 0px 22px 0px;
+  }
 }
-
-
-
-

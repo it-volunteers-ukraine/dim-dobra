@@ -20,7 +20,10 @@
 }
 
 .button {
-  padding: 14px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 32px;
   color: $white;
   background-color: $main-blue;
   cursor: pointer;
@@ -29,7 +32,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: auto;
-  border-radius: 8px;
+  border-radius: $btn-border-radius;
   transition: color $transition-function, background-color $transition-function,
     box-shadow $transition-function;
 
