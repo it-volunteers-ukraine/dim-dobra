@@ -6,7 +6,7 @@
         if( ! empty( $next_post ) ){
             ?>
             <a class="navigation-text" href="<?php echo get_permalink( $next_post ); ?>">
-                <svg class="navigation-icon" width="24px" height="24px">
+                <svg class="navigation-icon" width="32px" height="32px">
                     <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#arrow-left"></use>
                 </svg>
                 <div><?php echo esc_html( $next_post->post_title ); ?></div>
@@ -23,7 +23,7 @@
             ?>
             <a class="navigation-text" href="<?php echo get_permalink( $previous_post ); ?>">
                 <div><?php echo esc_html( $previous_post->post_title ); ?></div>
-                <svg class="navigation-icon" width="24px" height="24px">
+                <svg class="navigation-icon" width="32px" height="32px">
                     <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite-logo.svg#arrow-right"></use>
                 </svg>
             </a>

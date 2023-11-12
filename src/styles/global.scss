@@ -35,10 +35,6 @@
   transition: color $transition-function, background-color $transition-function,
     box-shadow $transition-function;
 
-  @media screen and (min-width: $mobile) {
-    min-width: 311px;
-  }
-
   &:hover,
   &:focus {
     color: $main-blue;
