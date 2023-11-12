@@ -1,8 +1,12 @@
 .header {
-  padding: 16px 0;
+  padding: 40px 0;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
     padding: 24px 0;
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: 16px 0;
   }
 }
 
@@ -13,16 +17,26 @@
   align-items: center;
 }
 .custom-logo-link img {
-  width: 174px;
-  height: 40px;
+  width: 320px;
+  height: 76px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1680px) {
     width: 200px;
     height: 46px;
+  }
+  @media screen and (max-width: $tablet) {
+    width: 174px;
+    height: 40px;
   }
 }
 
 // header menu
+.menu__body {
+  margin-right: 150px;
+  @media screen and (max-width: 1880px) {
+    margin-right: 0;
+  }
+}
 .menu__nav,
 .buttons__wrap {
   display: flex;
@@ -31,23 +45,22 @@
 }
 
 .buttons__wrap {
-  margin-top: 47px;
+  margin-top: 0;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (max-width: 1200px) {
     margin-top: 64px;
-  }
-
-  @media screen and (max-width: 1199.98px) {
     width: 100%;
   }
 
-  @media screen and (min-width: 1200px) {
-    margin-top: 0;
+  @media screen and (max-width: $tablet) {
+    margin-top: 47px;
   }
 }
 
 .menu__container {
-  @media screen and (max-width: 1199.98px) {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 1200px) {
     display: block;
     position: fixed;
     z-index: 9;
@@ -60,10 +73,6 @@
     transform: translateX(100%);
     transition: $transition-function;
   }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .menu__container.is-open {
@@ -72,45 +81,47 @@
 }
 
 .menu__wrapper {
+  position: static;
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  position: absolute;
-  top: 72px;
-  width: 100%;
-  padding: 24px 16px 32px;
-  background: $white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
 
-  @media screen and (max-width: 767.98px) {
-    left: 0;
-    border-top: 1px solid $main-blue;
-    border-bottom: 1px solid $main-blue;
-  }
-
-  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
-    padding: 24px 20px 40px;
-    border-radius: 8px;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
     top: 30px;
     right: 40px;
+    padding: 24px 20px 40px;
+    border-radius: 8px;
     width: 421px;
+    background: $white;
     box-shadow: 0px 4px 25px 0px rgba(44, 44, 44, 0.2);
   }
 
-  @media screen and (min-width: 1200px) {
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0;
+  @media screen and (max-width: $tablet) {
+    top: 72px;
+    padding: 24px 16px 32px;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    border-top: 1px solid $main-blue;
+    border-bottom: 1px solid $main-blue;
   }
 }
 
 .menu__wrapper ul {
-  @media screen and (min-width: 1200px) {
+  margin-right: 32px;
+  @media screen and (max-width: 1880px) {
+    margin-right: 56px;
+  }
+  @media screen and (max-width: $full) {
     margin-right: 40px;
   }
-  @media screen and (min-width: $desktop) {
-    margin-right: 56px;
+  @media screen and (max-width: $desktop) {
+    margin-right: 0;
   }
 }
 
@@ -130,11 +141,11 @@
 }
 
 .menu-open__btn .menu-icon {
-  width: 24px;
-  height: 24px;
-  @media screen and (min-width: $tablet) {
-    width: 36px;
-    height: 36px;
+  width: 36px;
+  height: 36px;
+  @media screen and (max-width: $tablet) {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -142,29 +153,31 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 27px;
+  top: 30px;
   right: 16px;
-  @media screen and (min-width: $mobile) {
-    top: 30px;
+  @media screen and (max-width: $mobile) {
+    top: 27px;
   }
 }
 
 .menu-open__btn,
 .menu-close__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: transparent;
+  display: none;
 
-  @media screen and (min-width: 1200px) {
-    display: none;
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
   }
 }
 
 // menu items with wp-classes
 .menu-item a {
-  font-size: 20px;
+  display: block;
+  text-align: center;
+  font-size: 24px;
   line-height: normal;
   transition: color $transition-function;
 
@@ -173,8 +186,11 @@
     color: $main-blue;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1680px) {
     font-size: 18px;
+  }
+  @media screen and (max-width: 1240px) {
+    font-size: 16px;
   }
 }
 
@@ -182,51 +198,53 @@
   color: $main-blue;
 }
 
-.menu-item:last-child {
-  @media screen and (min-width: 1200px) {
-    display: none;
+header .menu-item:last-child {
+  display: none;
+  @media screen and (max-width: 1200px) {
+    display: block;
   }
 }
 
-.menu-item:not(:last-child) {
-  margin-bottom: 40px;
-  @media screen and (min-width: $tablet) {
+header .menu-item:not(:last-child) {
+  margin-bottom: 0;
+  @media screen and (max-width: 1200px) {
     margin-bottom: 44px;
   }
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 0;
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 40px;
   }
 }
 
-.menu-item:not(:first-child) {
-  @media screen and (min-width: 1200px) {
+header .menu-item:not(:first-child) {
+  margin-left: 48px;
+  @media screen and (max-width: $full) {
     margin-left: 30px;
   }
-  @media screen and (min-width: $desktop) {
-    margin-left: 48px;
+  @media screen and (max-width: 1200px) {
+    margin-left: 0;
   }
 }
 
 .header_list {
   display: flex;
+  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
-  flex-direction: column;
-  align-items: start;
 
-  @media screen and (min-width: 1200px) {
-    align-items: center;
-    flex-direction: row;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
 // social links
 ul.mob-menu__social {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
 
-  @media screen and (min-width: 1200px) {
-    display: none;
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -249,55 +267,59 @@ ul.mob-menu__social {
 // Help menu button
 .menu__btn {
   display: inline-block;
-  padding: 14px 32px;
-  margin-bottom: 39px;
+  padding: 26px 56px;
   text-align: center;
-  width: fit-content;
+  min-width: 253px;
   background-color: $yellow;
   border-radius: $btn-border-radius;
-
+  margin-bottom: 0;
+  font-size: 23px;
+  order: initial;
   color: $main-blue;
-  font-size: 15px;
   font-weight: 500;
   line-height: 1;
-  order: -1;
-  @media screen and (min-width: $mobile) {
-    font-size: 18px;
-  }
 
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 32px;
-  }
-
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1680px) {
     padding: 14px 24px;
-    margin-bottom: 0;
     font-size: 16px;
-    order: initial;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 32px;
+    padding: 14px 32px;
+    font-size: 18px;
+    order: -1;
+  }
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 39px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    font-size: 15px;
   }
 }
 
 // Language change buttons
 .lang__list {
   display: flex;
-  font-size: 20px;
+  font-size: 24px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1680px) {
     font-size: 18px;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 20px;
   }
 }
 
 .lang-item:not(:last-child) {
-  margin-right: 24px;
-
-  @media screen and (min-width: $tablet) {
+  margin-right: 12px;
+  @media screen and (max-width: 1200px) {
     margin-right: 32px;
   }
-  @media screen and (min-width: 1200px) {
-    margin-right: 8px;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-right: 12px;
+  @media screen and (max-width: $tablet) {
+    margin-right: 24px;
   }
 }
 

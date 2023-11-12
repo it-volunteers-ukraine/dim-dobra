@@ -5,17 +5,26 @@
 
   @media screen and (min-width: $tablet) {
     padding: 0 40px;
+    max-width: $desktop;
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: $desktop;
     padding: 0 75px;
+    max-width: $full;
+  }
+
+  @media screen and (min-width: $full) {
+    max-width: 1920px;
+    padding: 0 80px;
   }
 }
 
 .button {
-  width: 100%;
-  padding: 14px 0;
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 32px;
   color: $white;
   background-color: $main-blue;
   cursor: pointer;
@@ -23,14 +32,9 @@
   font-family: inherit;
   font-size: 20px;
   font-weight: 500;
-  line-height: auto;
-  border-radius: 8px;
+  border-radius: $btn-border-radius;
   transition: color $transition-function, background-color $transition-function,
     box-shadow $transition-function;
-
-  @media screen and (min-width: $mobile) {
-    width: 311px;
-  }
 
   &:hover,
   &:focus {

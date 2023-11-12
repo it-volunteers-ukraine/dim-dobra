@@ -1,42 +1,53 @@
 @import "../variables.scss";
 
 .single-post__title {
-  font-size: 28px;
+  font-size: 48px;
   font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 16px;
-  @media screen and (min-width: $desktop) {
-    line-height: 1;
-  }
-  @media screen and (min-width: 1200px) {
+  line-height: 1;
+  margin-bottom: 32px;
+
+  @media screen and (max-width: $full) {
     font-size: 32px;
     margin-bottom: 40px;
+  }
+  @media screen and (max-width: $desktop) {
+    margin-bottom: 16px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 28px;
+    line-height: 1.4;
   }
 }
 
 .single-post__description {
-  font-size: 18px;
+  font-size: 26px;
+  max-width: 1200px;
   line-height: 1.4;
-  margin-bottom: 32px;
-  @media screen and (min-width: $tablet) {
+  margin-bottom: 64px;
+  @media screen and (max-width: $full) {
+    font-size: 18px;
+    max-width: 900px;
+    margin-bottom: 56px;
+  }
+  @media screen and (max-width: $desktop) {
     font-size: 16px;
-    width: 609px;
+    max-width: 650px;
     margin-bottom: 40px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: $tablet) {
     font-size: 18px;
-    width: 850px;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
 }
 
 //slider
 .single-post__slider {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 64px;
-  @media screen and (min-width: $tablet) {
-    display: none;
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 64px;
   }
 }
 
@@ -99,17 +110,22 @@
 }
 
 .single-post__flex {
-  display: none;
-  @media screen and (min-width: $tablet) {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 32px;
-  }
-  @media screen and (min-width: $desktop) {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 56px;
+  margin-bottom: 64px;
+  @media screen and (max-width: $full) {
     column-gap: 30px;
     row-gap: 50px;
     margin-bottom: 56px;
+  }
+  @media screen and (max-width: $desktop) {
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }

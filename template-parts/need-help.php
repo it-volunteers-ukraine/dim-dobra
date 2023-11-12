@@ -5,7 +5,7 @@
         .need-help {
           background-image: url('<?php the_field('need_help_sm_img', 'option') ?>');
 
-          @media screen and (min-width: 768px) {
+          @media screen and (min-width: 576px) {
             background-image: url('<?php the_field('need_help_lg_img', 'option') ?>');
           }
         }

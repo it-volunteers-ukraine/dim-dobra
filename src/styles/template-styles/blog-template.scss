@@ -1,42 +1,38 @@
 @import "../variables.scss";
 
-.help-people__title {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.4;
-  @media screen and (min-width: $tablet) {
-    line-height: 1;
-  }
-  @media screen and (min-width: $desktop) {
-    font-size: 32px;
-  }
-}
-
 .help__title {
-  margin: 0;
-  font-size: 28px;
+  font-size: 48px;
   font-weight: 600;
   line-height: 1;
-  @media screen and (min-width: $desktop) {
+
+  @media screen and (max-width: $full) {
     font-size: 32px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 28px;
+    line-height: 1.4;
   }
 }
 
 .posts-list {
   display: flex;
   flex-direction: column;
-  margin-top: 24px;
-  @media screen and (min-width: $tablet) {
+  margin-top: 40px;
+  @media screen and (max-width: $desktop) {
     margin-top: 32px;
   }
-  @media screen and (min-width: $desktop) {
-    margin-top: 40px;
+  @media screen and (max-width: $tablet) {
+    margin-top: 24px;
   }
 }
 
 .nav-links {
+  font-size: 26px;
   color: $black;
   text-align: center;
+  @media screen and (max-width: $full) {
+    font-size: 18px;
+  }
 }
 
 .nav-links .current {

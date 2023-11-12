@@ -13,7 +13,7 @@ get_header();
             $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $postID = $post->ID; ?>
 
-            <h1 class="help-people__title"><?php the_field('page_title', $postID) ?></h1>
+            <h1 class="help__title"><?php the_field('page_title', $postID) ?></h1>
             
             <?php
             $args = array(

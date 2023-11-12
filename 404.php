@@ -12,7 +12,7 @@
 	<section class="error-404 not-found">
 		<h2 class="error-text"><?php the_field('error-text', 'option'); ?></h2>
 		<h1 class="error-oops"><?php the_field('error-oops', 'option'); ?></h1>
-		<a class="error-button" href="<?php echo get_home_url(); ?>"><?php the_field('error-button', 'option'); ?></a>
+		<a class="button error-button" href="<?php echo get_home_url(); ?>"><?php the_field('error-button', 'option'); ?></a>
 	</section>
 
 </main>

@@ -6,17 +6,15 @@ get_header();
 ?>
 
 <main>
-  <div class="container ">
-    <section class="house" style="background-image: url('<?php the_field('hero_img_background') ?>')">
-      <div class="house__title-wraper">
-        <h1 class="house__title"><?php the_field('hero_title'); ?></h1>
-      </div>
-
-      <a href="#bank-details" class="button house__button house__link">
-        <?php the_field('hero_btn_text'); ?>
-      </a>
+    <section class="house">
+        <img class="img-hero" src="<?php the_field('hero_img_background') ?>" alt="">
+        <div class="house__title-wraper">
+          <h1 class="house__title"><?php the_field('hero_title'); ?></h1>
+        <a href="#bank-details" class="button house__button">
+          <?php the_field('hero_btn_text'); ?>
+        </a>
+        </div>
     </section>
-  </div>
 
   <section class="support">
     <div class="container ">

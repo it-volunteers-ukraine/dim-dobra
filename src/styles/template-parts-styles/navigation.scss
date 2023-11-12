@@ -1,18 +1,22 @@
 @import "../variables.scss";
 
 .navigation-wrapper {
-  display: none;
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }
 
 .navigation-text {
+  font-size: 24px;
   color: $grey;
   display: flex;
   align-items: center;
   gap: 12px;
+  @media screen and (max-width: $full) {
+    font-size: 16px;
+  }
 }
 
 .navigation-icon {
