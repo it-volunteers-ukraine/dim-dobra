@@ -135,17 +135,22 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 56px;
   @media screen and (max-width: 1600px) {
-    gap: 24px;
+    gap: 30px;
   }
   @media screen and (max-width: 768px) {
     display: block;
   }
 }
 
-.support__item:not(:last-child) {
+.support__item {
   padding: 0 16px;
   @media screen and (max-width: 768px) {
     padding: 0;
+  }
+}
+
+.support__item:not(:last-child) {
+  @media screen and (max-width: 768px) {
     margin-bottom: 40px;
   }
 }

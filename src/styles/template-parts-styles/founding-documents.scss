@@ -43,26 +43,32 @@
 }
 
 .documents__list {
-  @media screen and (min-width: 850px) {
-    display: flex;
-    gap: 0px;
+  @media screen and (min-width: $tablet) {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 420px;
     justify-content: space-between;
+    row-gap: 40px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    width: auto;
+    row-gap: 0;
     justify-content: space-evenly;
   }
 }
 
 .documents__wraper {
   display: flex;
-  gap: 24px;
-  align-items: center;
-  margin-bottom: 32px;
   transition: color $transition-function;
+  align-items: center;
+  margin-bottom: 33px;
 
   @media screen and (min-width: $tablet) {
+    display: block;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 
   &:hover,
@@ -81,8 +87,9 @@
   display: block;
   width: 90px;
   height: 118px;
+  margin-right: 25px;
 
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }
@@ -90,14 +97,16 @@
 .documents__img-desktop {
   display: none;
 
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: $tablet) {
     display: block;
-    width: 175px;
-    height: 235px;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
   }
 
   @media screen and (min-width: 1200px) {
     width: 195px;
+    height: 235px;
   }
 
   @media screen and (min-width: 1600px) {
@@ -113,18 +122,21 @@
   font-weight: 500;
   line-height: 1.4;
 
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: $tablet) {
     position: absolute;
-    width: 150px;
-    left: 16px;
+    width: 130px;
+    left: 42px;
     bottom: 20px;
     color: $black;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.3;
   }
-
   @media screen and (min-width: $desktop) {
+    left: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
     width: 162px;
     left: 14px;
     bottom: 32px;
@@ -152,7 +164,7 @@
   @media screen and (min-width: $tablet) {
     margin-right: auto;
     margin-left: auto;
-    margin-top: -8px;
+    margin-top: 32px;
     max-width: 750px;
     text-align: center;
     font-weight: 600;
