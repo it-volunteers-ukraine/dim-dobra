@@ -144,6 +144,10 @@
 
 .support__item {
   padding: 0 16px;
+  margin: 0 auto;
+  @media screen and (max-width: 1600px) {
+    max-width: 310px;
+  }
   @media screen and (max-width: 768px) {
     padding: 0;
   }
