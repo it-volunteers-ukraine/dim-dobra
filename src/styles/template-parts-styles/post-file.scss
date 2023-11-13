@@ -14,6 +14,7 @@
     display: block;
     max-width: $tablet;
     padding: 24px 16px;
+    margin: 0 auto;
   }
 }
 
@@ -125,7 +126,7 @@
   color: $main-blue;
   padding: 26px 56px;
   font-size: 23px;
-  margin-top: 32px;
+  margin-top: 40px;
   min-width: 358px;
   width: fit-content;
   @media screen and (max-width: $full) {

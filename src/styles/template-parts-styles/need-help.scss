@@ -64,7 +64,7 @@
   color: $main-blue;
   background-color: $yellow;
   @media screen and (max-width: $full) {
-    padding: 16px 32px;
+    padding: 14px 32px;
     min-width: 322px;
   }
   @media screen and (max-width: $full) {
@@ -73,8 +73,8 @@
   @media screen and (max-width: $tablet) {
     min-width: 311px;
   }
-  @media screen and (max-width: 370px) {
-    min-width: fit-content;
+  @media screen and (max-width: $mobile) {
+    min-width: 286px;
   }
 
   &:hover,
