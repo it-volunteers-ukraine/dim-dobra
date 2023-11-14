@@ -14,7 +14,7 @@ const homeSlyder = new Swiper(".mySwiper", {
   },
 
   breakpoints: {
-    768: {
+    576: {
       navigation: {
         nextEl: ".custom-next-icon",
         prevEl: ".custom-prev-icon",
