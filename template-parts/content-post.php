@@ -10,64 +10,57 @@
                 
                 $content = get_the_content();
                 $title = get_the_title(); ?>
-                
-                <section>
-                    <div class="container">
-                        <h1 class="single-post__title"><?php if($title) : echo $title; endif;?> 
-                        <span> 
-                            <?php { if(function_exists('pll_e'))
+
+<section>
+  <div class="container">
+    <h1 class="single-post__title"><?php if($title) : echo $title; endif;?>
+      <span>
+        <?php { if(function_exists('pll_e'))
                             pll_e('від');
-                        } ?> 
-                        </span>
-                        <?php the_time('d.m.Y'); ?></h1>
-                        <div class="single-post__description"><?php if($content) : echo $content; endif; ?></div>
-                        <?php if(have_rows('images-gallery')):?>
-                             <div class="single-post__slider swiper-container">
+                        } ?>
+      </span>
+      <?php the_time('d.m.Y'); ?>
+    </h1>
+    <div class="single-post__description"><?php if($content) : echo $content; endif; ?></div>
 
-                                <ul class="single-post__wrap swiper-wrapper" id="lightgallery">
-                                <?php while(have_rows('images-gallery')): the_row();
-                                $alt = get_sub_field('alt');
-                                $link = get_sub_field('link');
 
-                                $arr = explode("/", $link);
-                                if (in_array("d", $arr)) {
-                                $index = array_search("d", $arr) + 1;
-                                $id = $arr[$index];
-                                $link = "https://drive.google.com/uc?id=" . $id;}; ?>
+    <?php $images = get_field('images-gallery'); ?>
+    <div class="single-post__slider swiper-container">
+      <?php if( $images ): ?>
 
-                                 <li class="swiper-slide img-slider__image">
-                                    <a class="one-image__wrap" href="<?php echo esc_url($link); ?>" data-lightbox="swiper-images" aria-label="Подивитись фото у повному розмірі">
-                                        <img id="image-link" class="swiper-lazy" loading="lazy" src="<?php echo esc_url($link); ?>" alt="<?php if($alt): echo $alt; endif; ?>">
-                                    </a>
-                                </li>
-                                <?php endwhile;?>
-                                </ul>
+      <ul class="single-post__wrap swiper-wrapper" id="lightgallery">
 
-                                <div class="swiper-pagination" style="position: inherit"></div>
-                            </div>
+        <?php foreach( $images as $image ): ?>
 
-                            <ul id="lightgallery" class="single-post__flex">
-                                <?php while(have_rows('images-gallery')): the_row();
-                                 $link = get_sub_field('link');
+        <li class="swiper-slide img-slider__image">
+          <a class="one-image__wrap" href="<?php echo esc_url($image['url']); ?>" data-lightbox="swiper-images"
+            aria-label="Подивитись фото у повному розмірі">
+            <img id="image-link" class="swiper-lazy" loading="lazy"
+              src="<?php echo esc_url($image['sizes']['medium_large']); ?>"
+              alt="<?php echo esc_attr($image['alt']); ?>">
+          </a>
+        </li>
+        <?php endforeach; ?>
+      </ul>
 
-                                $arr = explode("/", $link);
-                                if (in_array("d", $arr)) {
-                                $index = array_search("d", $arr) + 1;
-                                $id = $arr[$index];
-                                $link = "https://drive.google.com/uc?id=" . $id;}; ?>
+      <div class="swiper-pagination" style="position: inherit"></div>
+    </div>
 
-                                    <li class="single-post__item">
-                                        <a class="single-post__link" href="<?php echo esc_url($link); ?>" data-lightbox="images" aria-label="Подивитись фото у повному розмірі">
-                                            <img src="<?php echo esc_url($link); ?>" alt="<?php if($alt): echo $alt; endif; ?>" loading="lazy">
-                                        </a>
-                                    </li>
-                                <?php endwhile;?>
-                            </ul>
+    <ul id="lightgallery" class="single-post__flex">
 
-                        <?php endif; ?>
-                    </div>	
-                </section>
+      <?php foreach( $images as $image ): ?>
+      <li class="single-post__item">
+        <a class="single-post__link" href="<?php echo esc_url($image['url']); ?>" data-lightbox="images"
+          aria-label="Подивитись фото у повному розмірі">
+          <img src="<?php echo esc_url($image['sizes']['medium_large']); ?>"
+            alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy">
+        </a>
+      </li>
+      <?php endforeach; ?>
+    </ul>
+    <?php endif; ?>
 
-				<?php endif;
-
-				wp_reset_postdata(); ?>
+  </div>
+</section>
+<?php endif;
+wp_reset_postdata(); ?>
